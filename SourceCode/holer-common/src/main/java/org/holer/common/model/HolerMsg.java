@@ -55,6 +55,9 @@ public class HolerMsg
     /** Disabled trial client */
     public static final byte TYPE_DISABLED_TRIAL_CLIENT = 0x09;
 
+    /** Invalid access key */
+    public static final byte TYPE_INVALID_KEY = 0x10;
+
     /** Message type */
     private byte type;
 

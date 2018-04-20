@@ -219,6 +219,9 @@ public class HolerClientHandler extends SimpleChannelInboundHandler<HolerMsg>
             case HolerMsg.TYPE_DISABLED_TRIAL_CLIENT:
                 msgInfo = HolerClientConst.MSG_DISABLED_TRIAL_CLIENT;
                 break;
+            case HolerMsg.TYPE_INVALID_KEY:
+                msgInfo = HolerClientConst.MSG_INVALID_ACCESS_KEY;
+                break;
             default:
                 msgInfo = HolerConst.EMPTY;
                 break;

@@ -36,6 +36,8 @@ public class HolerClientConst
 
     public static final String MSG_DISABLED_ACCESS_KEY = "Holer access key has been disabled.\n";
 
+    public static final String MSG_INVALID_ACCESS_KEY = "Holer access key is not valid.\n";
+
     public static final String MSG_DISABLED_TRIAL_CLIENT = "Your holer client is overuse.\n" + 
                                                            "The trial holer access key can only be used for 20 minutes in 24 hours.\n" + 
                                                            "If you want to get an exclusive access key, please visit\n" +
