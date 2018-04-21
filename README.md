@@ -26,8 +26,8 @@ Holer是一个将局域网服务器代理到公网的内网穿透工具，支持
      **Windows**:<br/>
      Run command `startup.bat` or double click `startup.bat`<br/><br/>
      **Linux**:<br/>
-     Run command `sh startup.sh`<br/>
-     
+     Run command `sh startup.sh`
+     
 #### 5. Internet and local address mapping
      公网和内网的地址映射关系
 
@@ -39,10 +39,20 @@ HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
 
 #### 6. Demo
      使用示例<br/>
-     如果您本地的Tomcat服务地址：`http://127.0.0.1:8088`<br/>
-     需要代理到公网上的服务地址为：`http://106.14.70.153:65531`<br/>
-     您只需要在配置文件`holer-client/conf/holer.conf`里设置`HOLER_ACCESS_KEY`即可：<br/><br/>
+     If your tomcat program local URL is as follows: <br/>
+     如果您本地的tomcat服务地址：<br/>
+     `http://127.0.0.1:8088`<br/><br/>
+     
+     Exposes to the public internet URL is as follows: <br/>
+     需要代理到公网上的服务地址为：<br/>
+     `http://106.14.70.153:65531`<br/><br/>
+     
+     Only need modify `holer-client/conf/holer.conf` to set `HOLER_ACCESS_KEY`: <br/>
+     只需要在配置文件`holer-client/conf/holer.conf`里设置`HOLER_ACCESS_KEY`即可：<br/>
      `HOLER_ACCESS_KEY=HOLER_CLIENT-3C07CDFD1BF99BF2`<br/><br/>
+     
+     **Note:** here only need set `HOLER_ACCESS_KEY`, for `HOLER_SERVER_HOST` and `HOLER_SERVER_PORT` please keep in line with step 3. <br/>
+
      **注意：** 这里只需要修改`HOLER_ACCESS_KEY`即可, `HOLER_SERVER_HOST`和`HOLER_SERVER_PORT`设置跟步骤3保持一致。
      
      
