@@ -47,8 +47,9 @@ HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
      需要代理到公网上的服务地址为：<br/>
      `http://106.14.70.153:65531`<br/><br/>
      
-     Only need modify `holer-client/conf/holer.conf` to set `HOLER_ACCESS_KEY`: <br/>
-     只需要在配置文件`holer-client/conf/holer.conf`里设置`HOLER_ACCESS_KEY`即可：<br/>
+     Only need modify configuration file to set `HOLER_ACCESS_KEY`: <br/>
+     只需要在配置文件里设置`HOLER_ACCESS_KEY`即可：<br/>
+     `holer-client/conf/holer.conf`<br/>
      `HOLER_ACCESS_KEY=HOLER_CLIENT-3C07CDFD1BF99BF2`<br/><br/>
      
      **Note:** only need set `HOLER_ACCESS_KEY`, for `HOLER_SERVER_HOST` and `HOLER_SERVER_PORT` please keep in line with step 3. <br/>
