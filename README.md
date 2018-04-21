@@ -1,7 +1,7 @@
 # What is holer
 Holer exposes local servers behind NATs and firewalls to the public internet over secure tunnels. <br/>
 Support forwarding message based on TCP protocol.<br/><br/>
-Holer是一个将局域网服务器代理到公网的内网穿透工具，支持基于TCP协议的报文转发。
+Holer是一个将局域网服务器代理到公网的内网穿透工具，支持转发基于TCP协议的报文。
 
 # How it works
 #### 1. Download software package [*`holer-client.zip`*](https://github.com/Wisdom-Projects/holer/blob/master/Binary);
@@ -62,7 +62,7 @@ HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
 
 # Support
 All of the above holer access keys and ports have been shared to public. In order to enable more users to get shared holer services, every user can use each holer access key within 24 hours to get holer service for 20 minutes. <br/>
-If you want to get an **exclusive** access key and port, please mail to the author.<br/><br/>
+If you want to get **exclusive** access key and port, please mail to the author.<br/><br/>
 以上的全部Holer Access Key和端口都已公开共享，为了让更多的用户都能获得到共享的Holer服务，每个用户在24小时内对每一个Holer Access Key都可以获取Holer服务20分钟。<br/>
 如果您需要**独享的**Holer Access Key和端口，请邮件联系作者。<br/><br/>
 _**Author**: Yudong (Dom) Wang_ <br/>
