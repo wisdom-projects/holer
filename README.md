@@ -20,12 +20,12 @@ Holer是一个将局域网服务器代理到公网的内网穿透工具，支持
      `HOLER_SERVER_HOST=106.14.70.153`<br/>
      `HOLER_SERVER_PORT=6060`<br/>
 #### 4. Start holer
-     启动Holer服务
+     启动Holer服务<br/>
      `cd holer-client/bin`<br/>
      **Windows**:<br/>
      Run command `startup.bat` or double click `startup.bat`<br/>
      **Linux**:<br/>
-     Run command `sh startup.sh`<br/>
+     Run command `sh startup.sh`<br/>
      
 #### 5. Internet and local address mapping
      公网和内网的地址映射关系
