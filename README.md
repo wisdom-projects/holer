@@ -58,8 +58,8 @@ HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
 
 # Support
      All of the above holer access keys and ports have been shared to public, they can only be used for 20 minutes in 24 hours. <br/>
-     If you want to get an exclusive access key and port, please mail to the author.<br/>
-     以上的Holer Access Key和端口每24小时内可以使用20分钟，如果您需要一个独享的Access Key和端口，请邮件联系作者。<br/>
+     If you want to get an exclusive access key and port, please mail to the author.<br/><br/>
+     以上的Holer Access Key和端口每24小时内可以使用20分钟，如果您需要一个独享的Access Key和端口，请邮件联系作者。<br/><br/>
      _**Author**: Yudong (Dom) Wang_ <br/>
      _**E-mail**: wisdomtool@outlook.com_<br/>
 
