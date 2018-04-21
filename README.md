@@ -61,12 +61,12 @@ HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
      **注意：** 这里只需要修改`HOLER_ACCESS_KEY`即可, `HOLER_SERVER_HOST`和`HOLER_SERVER_PORT`设置跟步骤3保持一致。
 
 # Support
-     All of the above holer access keys and ports have been shared to public, they can only be used for 20 minutes in 24 hours. <br/>
-     If you want to get an exclusive access key and port, please mail to the author.<br/><br/>
-     以上的全部Holer Access Key和端口都已公开共享，每24小时内可以使用20分钟，<br/>
-     如果您需要独享的Holer Access Key和端口，请邮件联系作者。<br/><br/>
-     _**Author**: Yudong (Dom) Wang_ <br/>
-     _**E-mail**: wisdomtool@outlook.com_<br/>
+All of the above holer access keys and ports have been shared to public, they can only be used for 20 minutes in 24 hours. <br/>
+If you want to get an exclusive access key and port, please mail to the author.<br/><br/>
+以上的全部Holer Access Key和端口都已公开共享，每24小时内可以使用20分钟，<br/>
+如果您需要独享的Holer Access Key和端口，请邮件联系作者。<br/><br/>
+_**Author**: Yudong (Dom) Wang_ <br/>
+_**E-mail**: wisdomtool@outlook.com_<br/>
 
 # Donate
 如果 **Holer** 工具对您帮助很大，并且您很愿意支持工具的后续开发和维护，您可以扫下方二维码随意打赏，就当是请我喝杯茶或是咖啡，将不胜感激。 **♥ 谢谢 ♥**
