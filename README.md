@@ -20,5 +20,12 @@ Holer是一个将局域网服务器代理到公网的内网穿透工具，支持
      `HOLER_SERVER_HOST=106.14.70.153`<br/>
      `HOLER_SERVER_PORT=6060`<br/>
 
-     
-     
+#### 4. Internet and local address mapping:
+     公网和内网的地址映射关系：
+
+Access Key                    |Internet Address    | Local Address
+------------------------------|--------------------|---------------
+HOLER_CLIENT-2F8D8B78B3C2A0AE |106.14.70.153:65530 |127.0.0.1:8080
+HOLER_CLIENT-3C07CDFD1BF99BF2 |106.14.70.153:65531 |127.0.0.1:8088
+HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
+
