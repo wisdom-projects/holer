@@ -62,12 +62,12 @@ HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
 
 # Support
 All of the above holer access keys and ports have been shared to public. In order to enable more users to get shared holer services, every user can use each holer access key within 24 hours to get holer service for 20 minutes. <br/>
-If you want to get **exclusive** access key and port, please mail to the author.<br/><br/>
+If you want to get **exclusive** access key and port, please contact the author by mail or QQ.<br/><br/>
 以上的全部Holer Access Key和端口都已公开共享，为了让更多的用户都能获得到共享的Holer服务，每个用户在24小时内对每一个Holer Access Key都可以获取Holer服务20分钟。<br/>
-如果您需要**独享的**Holer Access Key和端口，请邮件联系作者。<br/><br/>
+如果您需要**独享的**Holer Access Key和端口，请邮件或者QQ联系作者。<br/><br/>
 _**Author**: Yudong (Dom) Wang_ <br/>
 _**E-mail**: wisdomtool@outlook.com_<br/>
-_**QQ**: 2353941272_<br/>
+_**QQ**    : 2353941272_<br/>
 
 # Donate
 如果 **Holer** 工具对您帮助很大，并且您很愿意支持工具的后续开发和维护，您可以扫下方二维码随意打赏，就当是请我喝杯茶或是咖啡，将不胜感激。 **♥ 谢谢 ♥**
