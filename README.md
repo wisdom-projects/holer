@@ -6,3 +6,9 @@ Holer是一个将局域网服务器代理到公网的内网穿透工具，支持
 # How it works
 #### 1. Download software package [*`holer-client.zip`*](https://github.com/Wisdom-Projects/holer/blob/master/Binary);
      下载软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary)；
+
+#### 2. Install `Java 1.7` or higher version;
+     使用前请先安装`Java 1.7`或者更高版本；
+
+#### 3. Unzip `holer-client.zip`;
+     解压`holer-client.zip`
