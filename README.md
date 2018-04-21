@@ -55,7 +55,8 @@ HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
      Restart holer, then you can visit you web application through URL `http://106.14.70.153:65531`<br/>
      重启Holer，然后就可以通过URL `http://106.14.70.153:65531`来访问您的Web应用。<br/><br/>
      
-     **Note:** only need set `HOLER_ACCESS_KEY`, for `HOLER_SERVER_HOST` and `HOLER_SERVER_PORT` please keep consistent with step 3. <br/>
+     **Note:** Only need to set `HOLER_ACCESS_KEY`, 
+               for `HOLER_SERVER_HOST` and `HOLER_SERVER_PORT` please keep consistent with step 3. <br/>
 
      **注意：** 这里只需要修改`HOLER_ACCESS_KEY`即可, `HOLER_SERVER_HOST`和`HOLER_SERVER_PORT`设置跟步骤3保持一致。
 
