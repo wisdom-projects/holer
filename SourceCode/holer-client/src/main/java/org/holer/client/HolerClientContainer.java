@@ -93,8 +93,8 @@ public class HolerClientContainer implements HolerContainer, HolerStatusListener
      */
     private void connectHolerServer()
     {
-        String host = config.strValue(HolerConst.HOLER_SERVER_HOST);
-        int port = config.intValue(HolerConst.HOLER_SERVER_PORT, HolerConst.HOLER_SERVER_PORT_DEFAULT);
+        final String host = config.strValue(HolerConst.HOLER_SERVER_HOST);
+        final int port = config.intValue(HolerConst.HOLER_SERVER_PORT, HolerConst.HOLER_SERVER_PORT_DEFAULT);
         holerClient.connect(host, port).addListener(new ChannelFutureListener()
         {
             @Override
@@ -112,6 +112,7 @@ public class HolerClientContainer implements HolerContainer, HolerStatusListener
                 }
                 else
                 {
+                    System.out.println("Unable to connect holer server <" + host + ":" + port + ">");
                     log.warn("Connect holer server failed.", future.cause());
                     waitForReconnect();
                     connectHolerServer();
