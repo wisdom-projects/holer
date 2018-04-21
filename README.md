@@ -49,10 +49,10 @@ HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
      
      Only need modify configuration file to set `HOLER_ACCESS_KEY`: <br/>
      只需要在配置文件里设置`HOLER_ACCESS_KEY`即可：<br/>
-     `holer-client/conf/holer.conf`<br/>
+     `holer-client/conf/holer.conf`<br/>
      `HOLER_ACCESS_KEY=HOLER_CLIENT-3C07CDFD1BF99BF2`<br/><br/>
      
-     **Note:** only need set `HOLER_ACCESS_KEY`, for `HOLER_SERVER_HOST` and `HOLER_SERVER_PORT` please keep in line with step 3. <br/>
+     **Note:** only need set `HOLER_ACCESS_KEY`, for `HOLER_SERVER_HOST` and `HOLER_SERVER_PORT` please keep consistent with step 3. <br/>
 
      **注意：** 这里只需要修改`HOLER_ACCESS_KEY`即可, `HOLER_SERVER_HOST`和`HOLER_SERVER_PORT`设置跟步骤3保持一致。
      
