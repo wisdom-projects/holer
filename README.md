@@ -44,11 +44,11 @@ HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
      `http://127.0.0.1:8088`<br/><br/>
      
      Exposes to the public internet URL: <br/>
-     需要代理到公网上的服务地址为：<br/>
+     代理到公网上的服务地址为：<br/>
      `http://106.14.70.153:65531`<br/>
      
      Only need modify configuration file to set `HOLER_ACCESS_KEY`: <br/>
-     只需要在配置文件里设置`HOLER_ACCESS_KEY`即可：<br/>
+     只需要在配置文件里修改`HOLER_ACCESS_KEY`即可，其他配置项跟步骤3一致：<br/>
      `holer-client/conf/holer.conf`<br/>
      `HOLER_ACCESS_KEY=HOLER_CLIENT-3C07CDFD1BF99BF2`<br/>
      
