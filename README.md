@@ -20,9 +20,9 @@ Only need to set `HOLER_ACCESS_KEY`:<br/>
      
 #### 4. Start holer
 启动Holer服务<br/>
-`cd holer-client/bin`<br/><br/>
+`cd holer-client/bin`<br/>
 **Windows**:<br/>
-Run command `startup.bat` or double click `startup.bat`<br/><br/>
+Run command `startup.bat` or double click `startup.bat`<br/>
 **Linux**:<br/>
 Run command `sh startup.sh`
      
@@ -39,7 +39,7 @@ HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
 使用示例<br/>
 If your tomcat program local URL: <br/>
 如果您本地的tomcat服务地址：<br/>
-`http://127.0.0.1:8088`<br/><br/>
+`http://127.0.0.1:8088`<br/>
 
 Exposes to the public internet URL: <br/>
 代理到公网上的服务地址为：<br/>
