@@ -50,7 +50,7 @@ Only need to modify configuration file to set `HOLER_ACCESS_KEY`: <br/>
 `holer-client/conf/holer.conf`<br/>
 `HOLER_ACCESS_KEY=HOLER_CLIENT-3C07CDFD1BF99BF2`<br/>
 
-Restart holer, then you can visit you web application through URL `http://106.14.70.153:65531`<br/>
+Restart holer, then you can visit your web application through URL `http://106.14.70.153:65531`<br/>
 重启Holer，然后就可以通过URL `http://106.14.70.153:65531`来访问您的Web应用。<br/>
 
 # Support
