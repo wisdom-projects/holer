@@ -13,8 +13,8 @@ Holer是一个将局域网服务器代理到公网的内网穿透工具，支持
 #### 3. Unzip `holer-client.zip`, modify configuration file
      解压`holer-client.zip`，修改配置文件<br/><br/>
      `holer-client/conf/holer.conf`<br/><br/>
-     Set the following configuration `HOLER_ACCESS_KEY`:<br/>
-     设置以下`HOLER_ACCESS_KEY`：
+     Only need to set `HOLER_ACCESS_KEY`:<br/>
+     只需设置`HOLER_ACCESS_KEY`：
 
      `HOLER_ACCESS_KEY=HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
      
@@ -45,13 +45,13 @@ HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
      代理到公网上的服务地址为：<br/>
      `http://106.14.70.153:65531`<br/>
      
-     Only need modify configuration file to set `HOLER_ACCESS_KEY`: <br/>
+     Only need to modify configuration file to set `HOLER_ACCESS_KEY`: <br/>
      只需要在配置文件里修改`HOLER_ACCESS_KEY`即可：<br/>
      `holer-client/conf/holer.conf`<br/>
      `HOLER_ACCESS_KEY=HOLER_CLIENT-3C07CDFD1BF99BF2`<br/>
      
      Restart holer, then you can visit you web application through URL `http://106.14.70.153:65531`<br/>
-     重启Holer，然后就可以通过URL `http://106.14.70.153:65531`来访问您的Web应用。<br/><br/>
+     重启Holer，然后就可以通过URL `http://106.14.70.153:65531`来访问您的Web应用。<br/>
 
 # Support
 All of the above holer access keys and ports have been shared to public. In order to enable more users to get shared holer services, every user can use each holer access key within 24 hours to get holer service. <br/>
