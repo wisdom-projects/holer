@@ -57,6 +57,7 @@ public class HolerConfig
     */
     public HolerConfig()
     {
+        this.initConfig(HolerConst.HOLER_CONF_DIR + HolerConst.HOLER_CONF);
         this.initConfig(HolerConst.HOLER_CONF);
     }
 

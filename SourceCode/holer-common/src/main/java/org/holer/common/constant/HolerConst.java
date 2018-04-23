@@ -87,7 +87,9 @@ public class HolerConst
 
     public static final String HOLER_SSL_PASSWD_DEFAULT = "Wisdom-Holer";
 
-    public static final String HOLER_SSL_JKS_DEFAULT = "org/holer/conf/holer.jks";
+    public static final String HOLER_CONF_DIR = "org/holer/conf/";
+
+    public static final String HOLER_SSL_JKS_DEFAULT = HOLER_CONF_DIR + "holer.jks";
 
     public static final AttributeKey<Channel> HOLER_CHANNEL = AttributeKey.newInstance("HOLER_CHANNEL");
 

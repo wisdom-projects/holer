@@ -47,7 +47,6 @@
                 <configuration>
                     <excludes>
                         <exclude>**/*.properties</exclude>
-                        <exclude>**/*.conf</exclude>
                         <exclude>**/*.sh</exclude>
                         <exclude>**/*.bat</exclude>
                     </excludes>

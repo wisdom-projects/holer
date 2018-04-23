@@ -54,6 +54,8 @@ public class HolerClientHandler extends SimpleChannelInboundHandler<HolerMsg>
 
     private Bootstrap intraServer = null;
 
+    private HolerConfig config = HolerConfig.getConfig();
+
     private HolerStatusListener listener = null;
 
     /**
@@ -117,7 +119,7 @@ public class HolerClientHandler extends SimpleChannelInboundHandler<HolerMsg>
                             // Remote binding
                             HolerMsg hmsg = new HolerMsg();
                             hmsg.setType(HolerMsg.TYPE_CONNECT);
-                            hmsg.setUri(msg.getUri() + "@" + HolerConfig.getConfig().strValue(HolerClientConst.HOLER_ACCESS_KEY));
+                            hmsg.setUri(msg.getUri() + "@" + config.strValue(HolerClientConst.HOLER_ACCESS_KEY));
                             channel.writeAndFlush(hmsg);
 
                             intraServer.config().setOption(ChannelOption.AUTO_READ, true);
@@ -233,6 +235,7 @@ public class HolerClientHandler extends SimpleChannelInboundHandler<HolerMsg>
         }
 
         ctx.channel().close();
+        System.out.println(HolerClientConst.HOLER_ACCESS_KEY + "=" + config.strValue(HolerClientConst.HOLER_ACCESS_KEY));
         System.out.println(msgInfo);
         HolerContainerHelper.stop(msg.getType());
     }
