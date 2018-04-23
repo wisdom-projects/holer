@@ -12,7 +12,7 @@ Holer是一个将局域网服务器代理到公网的内网穿透工具，支持
 
 #### 3. Unzip `holer-client.zip`, modify configuration file
 解压`holer-client.zip`，修改配置文件<br/>
-`holer-client/conf/holer.conf`<br/>
+`holer-client/conf/holer.conf`<br/><br/>
 Only need to set `HOLER_ACCESS_KEY`:<br/>
 只需设置`HOLER_ACCESS_KEY`：
 
