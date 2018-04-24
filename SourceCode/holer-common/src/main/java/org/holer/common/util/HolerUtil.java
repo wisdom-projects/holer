@@ -28,6 +28,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import io.netty.channel.Channel;
+
 /** 
 * @Class Name : HolerUtil 
 * @Description: Holer utilities 
@@ -129,6 +131,51 @@ public class HolerUtil
             is.close();
         }
         catch(IOException e)
+        {
+            // Ignore this exception
+        }
+    }
+    
+    /**
+    * 
+    * @Title      : close 
+    * @Description: Close channel
+    * @Param      : @param channel 
+    * @Return     : void
+    * @Throws     :
+     */
+    public static void close(Channel channel)
+    {
+        if (null == channel)
+        {
+            return;
+        }
+
+        try
+        {
+            channel.close();
+        }
+        catch(Exception e)
+        {
+            // Ignore this exception
+        }
+    }
+    
+    /**
+    * 
+    * @Title      : sleep 
+    * @Description: TODO 
+    * @Param      : @param millis 
+    * @Return     : void
+    * @Throws     :
+     */
+    public static void sleep(long millis)
+    {
+        try
+        {
+            Thread.sleep(millis);
+        }
+        catch(InterruptedException e)
         {
             // Ignore this exception
         }

@@ -75,7 +75,7 @@ public class HolerContainerHelper
             }
             catch(Exception e)
             {
-                log.warn("Container stopped with exception.", e);
+                log.warn("Container stopped with exception. {}", e.getMessage());
             }
         }
     }

@@ -134,7 +134,7 @@ public class HolerClientHandler extends SimpleChannelInboundHandler<HolerMsg>
                             hmsg.setType(HolerMsg.TYPE_DISCONNECT);
                             hmsg.setUri(msg.getUri());
                             ctx.channel().writeAndFlush(hmsg);
-                            log.error("It is failed.", cause);
+                            log.error("It is failed. {}", cause.getMessage());
                         }
                     });
                 }
@@ -299,7 +299,7 @@ public class HolerClientHandler extends SimpleChannelInboundHandler<HolerMsg>
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception
     {
-        log.error("Exception caught.", cause);
+        log.error("Exception caught {}.", cause.getMessage());
         super.exceptionCaught(ctx, cause);
     }
 }

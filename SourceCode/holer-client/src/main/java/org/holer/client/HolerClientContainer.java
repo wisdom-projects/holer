@@ -113,7 +113,7 @@ public class HolerClientContainer implements HolerContainer, HolerStatusListener
                 else
                 {
                     System.out.println("Unable to connect holer server <" + host + ":" + port + ">");
-                    log.warn("Connect holer server failed.", future.cause());
+                    log.warn("Connect holer server failed. {}", future.cause().getMessage());
                     waitForReconnect();
                     connectHolerServer();
                 }

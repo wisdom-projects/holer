@@ -53,7 +53,11 @@ public class HolerConst
 
     public static final int HOLER_SERVER_PORT_DEFAULT = 6060;
 
+    public static final long HALF_SECOND = 500L;
+
     public static final long ONE_SECOND = 1000L;
+
+    public static final long THREE_SECONDS = 3 * ONE_SECOND;
 
     public static final long ONE_MINUTE = 60 * ONE_SECOND;
 

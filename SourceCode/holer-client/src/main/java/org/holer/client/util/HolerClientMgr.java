@@ -87,7 +87,7 @@ public class HolerClientMgr
                 }
                 else
                 {
-                    log.warn("Connect holer server failed.", future.cause());
+                    log.warn("Connect holer server failed. {}", future.cause().getMessage());
                     listener.fail(future.cause());
                 }
             }
