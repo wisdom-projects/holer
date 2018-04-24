@@ -29,12 +29,12 @@ Run command `sh startup.sh`
 #### 5. Internet and local address mapping
 公网和内网的地址映射关系
 
-Holer Access Key              |Internet Address    | Local Address
-------------------------------|--------------------|---------------
-HOLER_CLIENT-2F8D8B78B3C2A0AE |106.14.70.153:65530 |127.0.0.1:8080
-HOLER_CLIENT-3C07CDFD1BF99BF2 |106.14.70.153:65531 |127.0.0.1:8088
-HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
-HOLER_CLIENT-AF3E6391525F70E4 |106.14.70.153:65533 |127.0.0.1:3389
+Holer Access Key             |Internet Address   | Local Address
+-----------------------------|-------------------|---------------
+HOLER_CLIENT-2F8D8B78B3C2A0AE|106.14.70.153:65530|127.0.0.1:8080
+HOLER_CLIENT-3C07CDFD1BF99BF2|106.14.70.153:65531|127.0.0.1:8088
+HOLER_CLIENT-2A623FCB6E2A7D1D|106.14.70.153:65532|127.0.0.1:80
+HOLER_CLIENT-AF3E6391525F70E4|106.14.70.153:65533|127.0.0.1:3389
 
 #### 6. Demo
 使用示例<br/><br/>
