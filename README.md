@@ -55,9 +55,9 @@ Restart holer, then you can visit your web application through URL `http://106.1
 重启Holer，然后就可以通过URL `http://106.14.70.153:65531`来访问您的Web应用。<br/>
 
 # Support
-All of the above holer access keys and ports have been shared to public. In order to enable more users to get shared holer services, every user can use each holer access key to get holer service. <br/>
+All of the above holer access keys and ports have been shared to public. In order to enable users to get more shared holer services, every user can use each holer access key to get holer service. <br/>
 If you want to get **exclusive** access key and port, please contact the author by mail or QQ.<br/><br/>
-以上的全部Holer Access Key和端口都已公开共享，为了让更多的用户获得到共享的Holer服务，每个用户可以使用每一个Holer Access Key获取到Holer服务。<br/>
+以上的全部Holer Access Key和端口都已公开共享，为了让用户获得到更多的共享的Holer服务，每个用户可以使用每一个Holer Access Key获取到Holer服务。<br/>
 如果您需要**独享的**Holer Access Key和端口，请邮件或者QQ联系作者。<br/><br/>
 _**Author**: Yudong (Dom) Wang_ <br/>
 _**E-mail**: wisdomtool@outlook.com_<br/>
