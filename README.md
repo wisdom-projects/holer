@@ -59,7 +59,7 @@ Restart holer, then you can visit your web application through URL `http://106.1
 All of the above holer access keys and ports have been shared to public. In order to enable users to get more shared holer services, every user can use each holer access key to get holer service. <br/>
 If you want to have **exclusive** holer service, please contact by QQ for application.<br/><br/>
 以上的全部Holer Access Key和端口都已公开共享，为了让用户获得到更多的共享的Holer服务，每个用户可以使用每一个Holer Access Key获取到Holer服务。<br/><br/>
-如果您需要**独享的**Holer服务，请QQ联系开通。更多Holer服务详情请访问[* Wisdom 主页 *](http://121.196.199.47/index.html)<br/>
+如果您需要**独享的**Holer服务，请QQ联系开通。更多Holer服务详情请访问[*Wisdom 主页*](http://121.196.199.47/index.html)<br/>
 _**QQ**    : 2353941272_<br/>
 
 # Donate
