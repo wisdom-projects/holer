@@ -31,11 +31,11 @@ Run command `sh startup.sh`
 
 Holer Access Key             |Internet Address   | Local Address
 -----------------------------|-------------------|---------------
-HOLER_CLIENT-2F8D8B78B3C2A0AE|106.14.70.153:65530|127.0.0.1:8080
-HOLER_CLIENT-3C07CDFD1BF99BF2|106.14.70.153:65531|127.0.0.1:8088
-HOLER_CLIENT-2A623FCB6E2A7D1D|106.14.70.153:65532|127.0.0.1:80
-HOLER_CLIENT-AF3E6391525F70E4|106.14.70.153:65533|127.0.0.1:3389
-HOLER_CLIENT-822404317F9D8ADD|106.14.70.153:65534|127.0.0.1:22
+HOLER_CLIENT-2F8D8B78B3C2A0AE|holer.org:65530|127.0.0.1:8080
+HOLER_CLIENT-3C07CDFD1BF99BF2|holer.org:65531|127.0.0.1:8088
+HOLER_CLIENT-2A623FCB6E2A7D1D|holer.org:65532|127.0.0.1:80
+HOLER_CLIENT-AF3E6391525F70E4|holer.org:65533|127.0.0.1:3389
+HOLER_CLIENT-822404317F9D8ADD|holer.org:65534|127.0.0.1:22
 
 #### 6. Demo
 使用示例<br/><br/>
@@ -45,15 +45,15 @@ If your tomcat program local URL: <br/>
 
 Exposes to the public internet URL: <br/>
 代理到公网上的服务地址为：<br/>
-`http://106.14.70.153:65531`<br/>
+`http://holer.org:65531`<br/>
 
 Only need to modify configuration file to set `HOLER_ACCESS_KEY`: <br/>
 只需要在配置文件里修改`HOLER_ACCESS_KEY`即可：<br/>
 `holer-client/conf/holer.conf`<br/>
 `HOLER_ACCESS_KEY=HOLER_CLIENT-3C07CDFD1BF99BF2`<br/>
 
-Restart holer, then you can visit your web application through URL `http://106.14.70.153:65531`<br/>
-重启Holer，然后就可以通过URL `http://106.14.70.153:65531`来访问您的Web应用。<br/>
+Restart holer, then you can visit your web application through URL `http://holer.org:65531`<br/>
+重启Holer，然后就可以通过URL `http://holer.org:65531`来访问您的Web应用。<br/>
 
 # Support
 All of the above holer access keys and ports have been shared to public. In order to enable users to get more shared holer services, every user can use each holer access key to get holer service. <br/>
