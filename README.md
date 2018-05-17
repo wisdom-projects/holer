@@ -29,11 +29,13 @@ Run command `sh startup.sh`
 #### 5. Internet and local address mapping
 公网和内网的地址映射关系
 
-Holer Access Key              |Internet Address    | Local Address
-------------------------------|--------------------|---------------
-HOLER_CLIENT-2F8D8B78B3C2A0AE |106.14.70.153:65530 |127.0.0.1:8080
-HOLER_CLIENT-3C07CDFD1BF99BF2 |106.14.70.153:65531 |127.0.0.1:8088
-HOLER_CLIENT-2A623FCB6E2A7D1D |106.14.70.153:65532 |127.0.0.1:80
+Holer Access Key             |Internet Address   | Local Address
+-----------------------------|-------------------|---------------
+HOLER_CLIENT-2F8D8B78B3C2A0AE|106.14.70.153:65530|127.0.0.1:8080
+HOLER_CLIENT-3C07CDFD1BF99BF2|106.14.70.153:65531|127.0.0.1:8088
+HOLER_CLIENT-2A623FCB6E2A7D1D|106.14.70.153:65532|127.0.0.1:80
+HOLER_CLIENT-AF3E6391525F70E4|106.14.70.153:65533|127.0.0.1:3389
+HOLER_CLIENT-822404317F9D8ADD|106.14.70.153:65534|127.0.0.1:22
 
 #### 6. Demo
 使用示例<br/><br/>
@@ -54,12 +56,10 @@ Restart holer, then you can visit your web application through URL `http://106.1
 重启Holer，然后就可以通过URL `http://106.14.70.153:65531`来访问您的Web应用。<br/>
 
 # Support
-All of the above holer access keys and ports have been shared to public. In order to enable more users to get shared holer services, every user can use each holer access key to get holer service. <br/>
-If you want to get **exclusive** access key and port, please contact the author by mail or QQ.<br/><br/>
-以上的全部Holer Access Key和端口都已公开共享，为了让更多的用户获得到共享的Holer服务，每个用户可以使用每一个Holer Access Key获取到Holer服务。<br/>
-如果您需要**独享的**Holer Access Key和端口，请邮件或者QQ联系作者。<br/><br/>
-_**Author**: Yudong (Dom) Wang_ <br/>
-_**E-mail**: wisdomtool@outlook.com_<br/>
+All of the above holer access keys and ports have been shared to public. In order to enable users to get more shared holer services, every user can use each holer access key to get holer service. <br/>
+If you want to have **exclusive** holer service, please contact by QQ for application. For more details about holer service, please visit [**Wisdom**](http://www.wdom.net).<br/><br/>
+以上的全部Holer Access Key和端口都已公开共享，为了让用户获得到更多的共享的Holer服务，每个用户可以使用每一个Holer Access Key获取到Holer服务。<br/><br/>
+如果您需要**独享的**Holer服务，请QQ联系开通。更多的Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/>
 _**QQ**    : 2353941272_<br/>
 
 # Donate
