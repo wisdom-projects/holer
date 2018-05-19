@@ -55,10 +55,13 @@ Only need to modify configuration file to set `HOLER_ACCESS_KEY`: <br/>
 Restart holer, then you can visit your web application through URL `http://holer.org:65531`<br/>
 重启Holer，然后就可以通过URL `http://holer.org:65531`来访问您的Web应用。<br/>
 
+Please refer to [**the blogs**](http://www.cnblogs.com/witpool/tag/holer/) for more demos and help.<br/>
+请参考[**博客文章**](http://www.cnblogs.com/witpool/tag/holer/)获得更多的使用示例和帮助。<br/>
+
 # Support
-All of the above holer access keys and ports have been shared to public. In order to enable users to get more shared holer services, every user can use each holer access key to get holer service. Please refer to [**the blogs**](http://www.cnblogs.com/witpool/tag/holer/) for more demos and help.<br/><br/>
+All of the above holer access keys and ports have been shared to public. In order to enable users to get more shared holer services, every user can use each holer access key to get holer service.<br/><br/>
 If you want to have **exclusive holer service**, please contact by QQ for application. For more details about holer service, please visit [**Wisdom**](http://www.wdom.net).<br/><br/>
-以上的全部Holer Access Key和端口都已公开共享，为了让用户获得到更多的共享的Holer服务，每个用户可以使用每一个Holer Access Key获取到Holer服务。请参考[**博客文章**](http://www.cnblogs.com/witpool/tag/holer/)获得更多的使用示例和帮助。<br/><br/>
+以上的全部Holer Access Key和端口都已公开共享，为了让用户获得到更多的共享的Holer服务，每个用户可以使用每一个Holer Access Key获取到Holer服务。<br/><br/>
 如果您需要**独享的Holer服务**，请QQ联系开通。更多的Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/>
 _**QQ**    : 2353941272_<br/>
 
