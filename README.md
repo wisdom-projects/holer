@@ -55,8 +55,8 @@ Only need to modify configuration file to set `HOLER_ACCESS_KEY`: <br/>
 Restart holer, then you can visit your web application through URL `http://holer.org:65531`<br/>
 重启Holer，然后就可以通过URL `http://holer.org:65531`来访问您的Web应用。<br/>
 
-Please refer to [**the blogs**](https://blog.csdn.net/wangudongdong/article/category/7611070) for more demos and help.<br/>
-请参考[**博客文章**](https://blog.csdn.net/wangudongdong/article/category/7611070)获得更多的使用示例和帮助。<br/>
+Please refer to [**the blogs**](http://wdom.net:9000/tag/Holer) for more demos and help.<br/>
+请参考[**博客文章**](http://wdom.net:9000/tag/Holer)获得更多的使用示例和帮助。<br/>
 
 # Support
 All of the above holer access keys and ports have been shared to public. In order to enable users to get more shared holer services, every user can use each holer access key to get holer service.<br/><br/>
