@@ -20,14 +20,20 @@
 
 cd `dirname $0`
 cd ..
+
 HOLER_HOME=`pwd`
 HOLER_CONF_DIR=$HOLER_HOME/conf
 HOLER_LOG_DIR=$HOLER_HOME/logs
 HOLER_LIB_DIR=$HOLER_HOME/lib
-HOLER_MAIN=org.holer.client.HolerClientContainer
-HOLER_ARGS=" -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true "
+HOLER_LOG=$HOLER_LOG_DIR/holer-script.log
+HOLER_LOG_GC=$HOLER_LOG_DIR/holer-gc.log
+HOLER_LIB_JARS=`ls $HOLER_LIB_DIR|grep .jar|awk '{print "'$HOLER_LIB_DIR'/"$0}'| xargs | sed "s/ /:/g"`
+
 HOLER_ERR=1
 HOLER_OK=0
+
+HOLER_MAIN=org.holer.client.HolerClientContainer
+HOLER_ARGS=" -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true "
 HOLER_PID=`ps -ef | grep -v grep | grep "$HOLER_CONF_DIR" |awk '{print $2}'`
 if [ -n "$HOLER_PID" ]; then
     echo "ERROR: already started."
@@ -39,9 +45,13 @@ if [ ! -d $HOLER_LOG_DIR ]; then
     mkdir $HOLER_LOG_DIR
 fi
 
-HOLER_LOG=$HOLER_LOG_DIR/holer-script.log
-HOLER_LOG_GC=$HOLER_LOG_DIR/holer-gc.log
-HOLER_LIB_JARS=`ls $HOLER_LIB_DIR|grep .jar|awk '{print "'$HOLER_LIB_DIR'/"$0}'| xargs | sed "s/ /:/g"`
+# Check if Java is correctly installed and set
+java -version >> $HOLER_LOG 2>&1
+if [ $? -ne 0 ]; then
+    echo "Please install Java 1.7 or higher and make sure the Java is set correctly."
+    echo "You can execute command [ java -version ] to check if Java is correctly installed and set."
+    exit $HOLER_ERR
+fi
 
 if [ "$1" = "debug" ]; then
     HOLER_ARGS=$HOLER_ARGS" -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n "
@@ -52,10 +62,9 @@ if [ "$1" = "jmx" ]; then
 fi
 
 #HOLER_ARGS=$HOLER_ARGS" -server -Xms5120M -Xmx5120M -Xmn1024M -Xnoclassgc -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+CMSParallelRemarkEnabled -XX:CMSInitiatingOccupancyFraction=80 -XX:SoftRefLRUPolicyMSPerMB=0 -XX:+PrintClassHistogram -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintHeapAtGC -Xloggc:$HOLER_LOG_GC "
-
 echo -e "Starting the holer client ...\c"
 
-nohup java -Dapp.home=$HOLER_HOME $HOLER_ARGS -classpath $HOLER_CONF_DIR:$HOLER_LIB_JARS $HOLER_MAIN >$HOLER_LOG 2>&1 &
+nohup java -Dapp.home=$HOLER_HOME $HOLER_ARGS -classpath $HOLER_CONF_DIR:$HOLER_LIB_JARS $HOLER_MAIN >> $HOLER_LOG 2>&1 &
 sleep 1
 echo "Started"
 
