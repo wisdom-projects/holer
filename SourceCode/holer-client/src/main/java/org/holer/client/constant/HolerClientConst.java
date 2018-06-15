@@ -40,8 +40,7 @@ public class HolerClientConst
 
     public static final String MSG_DISABLED_TRIAL_CLIENT = "Your holer client is overuse.\n" + 
                                                            "The trial holer access key can only be used for 20 minutes in 24 hours.\n" + 
-                                                           "If you want to get an exclusive access key, please visit\n" +
-                                                           "https://github.com/Wisdom-Projects/holer\n" +
-                                                           "for more details.\n";
+                                                           "If you want to have exclusive holer service\n" + 
+                                                           "please visit 'www.wdom.net' for more details.\n";
 
 }
