@@ -65,6 +65,8 @@ public class HolerConst
 
     public static final long ONE_DAY = 24 * ONE_HOUR;
 
+    public static final long THREE_DAYS = 3 * ONE_DAY;
+
     public static final long FIVE_MINUTES = 5 * ONE_MINUTE;
 
     public static final long TEN_MINUTES = 10 * ONE_MINUTE;
