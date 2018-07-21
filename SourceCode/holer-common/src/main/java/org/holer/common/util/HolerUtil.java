@@ -19,6 +19,7 @@ package org.holer.common.util;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.DecimalFormat;
 
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -179,5 +180,25 @@ public class HolerUtil
         {
             // Ignore this exception
         }
+    }
+
+    /**
+    * 
+    * @Title      : division 
+    * @Description: A division method
+    * @Param      : @param a
+    * @Param      : @param b
+    * @Param      : @return 
+    * @Return     : String
+    * @Throws     :
+     */
+    public static String division(long a, long b)
+    {
+        double num = (double) a / b;
+
+        DecimalFormat df = new DecimalFormat("0.0");
+        String result = df.format(num);
+
+        return result;
     }
 }
