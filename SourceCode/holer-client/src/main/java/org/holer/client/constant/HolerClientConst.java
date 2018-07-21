@@ -32,7 +32,9 @@ public class HolerClientConst
 
     public static final String MSG_NO_AVAILABLE_PORT = "There are no available ports for the holer access key.\n";
 
-    public static final String MSG_IS_INUSE_KEY = "Holer access key is in use by other holer client.\n";
+    public static final String MSG_IS_INUSE_KEY = "Holer access key is in use by other holer client.\n" + 
+                                                  "If you want to have exclusive holer service\n" + 
+                                                  "please visit 'www.wdom.net' for more details.\n";
 
     public static final String MSG_DISABLED_ACCESS_KEY = "Holer access key has been disabled.\n";
 
