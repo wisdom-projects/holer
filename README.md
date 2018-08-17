@@ -60,10 +60,9 @@ Please refer to [**the blogs**](http://wdom.net:9000/tag/Holer) for more demos a
 
 #### 7. Other Holer Binaries
 其他的Holer可执行程序<br/><br/>
-这些Holer软件是由GO语言实现，支持多种操作系统和硬件平台。<br/>
-下载地址：[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)<br/><br/>
-使用示例：<br/>
-这里以`Windows`和`Linux x86-64bit` 为例，执行命令如下：<br/>
+这些Holer软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件平台。<br/>
+
+使用示例，这里以`Windows & Linux x86-64bit` 为例，执行如下命令即可：<br/>
 **Windows**:<br/>
 `holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
 **Linux**:<br/>
