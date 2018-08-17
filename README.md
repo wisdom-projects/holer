@@ -60,7 +60,7 @@ Please refer to [**the blogs**](http://wdom.net:9000/tag/Holer) for more demos a
 
 #### 7. Other Holer Softwares
 其他的Holer软件<br/><br/>
-These Holer softwares ([source code](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[software package](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)) are implemented by GO, and support many different OS and hardware architectures. <br/>
+These Holer softwares ([source code](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[package](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)) are implemented by GO, and support many different OS and hardware architectures. <br/>
 这些Holer软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/><br/>
 Take `Windows & Linux x86-64bit` as an example, execute the following commands:<br/>
 这里以`Windows & Linux x86-64bit` 为例，执行如下命令：<br/><br/>
