@@ -58,6 +58,12 @@ Restart holer, then you can visit your web application through URL `http://holer
 Please refer to [**the blogs**](http://wdom.net:9000/tag/Holer) for more demos and help.<br/>
 请参考[**博客文章**](http://wdom.net:9000/tag/Holer)获得更多的使用示例和帮助。<br/>
 
+#### 7. Other Holer Binaries
+其他的Holer可执行程序<br/>
+这些Holer软件是由GO语言实现，支持多种平台。<br/>
+**下载地址：** [源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)<br/>
+**使用示例：** `./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/><br/>
+
 # Support
 All of the above holer access keys and ports have been shared to public. In order to enable users to get more shared holer services, every user can use each holer access key to get holer service.<br/><br/>
 If you want to have **exclusive holer service**, please contact by QQ for application. For more details about holer service, please visit [**Wisdom**](http://www.wdom.net).<br/><br/>
