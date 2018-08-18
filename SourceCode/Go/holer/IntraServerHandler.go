@@ -17,7 +17,7 @@
 package main
 
 import (
-	"log"
+	"fmt"
 )
 
 type IntraServerMsgHandler struct {
@@ -53,7 +53,7 @@ func (msgHandler *IntraServerMsgHandler) Receive(connHandler *ConnHandler, msgDa
 func (msgHandler *IntraServerMsgHandler) Success(connHandler *ConnHandler) {
 	holerHandler, err := msgHandler.Pooler.Pull()
 	if err != nil {
-		log.Println("Get holer connection error:", err, "Uri:", msgHandler.Uri)
+		fmt.Println("Get holer connection error:", err, "Uri:", msgHandler.Uri)
 
 		msg := Message{Type: TYPE_DISCONNECT}
 		msg.Uri = msgHandler.Uri
@@ -68,7 +68,7 @@ func (msgHandler *IntraServerMsgHandler) Success(connHandler *ConnHandler) {
 		msg.Uri = msgHandler.Uri + "@" + msgHandler.AccessKey
 
 		holerHandler.Write(msg)
-		//log.Println("Intranet server connect success, notify holer server:", message.Uri)
+		//fmt.Println("Intranet server connect success, notify holer server:", message.Uri)
 	}
 }
 

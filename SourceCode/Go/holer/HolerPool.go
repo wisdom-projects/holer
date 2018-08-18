@@ -17,7 +17,7 @@
 package main
 
 import (
-	"log"
+	"fmt"
 	"sync"
 )
 
@@ -81,7 +81,7 @@ func (pooler *PoolHandler) GetConn() (*ConnHandler, error) {
 	if pooler.Pool.IsActive(conn) {
 		return conn, nil
 	} else {
-		log.Println("There is no holer connection.")
+		fmt.Println("There is no holer connection.")
 		return nil, nil
 	}
 }

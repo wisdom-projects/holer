@@ -21,8 +21,8 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"encoding/binary"
+	"fmt"
 	"io/ioutil"
-	"log"
 	"net"
 	"os"
 	"strconv"
@@ -93,11 +93,12 @@ type HolerConnPooler struct {
 }
 
 func main() {
-	log.Println("WELCOME TO HOLER.ORG !")
+	fmt.Println("Welcome to Holer !")
 
 	holer := cli.NewApp()
 	holer.Name = "Holer"
-	holer.Usage = "Holer helps you local servers behind NATs and firewalls to the public internet over secure tunnels."
+	holer.Version = "1.0.0"
+	holer.Usage = "exposes local servers behind NATs and firewalls to the public internet over secure tunnels."
 	holer.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:  "k",
@@ -128,18 +129,18 @@ func main() {
 
 	holer.Action = func(c *cli.Context) error {
 		if c.String("k") == "" {
-			log.Println("Holer access key is required, please use argument -k to specify")
-			log.Println("exit")
+			fmt.Println("Holer access key is required, please use argument -k to specify it")
+			fmt.Println("exit")
 			return nil
 		}
 
 		if c.String("s") == "" {
-			log.Println("Holer server host is required, please use argument -s to specify")
-			log.Println("exit")
+			fmt.Println("Holer server host is required, please use argument -s to specify it")
+			fmt.Println("exit")
 			return nil
 		}
 
-		log.Println("Holer access key:", c.String("k"))
+		fmt.Println("Holer access key:", c.String("k"))
 
 		var conf *tls.Config
 
@@ -156,13 +157,13 @@ func main() {
 				InsecureSkipVerify: skipVerify,
 			}
 
-			log.Println("SSL certificate path:", cerPath)
+			fmt.Println("SSL certificate path:", cerPath)
 
 			if c.String("cer") != "" {
 				cert, err := ioutil.ReadFile(c.String("cer"))
 
 				if err != nil {
-					log.Fatalf("Failed to load file", err)
+					fmt.Println("Failed to load file", err)
 					return nil
 				}
 
@@ -212,7 +213,7 @@ func Connect(key string, host string, port int, conf *tls.Config) net.Conn {
 		}
 
 		if err != nil {
-			log.Println("Error dialing", err.Error())
+			fmt.Println("Error dialing", err.Error())
 			time.Sleep(time.Second * 3)
 			continue
 		}
@@ -274,14 +275,14 @@ func (msgHandler *HolerMsgHandler) Receive(connHandler *ConnHandler, msgData int
 	switch msg.Type {
 	case TYPE_CONNECT:
 		go func() {
-			//log.Println("Received connect message:", msg.Uri, "=>", string(msg.Data))
+			//fmt.Println("Received connect message:", msg.Uri, "=>", string(msg.Data))
 			intraServerHandler := &IntraServerMsgHandler{HolerConn: connHandler, Pooler: msgHandler.Pooler, Uri: msg.Uri, AccessKey: msgHandler.AccessKey}
 
 			addr := string(msg.Data)
 			conn, err := net.Dial("tcp", addr)
 
 			if err != nil {
-				log.Println("Failed to connect intranet server", err)
+				fmt.Println("Failed to connect intranet server", err)
 				intraServerHandler.Failure()
 			} else {
 				connHandler := &ConnHandler{}
@@ -303,28 +304,28 @@ func (msgHandler *HolerMsgHandler) Receive(connHandler *ConnHandler, msgData int
 			msgHandler.Pooler.Push(connHandler)
 		}
 	case TYPE_NO_AVAILABLE_PORT:
-		log.Println("There are no available ports for the holer access key.")
+		fmt.Println("There are no available ports for the holer access key.")
 		msgHandler.Close(connHandler)
 		os.Exit(1)
 	case TYPE_DISABLED_ACCESS_KEY:
-		log.Println("Holer access key has been disabled.")
+		fmt.Println("Holer access key has been disabled.")
 		msgHandler.Close(connHandler)
 		os.Exit(1)
 	case TYPE_INVALID_KEY:
-		log.Println("Holer access key is not valid.")
+		fmt.Println("Holer access key is not valid.")
 		msgHandler.Close(connHandler)
 		os.Exit(1)
 	case TYPE_IS_INUSE_KEY:
-		log.Println("Holer access key is in use by other holer client.")
-		log.Println("If you want to have exclusive holer service")
-		log.Println("please visit 'www.wdom.net' for more details.")
+		fmt.Println("Holer access key is in use by other holer client.")
+		fmt.Println("If you want to have exclusive holer service")
+		fmt.Println("please visit 'www.wdom.net' for more details.")
 		msgHandler.Close(connHandler)
 		os.Exit(1)
 	case TYPE_DISABLED_TRIAL_CLIENT:
-		log.Println("Your holer client is overuse.")
-		log.Println("The trial holer access key can only be used for 20 minutes in 24 hours.")
-		log.Println("If you want to have exclusive holer service")
-		log.Println("please visit 'www.wdom.net' for more details.")
+		fmt.Println("Your holer client is overuse.")
+		fmt.Println("The trial holer access key can only be used for 20 minutes in 24 hours.")
+		fmt.Println("If you want to have exclusive holer service")
+		fmt.Println("please visit 'www.wdom.net' for more details.")
 		msgHandler.Close(connHandler)
 		os.Exit(1)
 	}
@@ -338,7 +339,7 @@ func (msgHandler *HolerMsgHandler) HeartBeat() {
 			select {
 			case <-time.After(time.Second * HEARTBEAT_INTERVAL):
 				if time.Now().Unix()-msgHandler.ConnHandler.ReadTime >= 2*HEARTBEAT_INTERVAL {
-					log.Println("Holer connection timeout:", msgHandler.ConnHandler, time.Now().Unix()-msgHandler.ConnHandler.ReadTime)
+					fmt.Println("Holer connection timeout:", msgHandler.ConnHandler, time.Now().Unix()-msgHandler.ConnHandler.ReadTime)
 					msgHandler.ConnHandler.Conn.Close()
 					return
 				}
@@ -382,7 +383,7 @@ func (msgHandler *HolerMsgHandler) Success(connHandler *ConnHandler) {
 }
 
 func (msgHandler *HolerMsgHandler) Error(connHandler *ConnHandler) {
-	log.Println("Error:", connHandler)
+	//fmt.Println("Error:", connHandler)
 
 	if msgHandler.Die != nil {
 		close(msgHandler.Die)
@@ -410,7 +411,7 @@ func (pooler *HolerConnPooler) Add(Pool *PoolHandler) (*ConnHandler, error) {
 	}
 
 	if err != nil {
-		log.Println("Error dialing", err.Error())
+		fmt.Println("Error dialing", err.Error())
 		return nil, err
 	}
 

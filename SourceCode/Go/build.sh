@@ -79,20 +79,20 @@ function build_linux()
         fi
     done
 
-    tar -zcf holer-${HOLER_OS}-x86-$VERSION.tar.gz holer-${HOLER_OS}-386 holer-${HOLER_OS}-amd64
-    $HOLER_SUM holer-${HOLER_OS}-x86-$VERSION.tar.gz
+    tar -zcf holer-${HOLER_OS}-x86.tar.gz holer-${HOLER_OS}-386 holer-${HOLER_OS}-amd64
+    $HOLER_SUM holer-${HOLER_OS}-x86.tar.gz
     
-    tar -zcf holer-${HOLER_OS}-arm-$VERSION.tar.gz holer-${HOLER_OS}-arm*
-    $HOLER_SUM holer-${HOLER_OS}-arm-$VERSION.tar.gz
+    tar -zcf holer-${HOLER_OS}-arm.tar.gz holer-${HOLER_OS}-arm*
+    $HOLER_SUM holer-${HOLER_OS}-arm.tar.gz
     
-    tar -zcf holer-${HOLER_OS}-mips-$VERSION.tar.gz holer-${HOLER_OS}-mips*
-    $HOLER_SUM holer-${HOLER_OS}-mips-$VERSION.tar.gz
+    tar -zcf holer-${HOLER_OS}-mips.tar.gz holer-${HOLER_OS}-mips*
+    $HOLER_SUM holer-${HOLER_OS}-mips.tar.gz
     
-    tar -zcf holer-${HOLER_OS}-ppc64-$VERSION.tar.gz holer-${HOLER_OS}-ppc64*
-    $HOLER_SUM holer-${HOLER_OS}-ppc64-$VERSION.tar.gz
+    tar -zcf holer-${HOLER_OS}-ppc64.tar.gz holer-${HOLER_OS}-ppc64*
+    $HOLER_SUM holer-${HOLER_OS}-ppc64.tar.gz
     
-    tar -zcf holer-${HOLER_OS}-s390x-$VERSION.tar.gz holer-${HOLER_OS}-s390x
-    $HOLER_SUM holer-${HOLER_OS}-s390x-$VERSION.tar.gz
+    tar -zcf holer-${HOLER_OS}-s390x.tar.gz holer-${HOLER_OS}-s390x
+    $HOLER_SUM holer-${HOLER_OS}-s390x.tar.gz
 }
 
 function build_windows_darwin_plan9()
@@ -110,8 +110,8 @@ function build_windows_darwin_plan9()
         for HOLER_ARCH in ${HOLER_ARCHS[@]}; do
             build_run
         done
-        tar -zcf holer-${HOLER_OS}-$VERSION.tar.gz holer-${HOLER_OS}-*
-        $HOLER_SUM holer-${HOLER_OS}-$VERSION.tar.gz
+        tar -zcf holer-${HOLER_OS}.tar.gz holer-${HOLER_OS}-*
+        $HOLER_SUM holer-${HOLER_OS}.tar.gz
     done
 }
 
@@ -126,8 +126,8 @@ function build_xbsd()
         for HOLER_ARCH in ${HOLER_ARCHS[@]}; do
             build_run
         done
-        tar -zcf holer-${HOLER_OS}-$VERSION.tar.gz holer-${HOLER_OS}-*
-        $HOLER_SUM holer-${HOLER_OS}-$VERSION.tar.gz
+        tar -zcf holer-${HOLER_OS}.tar.gz holer-${HOLER_OS}-*
+        $HOLER_SUM holer-${HOLER_OS}.tar.gz
     done
 }
 
@@ -140,8 +140,8 @@ function build_solaris_dragonfly()
 
     for HOLER_OS in ${HOLER_OSES[@]}; do
         build_run
-        tar -zcf holer-${HOLER_OS}-$VERSION.tar.gz holer-${HOLER_OS}-*
-        $HOLER_SUM holer-${HOLER_OS}-$VERSION.tar.gz
+        tar -zcf holer-${HOLER_OS}.tar.gz holer-${HOLER_OS}-*
+        $HOLER_SUM holer-${HOLER_OS}.tar.gz
     done
 }
 

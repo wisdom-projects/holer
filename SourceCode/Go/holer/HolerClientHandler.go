@@ -17,10 +17,10 @@
 package main
 
 import (
-	"log"
+	//"fmt"
 	"net"
-	"time"
 	//"runtime/debug"
+	"time"
 )
 
 type ConnHandler struct {
@@ -53,7 +53,7 @@ func (connHandler *ConnHandler) Write(msg interface{}) {
 func (connHandler *ConnHandler) Listen(conn net.Conn, msgHandler interface{}) {
 	defer func() {
 		if err := recover(); err != nil {
-			log.Printf("Warn: %v", err)
+			//fmt.Printf("Warn: %v", err)
 			//debug.PrintStack()
 			connHandler.MsgHandler.Error(connHandler)
 		}
