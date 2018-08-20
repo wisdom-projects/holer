@@ -213,8 +213,8 @@ func Connect(key string, host string, port int, conf *tls.Config) net.Conn {
 		}
 
 		if err != nil {
-			fmt.Println("Error dialing", err.Error())
-			time.Sleep(time.Second * 3)
+			fmt.Println("Error", err.Error())
+			time.Sleep(time.Second * 20)
 			continue
 		}
 
@@ -339,8 +339,12 @@ func (msgHandler *HolerMsgHandler) HeartBeat() {
 			select {
 			case <-time.After(time.Second * HEARTBEAT_INTERVAL):
 				if time.Now().Unix()-msgHandler.ConnHandler.ReadTime >= 2*HEARTBEAT_INTERVAL {
-					fmt.Println("Holer connection timeout:", msgHandler.ConnHandler, time.Now().Unix()-msgHandler.ConnHandler.ReadTime)
-					msgHandler.ConnHandler.Conn.Close()
+					fmt.Println("Holer connection timeout")
+
+					if msgHandler.ConnHandler != nil && msgHandler.ConnHandler.Conn != nil {
+						msgHandler.ConnHandler.Conn.Close()
+					}
+
 					return
 				}
 
@@ -359,13 +363,17 @@ func (msgHandler *HolerMsgHandler) Close(connHandler *ConnHandler) {
 	}
 
 	if connHandler.NextConn != nil {
-		connHandler.NextConn.Conn.Close()
 		connHandler.NextConn.NextConn = nil
+		if connHandler.NextConn.Conn != nil {
+			connHandler.NextConn.Conn.Close()
+			connHandler.NextConn.Conn = nil
+		}
 		connHandler.NextConn = nil
 	}
 
-	if msgHandler.ConnHandler.Conn != nil {
+	if msgHandler.ConnHandler != nil && msgHandler.ConnHandler.Conn != nil {
 		msgHandler.ConnHandler.Conn.Close()
+		msgHandler.ConnHandler.Conn = nil
 	}
 
 	connHandler.MsgHandler = nil
@@ -390,8 +398,11 @@ func (msgHandler *HolerMsgHandler) Error(connHandler *ConnHandler) {
 	}
 
 	if connHandler.NextConn != nil {
-		connHandler.NextConn.Conn.Close()
 		connHandler.NextConn.NextConn = nil
+		if connHandler.NextConn.Conn != nil {
+			connHandler.NextConn.Conn.Close()
+			connHandler.NextConn.Conn = nil
+		}
 		connHandler.NextConn = nil
 	}
 
@@ -411,7 +422,7 @@ func (pooler *HolerConnPooler) Add(Pool *PoolHandler) (*ConnHandler, error) {
 	}
 
 	if err != nil {
-		fmt.Println("Error dialing", err.Error())
+		fmt.Println("Error", err.Error())
 		return nil, err
 	}
 
