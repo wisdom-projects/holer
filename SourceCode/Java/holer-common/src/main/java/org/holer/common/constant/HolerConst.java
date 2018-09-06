@@ -37,7 +37,8 @@ public class HolerConst
 
     public static final int URI_LEN_SIZE = 1;
 
-    public static final int MAX_FRAME_LEN = 10 * 1024 * 1024;
+    /* Max packet size is 2M */
+    public static final int MAX_FRAME_LEN = 2 * 1024 * 1024;
 
     public static final int FIELD_OFFSET = 0;
 
