@@ -35,7 +35,7 @@ import io.netty.channel.Channel;
 * @Class Name : HolerUtil 
 * @Description: Holer utilities 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 22, 2018 4:05:32 PM 
 * @Version    : Wisdom Holer V1.0 
 */

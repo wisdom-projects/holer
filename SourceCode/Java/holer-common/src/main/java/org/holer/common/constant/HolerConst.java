@@ -23,7 +23,7 @@ import io.netty.util.AttributeKey;
 * @Class Name : HolerConst 
 * @Description: Holer constant definition 
 * @Author     : Dom Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 19, 2018 11:15:15 AM 
 * @Version    : Wisdom Holer V1.0 
 */

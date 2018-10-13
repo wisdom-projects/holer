@@ -22,7 +22,7 @@ import java.util.Arrays;
 * @Class Name : HolerMsg 
 * @Description: Exchange message between holer client and server  
 * @Author     : Dom Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 19, 2018 12:27:20 PM 
 * @Version    : Wisdom Holer V1.0 
 */

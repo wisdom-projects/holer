@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory;
 * @Class Name : HolerSSLCreator 
 * @Description: Holer SSL context creator 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Apr 13, 2018 5:09:44 PM 
 * @Version    : Wisdom Holer V1.0 
 */

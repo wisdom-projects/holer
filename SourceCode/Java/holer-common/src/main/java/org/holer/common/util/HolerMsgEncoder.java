@@ -27,7 +27,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 * @Class Name : HolerMsgEncoder 
 * @Description: Holer message encoder 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 22, 2018 10:35:16 AM 
 * @Version    : Wisdom Holer V1.0 
 */

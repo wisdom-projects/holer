@@ -53,7 +53,7 @@ import io.netty.handler.ssl.SslHandler;
 * @Class Name : HolerClientContainer 
 * @Description: Holer client container 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 20, 2018 8:11:57 PM 
 * @Version    : Wisdom Holer V1.0 
 */

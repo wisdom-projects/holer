@@ -42,7 +42,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 * @Class Name : HolerClientHandler 
 * @Description: Holer client channel handler 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 20, 2018 10:23:37 PM 
 * @Version    : Wisdom Holer V1.0 
 */

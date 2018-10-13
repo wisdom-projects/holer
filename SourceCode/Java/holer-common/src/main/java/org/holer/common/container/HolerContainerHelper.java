@@ -25,7 +25,7 @@ import org.slf4j.LoggerFactory;
 * @Class Name : HolerContainerHelper 
 * @Description: Holer container helper 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 21, 2018 9:43:55 AM 
 * @Version    : Wisdom Holer V1.0 
 */

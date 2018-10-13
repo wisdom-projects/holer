@@ -27,7 +27,7 @@ import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 * @Class Name : HolerMsgDecoder 
 * @Description: Holer message decoder 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 22, 2018 10:34:48 AM 
 * @Version    : Wisdom Holer V1.0 
 */

@@ -41,7 +41,7 @@ import io.netty.channel.ChannelOption;
 * @Class Name : HolerClientMgr 
 * @Description: Holer client channel manager 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 21, 2018 11:02:57 AM 
 * @Version    : Wisdom Holer V1.0 
 */

@@ -32,7 +32,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 * @Class Name : IntraServerHandler 
 * @Description: Intranet server channel handler 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 20, 2018 10:25:11 PM 
 * @Version    : Wisdom Holer V1.0 
 */

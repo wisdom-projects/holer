@@ -20,7 +20,7 @@ package org.holer.common.container;
 * @Class Name : HolerContainer 
 * @Description: Holer common container 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 20, 2018 8:16:41 PM 
 * @Version    : Wisdom Holer V1.0 
 */

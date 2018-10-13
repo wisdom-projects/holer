@@ -29,7 +29,7 @@ import org.slf4j.LoggerFactory;
 * @Class Name : HolerConfig 
 * @Description: Holer configuration 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 20, 2018 9:16:15 PM 
 * @Version    : Wisdom Holer V1.0 
 */

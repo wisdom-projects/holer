@@ -20,7 +20,7 @@ package org.holer.client.constant;
 * @Class Name : HolerClientConst 
 * @Description: Holer client constant definition 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Apr 13, 2018 1:12:09 PM 
 * @Version    : Wisdom Holer V1.0 
 */

@@ -22,7 +22,7 @@ import io.netty.channel.ChannelHandlerContext;
 * @Class Name : HolerStatusListener 
 * @Description: Holer channel status listener 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 20, 2018 8:25:00 PM 
 * @Version    : Wisdom Holer V1.0 
 */

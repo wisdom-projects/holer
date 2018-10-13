@@ -28,7 +28,7 @@ import io.netty.handler.timeout.IdleStateHandler;
 * @Class Name : HolerIdleChecker 
 * @Description: check idle channel 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 22, 2018 12:22:55 PM 
 * @Version    : Wisdom Holer V1.0 
 */

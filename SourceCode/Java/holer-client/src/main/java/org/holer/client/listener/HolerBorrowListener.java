@@ -22,7 +22,7 @@ import io.netty.channel.Channel;
 * @Class Name : HolerBorrowListener 
 * @Description: Holer channel borrow listener 
 * @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@outlook.com
+* @Email      : wisdomtool@qq.com
 * @Date       : Mar 22, 2018 1:29:20 PM 
 * @Version    : Wisdom Holer V1.0 
 */
