@@ -55,8 +55,8 @@ Only need to modify configuration file to set `HOLER_ACCESS_KEY`: <br/>
 Restart holer, then you can visit your web application through URL `http://holer.org:65531`<br/>
 重启Holer，然后就可以通过URL `http://holer.org:65531`来访问您的Web应用。<br/>
 
-Please refer to [**the blogs**](http://wdom.net:9000/tag/Holer) for more demos and help.<br/>
-请参考[**博客文章**](http://wdom.net:9000/tag/Holer)获得更多的使用示例和帮助。<br/>
+Please refer to [**the blogs**](http://blog.wdom.net/tag/Holer) for more demos and help.<br/>
+请参考[**博客文章**](http://blog.wdom.net/tag/Holer)获得更多的使用示例和帮助。<br/>
 
 #### 7. Other Holer Softwares
 其他的Holer软件<br/><br/>
