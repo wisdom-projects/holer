@@ -34,8 +34,8 @@ Run command `startup.bat` or double click `startup.bat`<br/><br/>
 **Linux**:<br/>
 Run command `sh startup.sh`
 
-Then visit web application through the following URL<br/>
-然后就可以通过如下URL来访问Web应用：<br/>
+Then visit web application through the following URL:<br/>
+然后就可以通过如下URL来访问Web应用：<br/><br/>
  `http://holer.org:65530` or `http://holer65530.wdom.net`
 
 #### 6. Internet and local address mapping
@@ -68,8 +68,8 @@ Take `Windows & Linux x86-64bit` as an example, execute the following commands:<
 
 # Support
 All of the above holer access keys and ports have been shared to public. Users can also apply for exclusive holer services.
-If you want to have **exclusive holer service**, please contact by QQ for application. For more details about holer service, please visit [**Wisdom**](http://www.wdom.net).<br/><br/>
-以上的全部Holer Access Key和端口都已公开共享。用户也可以申请专属的Holer服务，如果您需要**专属的Holer服务**，请QQ联系开通。Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/>
+If you want to have **exclusive holer services**, please contact by QQ for application. For more details about holer service, please visit [**Wisdom**](http://www.wdom.net).<br/><br/>
+以上的全部Holer Access Key和端口都已公开共享。用户也可以申请专属的holer服务，如果您需要**专属的Holer服务**，请QQ联系开通。Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/><br/>
 _**QQ**    : 2353941272_<br/>
 
 # Donate
