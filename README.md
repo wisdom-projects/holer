@@ -13,14 +13,14 @@ Holer是一个将局域网服务器代理到公网的内网穿透工具，支持
 Install and start tomcat<br/>
 安装并启动tomcat<br/><br/>
 Input the following URL in browser to check if tomcat service is accessible :<br/>
-在浏览器里输入如下URL来检查tomcat服务是否可以正常访问：<br/><br/>
+在浏览器里输入如下URL来检查tomcat服务是否可以正常访问：<br/>
 `http://127.0.0.1:8080`
 
-#### 3. Download software package [*`holer-client.zip`*](https://github.com/Wisdom-Projects/holer/blob/master/Binary) and unzip `holer-client.zip`, modify configuration file
-下载软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary)并解压`holer-client.zip`，修改配置文件<br/>
+#### 3. Download and unzip software [*`holer-client.zip`*](https://github.com/Wisdom-Projects/holer/blob/master/Binary), modify configuration file:
+下载并解压软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary)，修改配置文件：<br/>
 `holer-client/conf/holer.conf`<br/><br/>
-Only need to set `HOLER_ACCESS_KEY`:<br/>
-只需设置`HOLER_ACCESS_KEY`：
+Only need to set `HOLER_ACCESS_KEY` as follows:<br/>
+只需设置`HOLER_ACCESS_KEY`如下：
 
 `HOLER_ACCESS_KEY=HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
 
