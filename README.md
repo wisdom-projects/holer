@@ -9,15 +9,15 @@ Holer是一个将局域网服务器代理到公网的内网穿透工具，支持
 使用前请先安装`Java 1.7`或者更高版本；
 
 #### 2. Install web server, take `tomcat` as an example;
-安装Web服务端，以tomcat为例<br/><br/>
+安装Web服务端，以tomcat为例；<br/><br/>
 Install and start tomcat<br/>
 安装并启动tomcat<br/><br/>
 Input the following URL in browser to check if tomcat service is accessible :<br/>
 在浏览器里输入如下URL来检查tomcat服务是否可以正常访问：<br/>
 `http://127.0.0.1:8080`
 
-#### 3. Download and unzip software [*`holer-client.zip`*](https://github.com/Wisdom-Projects/holer/blob/master/Binary), modify configuration file:
-下载并解压软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary)，修改配置文件：<br/>
+#### 3. Download and unzip software [*`holer-client.zip`*](https://github.com/Wisdom-Projects/holer/blob/master/Binary/Java), modify configuration file:
+下载并解压软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary/Java)，修改配置文件：<br/>
 `holer-client/conf/holer.conf`<br/><br/>
 Only need to set `HOLER_ACCESS_KEY` as follows:<br/>
 只需设置`HOLER_ACCESS_KEY`如下：
