@@ -4,13 +4,11 @@ Support forwarding message based on TCP protocol.<br/><br/>
 Holer是一个将局域网服务器代理到公网的内网穿透工具，支持转发基于TCP协议的报文。
 ![Demo](https://github.com/Wisdom-Projects/holer/blob/master/Image/demo.png)
 # How it works
-#### 1. Download software package [*`holer-client.zip`*](https://github.com/Wisdom-Projects/holer/blob/master/Binary);
-下载软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary)；
 
-#### 2. Install `Java 1.7` or higher version;
+#### 1. Install `Java 1.7` or higher version;
 使用前请先安装`Java 1.7`或者更高版本；
 
-#### 3. Install web server, take `tomcat` as an example;
+#### 2. Install web server, take `tomcat` as an example;
 安装Web服务端，以tomcat为例<br/><br/>
 Install and start tomcat<br/>
 安装并启动tomcat<br/><br/>
@@ -18,15 +16,15 @@ Input the following URL in browser to check if tomcat service is accessible :<br
 在浏览器里输入如下URL来检查tomcat服务是否可以正常访问：<br/><br/>
 `http://127.0.0.1:8080`
 
-#### 4. Unzip `holer-client.zip`, modify configuration file
-解压`holer-client.zip`，修改配置文件<br/>
+#### 3. Download software package [*`holer-client.zip`*](https://github.com/Wisdom-Projects/holer/blob/master/Binary) and unzip `holer-client.zip`, modify configuration file
+下载软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary)并解压`holer-client.zip`，修改配置文件<br/>
 `holer-client/conf/holer.conf`<br/><br/>
 Only need to set `HOLER_ACCESS_KEY`:<br/>
 只需设置`HOLER_ACCESS_KEY`：
 
 `HOLER_ACCESS_KEY=HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
 
-#### 5. Start holer
+#### 4. Start holer
 启动Holer服务<br/>
 `cd holer-client/bin`<br/><br/>
 **Windows**:<br/>
@@ -38,7 +36,7 @@ Then visit web application through the following URL:<br/>
 然后就可以通过如下URL来访问Web应用：<br/><br/>
  `http://holer.org:65530` or `http://holer65530.wdom.net`
 
-#### 6. Internet and local address mapping
+#### 5. Internet and local address mapping
 公网和内网的地址映射关系
 
 Holer Access Key             |Domain Name|Internet Address|Local Address
@@ -55,7 +53,7 @@ If your tomcat port is 80 or 8088, please select the matched key to configure.<b
 Please refer to [**the blogs**](http://blog.wdom.net/tag/Holer) for more demos and help.<br/>
 请参考[**博客文章**](http://blog.wdom.net/tag/Holer)获得更多的使用示例和帮助。<br/>
 
-#### 7. Other Holer Softwares
+#### 6. Other Holer Softwares
 其他的holer软件<br/><br/>
 These holer softwares ([source code](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[package](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)) are implemented by GO, and support many different OS and hardware architectures. <br/>
 这些holer软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/><br/>
