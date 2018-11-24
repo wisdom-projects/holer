@@ -63,7 +63,7 @@ Take `Windows & Linux x86-64bit` as an example, execute the following commands:<
 **Windows**:<br/>
 `holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/><br/>
 **Linux**:<br/>
-`./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
+`nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
 
 # Support
 All of the above holer access keys and ports have been shared to public. Users can also apply for exclusive holer services.
