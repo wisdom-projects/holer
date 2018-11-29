@@ -1,7 +1,7 @@
 # What is holer
 Holer exposes local servers behind NATs and firewalls to the public internet over secure tunnels. <br/>
 Support forwarding message based on TCP protocol.<br/><br/>
-Holer是一个将局域网内的应用映射到公网上访问的端口映射工具，支持转发基于TCP协议的报文。
+Holer是一个将局域网内的应用映射到公网上访问的端口映射软件，支持转发基于TCP协议的报文。
 ![Demo](https://github.com/Wisdom-Projects/holer/blob/master/Image/demo.png)
 # How it works
 
