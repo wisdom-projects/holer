@@ -24,50 +24,78 @@ import java.util.Arrays;
 * @Author     : Dom Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Mar 19, 2018 12:27:20 PM 
-* @Version    : Wisdom Holer V1.0 
+* @Version    : Holer V1.1 
 */
 public class HolerMsg
 {
-    /** Authenticate message to check whether accessKey is correct */
+    /**
+     * Authenticate message to check whether accessKey is correct
+     */
     public static final byte TYPE_AUTH = 0x01;
 
-    /** There are no available ports for the access key */
+    /**
+     * There are no available ports for the access key
+     */
     public static final byte TYPE_NO_AVAILABLE_PORT = 0x02;
 
-    /** Holer connection message */
+    /**
+     * Holer connection message
+     */
     public static final byte TYPE_CONNECT = 0x03;
 
-    /** Holer disconnection message */
+    /**
+     * Holer disconnection message
+     */
     public static final byte TYPE_DISCONNECT = 0x04;
 
-    /** Holer data transfer */
+    /**
+     * Holer data transfer
+     */
     public static final byte TYPE_TRANSFER = 0x05;
 
-    /** Access key is in use by other holer client */
+    /**
+     * Access key is in use by other holer client
+     */
     public static final byte TYPE_IS_INUSE_KEY = 0x06;
 
-    /** Heart beat */
+    /**
+     * Heart beat
+     */
     public static final byte TYPE_HEARTBEAT = 0x07;
 
-    /** Disabled access key */
+    /**
+     * Disabled access key
+     */
     public static final byte TYPE_DISABLED_ACCESS_KEY = 0x08;
 
-    /** Disabled trial client */
+    /**
+     * Disabled trial client
+     */
     public static final byte TYPE_DISABLED_TRIAL_CLIENT = 0x09;
 
-    /** Invalid access key */
+    /**
+     * Invalid access key
+     */
     public static final byte TYPE_INVALID_KEY = 0x10;
 
-    /** Message type */
+    /**
+     * Message type
+     */
     private byte type;
 
-    /** Message type serial number */
+    /**
+     * Message type serial number
+     */
     private long serialNumber;
 
-    /** Message request command */
+    /**
+     * Message request command
+     */
     private String uri;
 
-    /** Message transfer data */
+    /**
+     * Message transfer data
+     */
     private byte[] data;
 
     public byte getType()

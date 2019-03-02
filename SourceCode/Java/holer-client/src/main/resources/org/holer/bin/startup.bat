@@ -21,7 +21,7 @@ setlocal enabledelayedexpansion
 set errorlevel=
 title holer-client
 
-set HOLER_MAIN=org.holer.client.HolerClientContainer
+set HOLER_MAIN=org.holer.client.ClientContainer
 set HOLER_LIB_JARS=""
 set HOLER_HOME=%~dp0
 set HOLER_LOG_DIR=!HOLER_HOME!\..\logs

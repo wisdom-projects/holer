@@ -5,7 +5,7 @@
     <groupId>org.holer</groupId>
     <artifactId>holer</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>holer</name>
     <url>http://www.holer.org</url>
     <properties>

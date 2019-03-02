@@ -25,7 +25,7 @@ import io.netty.util.AttributeKey;
 * @Author     : Dom Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Mar 19, 2018 11:15:15 AM 
-* @Version    : Wisdom Holer V1.0 
+* @Version    : Holer V1.1 
 */
 public class HolerConst
 {    
@@ -60,6 +60,8 @@ public class HolerConst
 
     public static final long THREE_SECONDS = 3 * ONE_SECOND;
 
+    public static final long THIRTY_SECONDS = 30 * ONE_SECOND;
+
     public static final long ONE_MINUTE = 60 * ONE_SECOND;
 
     public static final long ONE_HOUR = 60 * ONE_MINUTE;
@@ -67,6 +69,10 @@ public class HolerConst
     public static final long ONE_DAY = 24 * ONE_HOUR;
 
     public static final long THREE_DAYS = 3 * ONE_DAY;
+
+    public static final long TWO_MINUTES = 2 * ONE_MINUTE;
+
+    public static final long THREE_MINUTES = 3 * ONE_MINUTE;
 
     public static final long FIVE_MINUTES = 5 * ONE_MINUTE;
 

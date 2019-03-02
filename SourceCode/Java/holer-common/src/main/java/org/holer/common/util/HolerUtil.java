@@ -37,7 +37,7 @@ import io.netty.channel.Channel;
 * @Author     : Yudong (Dom) Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Mar 22, 2018 4:05:32 PM 
-* @Version    : Wisdom Holer V1.0 
+* @Version    : Holer V1.1 
 */
 public class HolerUtil
 {
@@ -154,11 +154,43 @@ public class HolerUtil
 
         try
         {
+            if (channel.isActive() || channel.isOpen())
+            {
+                channel.close();
+            }
+        }
+        catch(Exception e)
+        {
+            // Ignore this exception
+        }
+    }
+
+    /**
+    * 
+    * @Title      : forceClose 
+    * @Description: Force close 
+    * @Param      : @param channel 
+    * @Return     : void
+    * @Throws     :
+     */
+    public static void forceClose(Channel channel)
+    {
+        if (null == channel)
+        {
+            return;
+        }
+
+        try
+        {
             channel.close();
         }
         catch(Exception e)
         {
             // Ignore this exception
+        } 
+        finally
+        {
+            channel = null;
         }
     }
 
@@ -200,5 +232,25 @@ public class HolerUtil
         String result = df.format(num);
 
         return result;
+    }
+
+    /**
+    * 
+    * @Title      : exec 
+    * @Description: Execute command 
+    * @Param      : @param cmd 
+    * @Return     : void
+    * @Throws     :
+     */
+    public static void exec(String cmd)
+    {
+        try
+        {
+            Runtime.getRuntime().exec(cmd);
+        }
+        catch(Exception e)
+        {
+            log.error("Failed to execute command: " + cmd, e);
+        }
     }
 }

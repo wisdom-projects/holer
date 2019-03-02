@@ -16,7 +16,7 @@
 
 package org.holer.client.handler;
 
-import org.holer.client.util.HolerClientMgr;
+import org.holer.client.util.ClientMgr;
 import org.holer.common.constant.HolerConst;
 import org.holer.common.model.HolerMsg;
 import org.slf4j.Logger;
@@ -28,27 +28,34 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.SimpleChannelInboundHandler;
 
-/** 
-* @Class Name : IntraServerHandler 
-* @Description: Intranet server channel handler 
-* @Author     : Yudong (Dom) Wang 
-* @Email      : wisdomtool@qq.com
-* @Date       : Mar 20, 2018 10:25:11 PM 
-* @Version    : Wisdom Holer V1.0 
-*/
+/**
+ * @Class Name : IntraServerHandler
+ * @Description: Intranet server channel handler
+ * @Author : Yudong (Dom) Wang
+ * @Email : wisdomtool@qq.com
+ * @Date : Mar 20, 2018 10:25:11 PM
+ * @Version : Holer V1.1
+ */
 public class IntraServerHandler extends SimpleChannelInboundHandler<ByteBuf>
 {
     private static Logger log = LoggerFactory.getLogger(IntraServerHandler.class);
 
     @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception
+    {
+        log.error("Caught intra-server exception {} {}", ctx.channel(), cause.getMessage());
+        super.exceptionCaught(ctx, cause);
+    }
+
+    @Override
     protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) throws Exception
     {
-        Channel intraServer = ctx.channel();
-        Channel channel = intraServer.attr(HolerConst.HOLER_CHANNEL).get();
-        if (null == channel)
+        Channel intraChannel = ctx.channel();
+        Channel holerChannel = intraChannel.attr(HolerConst.HOLER_CHANNEL).get();
+
+        if (null == holerChannel)
         {
-            // Disconnect client channel
-            ctx.channel().close();
+            intraChannel.close();
             return;
         }
 
@@ -57,52 +64,39 @@ public class IntraServerHandler extends SimpleChannelInboundHandler<ByteBuf>
 
         HolerMsg hmsg = new HolerMsg();
         hmsg.setType(HolerMsg.TYPE_TRANSFER);
-        hmsg.setUri(HolerClientMgr.getIntraServerUri(intraServer));
+        hmsg.setUri(ClientMgr.getIntraServerUri(intraChannel));
         hmsg.setData(data);
-        channel.writeAndFlush(hmsg);
-        log.debug("Write data to holer server, {}, {}", intraServer, channel);
-    }
-
-    @Override
-    public void channelActive(ChannelHandlerContext ctx) throws Exception
-    {
-        super.channelActive(ctx);
+        holerChannel.writeAndFlush(hmsg);
     }
 
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception
     {
-        Channel intraServer = ctx.channel();
-        String uri = HolerClientMgr.getIntraServerUri(intraServer);
-        HolerClientMgr.removeIntraServer(uri);
-        Channel channel = intraServer.attr(HolerConst.HOLER_CHANNEL).get();
-        if (null != channel)
+        Channel intraChannel = ctx.channel();
+        String uri = ClientMgr.getIntraServerUri(intraChannel);
+        ClientMgr.removeIntraServer(uri);
+
+        Channel holerChannel = intraChannel.attr(HolerConst.HOLER_CHANNEL).get();
+        if (null != holerChannel)
         {
-            log.debug("Channel inactive, {}", intraServer);
             HolerMsg hmsg = new HolerMsg();
             hmsg.setType(HolerMsg.TYPE_DISCONNECT);
             hmsg.setUri(uri);
-            channel.writeAndFlush(hmsg);
+            holerChannel.writeAndFlush(hmsg);
         }
+
         super.channelInactive(ctx);
     }
 
     @Override
     public void channelWritabilityChanged(ChannelHandlerContext ctx) throws Exception
     {
-        Channel intraServer = ctx.channel();
-        Channel channel = intraServer.attr(HolerConst.HOLER_CHANNEL).get();
-        if (null != channel)
+        Channel intraChannel = ctx.channel();
+        Channel holerChannel = intraChannel.attr(HolerConst.HOLER_CHANNEL).get();
+        if (null != holerChannel)
         {
-            channel.config().setOption(ChannelOption.AUTO_READ, intraServer.isWritable());
+            holerChannel.config().setOption(ChannelOption.AUTO_READ, intraChannel.isWritable());
         }
         super.channelWritabilityChanged(ctx);
-    }
-
-    @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception
-    {
-        log.error("Exception caught {}.", cause.getMessage());
-        super.exceptionCaught(ctx, cause);
     }
 }

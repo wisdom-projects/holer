@@ -32,7 +32,7 @@ HOLER_LIB_JARS=`ls $HOLER_LIB_DIR|grep .jar|awk '{print "'$HOLER_LIB_DIR'/"$0}'|
 HOLER_ERR=1
 HOLER_OK=0
 
-HOLER_MAIN=org.holer.client.HolerClientContainer
+HOLER_MAIN=org.holer.client.ClientContainer
 HOLER_ARGS=" -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true "
 HOLER_PID=`ps -ef | grep -v grep | grep "$HOLER_CONF_DIR" |awk '{print $2}'`
 if [ -n "$HOLER_PID" ]; then
