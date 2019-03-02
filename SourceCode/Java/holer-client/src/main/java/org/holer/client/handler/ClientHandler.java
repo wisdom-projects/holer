@@ -104,13 +104,14 @@ public class ClientHandler extends SimpleChannelInboundHandler<HolerMsg>
     private void handleDisconnectMsg(final Channel clientChannel, final HolerMsg msg)
     {
         Channel intraChannel = clientChannel.attr(HolerConst.HOLER_CHANNEL).get();
-        if (HolerUtil.isActive(intraChannel))
+        if (null == intraChannel)
         {
-            HolerUtil.close(clientChannel.attr(HolerConst.HOLER_CHANNEL).get());
-            clientChannel.attr(HolerConst.HOLER_CHANNEL).set(null);
-            ClientMgr.pushClient(clientChannel);
-            intraChannel.writeAndFlush(Unpooled.EMPTY_BUFFER).addListener(ChannelFutureListener.CLOSE);
+            return;
         }
+
+        clientChannel.attr(HolerConst.HOLER_CHANNEL).set(null);
+        ClientMgr.pushClient(clientChannel);
+        intraChannel.writeAndFlush(Unpooled.EMPTY_BUFFER).addListener(ChannelFutureListener.CLOSE);
     }
 
     /**
@@ -126,12 +127,14 @@ public class ClientHandler extends SimpleChannelInboundHandler<HolerMsg>
     private void handleTransferMsg(final Channel clientChannel, final ByteBufAllocator allocator, final HolerMsg msg)
     {
         Channel intraChannel = clientChannel.attr(HolerConst.HOLER_CHANNEL).get();
-        if (HolerUtil.isActive(intraChannel))
+        if (null == intraChannel)
         {
-            ByteBuf buf = allocator.buffer(msg.getData().length);
-            buf.writeBytes(msg.getData());
-            intraChannel.writeAndFlush(buf);
+            return;
         }
+
+        ByteBuf buf = allocator.buffer(msg.getData().length);
+        buf.writeBytes(msg.getData());
+        intraChannel.writeAndFlush(buf);
     }
 
     /**
@@ -222,6 +225,11 @@ public class ClientHandler extends SimpleChannelInboundHandler<HolerMsg>
             ClientMgr.setClientChannel(null);
             ClientMgr.clearIntraServer();
             ClientContainer.getContainer().restart();
+        }
+        else
+        {
+            Channel intraChannel = clientChannel.attr(HolerConst.HOLER_CHANNEL).get();
+            HolerUtil.close(intraChannel);
         }
 
         ClientMgr.removeClient(clientChannel);

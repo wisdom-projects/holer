@@ -19,7 +19,6 @@ package org.holer.client.handler;
 import org.holer.client.util.ClientMgr;
 import org.holer.common.constant.HolerConst;
 import org.holer.common.model.HolerMsg;
-import org.holer.common.util.HolerUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -54,7 +53,7 @@ public class IntraServerHandler extends SimpleChannelInboundHandler<ByteBuf>
         Channel intraChannel = ctx.channel();
         Channel holerChannel = intraChannel.attr(HolerConst.HOLER_CHANNEL).get();
 
-        if (!HolerUtil.isActive(holerChannel))
+        if (null == holerChannel)
         {
             intraChannel.close();
             return;
@@ -78,7 +77,7 @@ public class IntraServerHandler extends SimpleChannelInboundHandler<ByteBuf>
         ClientMgr.removeIntraServer(uri);
 
         Channel holerChannel = intraChannel.attr(HolerConst.HOLER_CHANNEL).get();
-        if (HolerUtil.isActive(holerChannel))
+        if (null != holerChannel)
         {
             HolerMsg hmsg = new HolerMsg();
             hmsg.setType(HolerMsg.TYPE_DISCONNECT);

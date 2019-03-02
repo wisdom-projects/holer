@@ -73,10 +73,6 @@ public class ClientMgr
 
     public static void removeClient(Channel channel)
     {
-        Channel holerChannel = channel.attr(HolerConst.HOLER_CHANNEL).get();
-        HolerUtil.close(holerChannel);
-
-        HolerUtil.close(channel);
         holerClients.remove(channel);
     }
 
@@ -109,7 +105,6 @@ public class ClientMgr
             return;
         }
 
-        HolerUtil.close(channel.attr(HolerConst.HOLER_CHANNEL).get());
         channel.config().setOption(ChannelOption.AUTO_READ, true);
         channel.attr(HolerConst.HOLER_CHANNEL).set(null);
         holerClients.offer(channel);
@@ -129,7 +124,7 @@ public class ClientMgr
         for (Entry<String, Channel> entry : intraServers.entrySet())
         {
             Channel channel = entry.getValue();
-            if (HolerUtil.isActive(channel))
+            if (channel.isActive())
             {
                 channel.writeAndFlush(Unpooled.EMPTY_BUFFER).addListener(ChannelFutureListener.CLOSE);
             }
