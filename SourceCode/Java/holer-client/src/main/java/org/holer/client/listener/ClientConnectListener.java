@@ -30,8 +30,8 @@ import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelOption;
 
 /** 
-* @Class Name : BorrowListener 
-* @Description: Holer client borrow listener
+* @Class Name : ClientConnectListener 
+* @Description: Holer client connection listener
 * @Author     : Yudong (Dom) Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Mar 01, 2019 10:23:37 PM 
@@ -48,7 +48,7 @@ public class ClientConnectListener implements ChannelFutureListener
     private HolerMsg msg = null;
 
     /** 
-    * @Title      : BorrowListener 
+    * @Title      : ClientConnectListener 
     * @Description: constructor 
     * @Param      : @param clientChannel
     * @Param      : @param intraServer
