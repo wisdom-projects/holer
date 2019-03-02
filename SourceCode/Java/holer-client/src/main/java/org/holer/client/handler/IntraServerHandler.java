@@ -31,10 +31,10 @@ import io.netty.channel.SimpleChannelInboundHandler;
 /**
  * @Class Name : IntraServerHandler
  * @Description: Intranet server channel handler
- * @Author : Yudong (Dom) Wang
- * @Email : wisdomtool@qq.com
- * @Date : Mar 20, 2018 10:25:11 PM
- * @Version : Holer V1.1
+ * @Author     : Yudong (Dom) Wang
+ * @Email      : wisdomtool@qq.com
+ * @Date       : Mar 20, 2018 10:25:11 PM
+ * @Version    : Holer V1.1
  */
 public class IntraServerHandler extends SimpleChannelInboundHandler<ByteBuf>
 {
