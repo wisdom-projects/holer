@@ -39,7 +39,7 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.SimpleChannelInboundHandler;
 
 /** 
-* @Class Name : HolerClientHandler 
+* @Class Name : ClientHandler 
 * @Description: Holer client channel handler 
 * @Author     : Yudong (Dom) Wang 
 * @Email      : wisdomtool@qq.com
