@@ -30,6 +30,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandlerContext;
 
 /** 
 * @Class Name : HolerUtil 
@@ -154,10 +155,7 @@ public class HolerUtil
 
         try
         {
-            if (channel.isActive() || channel.isOpen())
-            {
-                channel.close();
-            }
+            channel.close();
         }
         catch(Exception e)
         {
@@ -167,30 +165,27 @@ public class HolerUtil
 
     /**
     * 
-    * @Title      : forceClose 
-    * @Description: Force close 
-    * @Param      : @param channel 
+    * @Title      : close 
+    * @Description: Close channel handler context
+    * @Param      : @param ctx 
     * @Return     : void
     * @Throws     :
      */
-    public static void forceClose(Channel channel)
+    public static void close(ChannelHandlerContext ctx)
     {
-        if (null == channel)
+        if (null == ctx)
         {
             return;
         }
 
         try
         {
-            channel.close();
+            close(ctx.channel());
+            ctx.close();
         }
         catch(Exception e)
         {
             // Ignore this exception
-        } 
-        finally
-        {
-            channel = null;
         }
     }
 
@@ -252,5 +247,27 @@ public class HolerUtil
         {
             log.error("Failed to execute command: " + cmd, e);
         }
+    }
+
+    /**
+    * 
+    * @Title      : isActive 
+    * @Description: Check if it is active 
+    * @Param      : @param ch
+    * @Param      : @return 
+    * @Return     : boolean
+    * @Throws     :
+     */
+    public static boolean isActive(Channel ch)
+    {
+        if (null == ch)
+        {
+            return false;
+        }
+        if (ch.isActive() || ch.isOpen())
+        {
+            return true;
+        }
+        return false;
     }
 }
