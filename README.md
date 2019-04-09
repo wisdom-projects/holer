@@ -65,7 +65,7 @@ Take `Windows & Linux x86-64bit` as an example, execute the following commands:<
 **Linux**:<br/>
 `nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE &`<br/>
 
-#### 7. Holer Server Software
+#### 7. Holer服务端软件使用
 用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases/download/v1.1/holer-server-1.1.zip) 搭建自己的holer服务端。
 
 ##### 7.1 搭建holer服务端准备工作
@@ -79,7 +79,7 @@ Take `Windows & Linux x86-64bit` as an example, execute the following commands:<
 
 (5) 建议申请域名并且完成域名备案，如果没有域名可以直接使用IP和端口访问。
 
-##### 7.2 配置holer服务端
+##### 7.2 配置并启动holer服务端
 解压软件包，打开配置文件 `holer-server/resources/application.yaml`
 
 (1). 修改数据库用户名和密码
@@ -103,9 +103,9 @@ holer:
     home: C:/nginx-1.14.2
 ```
 Linux系统默认安装Nginx路径 `/usr/local/nginx`
-Windows系统中可以先将Nginx复制到某个目录下后再在配置文件中指定其主目录
+Windows系统中可以先将Nginx复制到某个目录下，然后在配置文件中指定其主目录
 
-如果需要用到HTTPS功能，Window系统版本的Nginx默认支持HTTPS功能，Linux系统需要下载Nginx源码执行如下命令来编译和安装
+如果需要用到HTTPS功能，Window系统版本的Nginx默认支持HTTPS功能，Linux系统需要下载Nginx源码，配置和编译以及安装执行如下命令：
 ```
 ./configure --with-http_ssl_module
 make;make install
@@ -123,6 +123,20 @@ cd holer-server
 startup.bat
 ```
 或者双击 `startup.bat`
+
+##### 7.3 配置并启动holer服务端
+
+(1). 登录holer管理系统
+
+如果配置文件`application.yaml`中设置了域名，并且指定了Nginx主目录，则在浏览器输入URL `http://holer.your-domain.com`
+如果没有设置域名访问，则通过IP和端口登录系统 `http://IP地址:600`
+
+登录系统需要输入默认的管理员账号，默认用户名： `admin` 密码： `admin123`
+用户也可以在文件`holer-server/resources/conf/holer-data.sql`中修改默认的用户名和密码，然后重启holer服务端使其生效。
+
+(2). 登录holer管理系统
+
+
 
 
 # Support
