@@ -103,7 +103,7 @@ holer:
     home: C:/nginx-1.14.2
 ```
 Linux系统默认安装Nginx路径 `/usr/local/nginx`
-Windows系统中可以先将Nginx复制到某个目录下，然后在配置文件中指定其主目录
+Windows系统中可以先将Nginx复制到某个目录下，然后在配置文件中指定其主目录。
 
 如果需要用到HTTPS功能，Window系统版本的Nginx默认支持HTTPS功能，Linux系统需要下载Nginx源码，配置和编译以及安装执行如下命令：
 ```
@@ -111,6 +111,7 @@ Windows系统中可以先将Nginx复制到某个目录下，然后在配置文�
 make;make install
 ```
 (3). 启动holer服务端
+
 Linux系统执行启动命令如下：
 ```
 cd holer-server
