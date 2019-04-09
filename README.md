@@ -77,10 +77,52 @@ Take `Windows & Linux x86-64bit` as an example, execute the following commands:<
 
 (4) 安装MariaDB并设置root用户密码；
 
-(5) 建议申请域名并且完成域名备案，如果没有域名可以直接使用IP和端口访问；
+(5) 建议申请域名并且完成域名备案，如果没有域名可以直接使用IP和端口访问。
 
 ##### 7.2 配置holer服务端
+解压软件包，打开配置文件 `holer-server/resources/application.yaml`
 
+(1). 修改数据库用户名和密码
+
+```
+spring:
+  datasource:
+    username: root
+    password: 123456
+```
+
+(2). 修改域名和Nginx主目录
+
+```
+holer:
+  ...
+  domain:
+    name: your-domain.com
+  nginx:
+    #home: /usr/local/nginx
+    home: C:/nginx-1.14.2
+```
+Linux系统默认安装Nginx路径 `/usr/local/nginx`
+Windows系统中可以先将Nginx复制到某个目录下后再在配置文件中指定其主目录
+
+如果需要用到HTTPS功能，Window系统版本的Nginx默认支持HTTPS功能，Linux系统需要下载Nginx源码执行如下命令来编译和安装
+```
+./configure --with-http_ssl_module
+make;make install
+```
+(3). 启动holer服务端
+Linux系统执行启动命令如下：
+```
+cd holer-server
+chmod 755 holer
+./holer start
+```
+Windows系统执行启动命令如下：
+```
+cd holer-server
+startup.bat
+```
+或者双击 `startup.bat`
 
 
 # Support
