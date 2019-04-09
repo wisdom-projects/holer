@@ -65,6 +65,24 @@ Take `Windows & Linux x86-64bit` as an example, execute the following commands:<
 **Linux**:<br/>
 `nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE &`<br/>
 
+#### 7. Holer Server Software
+用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases/download/v1.1/holer-server-1.1.zip) 搭建自己的holer服务端。
+
+##### 7.1 搭建holer服务端准备工作
+(1) 准备一台Linux系统或者Windows系统主机；
+
+(2) 安装Java 1.8及以上版本，执行命令：`java -version` 检查java是否可用；
+
+(3) 安装Nginx, 建议安装其稳定版本；
+
+(4) 安装MariaDB并设置root用户密码；
+
+(5) 建议申请域名并且完成域名备案，如果没有域名可以直接使用IP和端口访问；
+
+##### 7.2 配置holer服务端
+
+
+
 # Support
 All of the above holer access keys and ports have been shared to public. Users can also apply for exclusive holer services.
 If you want to have **exclusive holer services**, please contact by QQ for application. For more details about holer services, please visit [**Wisdom**](http://www.wdom.net).<br/><br/>
