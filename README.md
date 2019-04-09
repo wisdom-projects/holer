@@ -132,12 +132,24 @@ startup.bat
 如果没有设置域名访问，则通过IP和端口登录系统 `http://IP地址:600`
 
 登录系统需要输入默认的管理员账号，默认用户名： `admin` 密码： `admin123`
+
 用户也可以在文件`holer-server/resources/conf/holer-data.sql`中修改默认的用户名和密码，然后重启holer服务端使其生效。
 
-(2). 登录holer管理系统
+(2). 创建客户端和端口映射
 
+在用户列表页面中创建一个holer客户端
+`http://holer.your-domain.com/view/holer-client.html`
 
+在端口映射页面中为该holer客户端创建端口映射
+`http://holer.your-domain.com/view/holer-port.html`
 
+在数据统计页面中查看报表信息
+`http://holer.your-domain.com/view/holer-report.html`
+
+(3). 配置holer客户端使其与holer服务端实现端口映射功能
+
+在用户列表页面中选中一条客户端记录，在页面右上角点击详情按钮，弹出的详情框下点击复制按钮；
+然后将详情信息粘贴到记事本里，严格按照详情信息里的使用说明进行操作，这样即可完成holer客户端配置，从而实现基于自己holer服务端的端口映射功能。
 
 # Support
 All of the above holer access keys and ports have been shared to public. Users can also apply for exclusive holer services.
