@@ -31,10 +31,10 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 
 `cd holer-client/bin`<br/>
 
-**Windows**:<br/>
+**Windows系统**:<br/>
 执行命令 `startup.bat` 或者双击 `startup.bat`<br/>
 
-**Linux**:<br/>
+**Linux系统**:<br/>
 执行命令 `sh startup.sh`
 
 然后就可以通过如下URL来访问Web应用：<br/>
