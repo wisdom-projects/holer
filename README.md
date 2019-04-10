@@ -140,15 +140,15 @@ startup.bat
 
 #### 2.3.2. 创建客户端和端口映射
 
-在用户列表页面中创建一个Holer客户端
+在用户列表页面中创建一个Holer客户端<br/>
 `http://holer.your-domain.com/view/holer-client.html`
 ![Holer Client](https://github.com/Wisdom-Projects/holer/blob/master/Image/holer-client.png)
 
-在端口映射页面中为该Holer客户端创建端口映射
+在端口映射页面中为该Holer客户端创建端口映射<br/>
 `http://holer.your-domain.com/view/holer-port.html`
 ![Holer Port](https://github.com/Wisdom-Projects/holer/blob/master/Image/holer-port.png)
 
-在数据统计页面中查看报表信息
+在数据统计页面中查看报表信息<br/>
 `http://holer.your-domain.com/view/holer-report.html`
 ![Holer Report](https://github.com/Wisdom-Projects/holer/blob/master/Image/holer-report.png)
 
