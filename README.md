@@ -5,26 +5,28 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 ![Demo](https://github.com/Wisdom-Projects/holer/blob/master/Image/demo.png)
 # How it works
 
-## Holer使用
+## 1. Holer使用
 
-### 1. 安装`Java 1.7`或者更高版本；
+### 1.1. 安装 Java
+安装`Java 1.7`或者更高版本
 
-### 2. 安装Web服务端
+### 1.2. 安装Web服务端
 
 以tomcat为例，安装并启动tomcat<br/><br/>
 在浏览器里输入如下URL来检查tomcat服务是否可以正常访问：<br/>
 `http://127.0.0.1:8080`
 
-### 3. 下载并解压软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary/Java)
+### 1.3. 配置Holer 
+下载并解压软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary/Java)
 
 修改配置文件：<br/>
 `holer-client/conf/holer.conf`<br/>
 
-只需设置`HOLER_ACCESS_KEY`如下：
+设置`HOLER_ACCESS_KEY`如下：
 
 `HOLER_ACCESS_KEY=HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
 
-### 4. 启动Holer服务
+### 1.4. 启动Holer
 
 `cd holer-client/bin`<br/>
 
@@ -37,7 +39,7 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 然后就可以通过如下URL来访问Web应用：<br/><br/>
 `http://holer65530.wdom.net` 或者 `http://holer.org:65530` 
 
-### 5. 公网和内网的地址映射关系
+### 1.5. 公网和内网的地址映射关系
 
 Holer Access Key             |Domain Name|Internet Address|Local Address
 -----------------------------|-----------|----------------|---------------
@@ -52,19 +54,19 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
 请参考[**博客文章**](http://blog.wdom.net/tag/Holer)获得更多的使用示例和帮助。<br/>
 
-### 6. 其他的版本的holer软件
+### 1.6. 其他版本的Holer软件
 
-这些holer软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/><br/>
-这里以`Windows & Linux x86-64bit` 为例，启动holer执行如下命令：<br/><br/>
+这些Holer软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/><br/>
+这里以`Windows & Linux x86-64bit` 为例，启动Holer执行如下命令：<br/><br/>
 **Windows**:<br/>
 `holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/><br/>
 **Linux**:<br/>
 `nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE &`<br/>
 
-## Holer服务端软件使用
+## 2. Holer服务端软件使用
 用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases/download/v1.1/holer-server-1.1.zip) 搭建自己的holer服务端。
 
-### 1. 搭建holer服务端准备工作
+### 2.1. 搭建Holer服务端准备工作
 (1) 准备一台Linux系统或者Windows系统主机；
 
 (2) 安装Java 1.8及以上版本，执行命令：`java -version` 检查java是否可用；
@@ -75,7 +77,7 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
 (5) 建议申请域名并且完成域名备案，如果没有域名可以直接使用IP和端口访问。
 
-### 2. 配置并启动holer服务端
+### 2.2. 配置并启动Holer服务端
 解压软件包，打开配置文件 `holer-server/resources/application.yaml`
 
 (1). 修改数据库用户名和密码
@@ -106,7 +108,7 @@ Windows系统中可以先将Nginx复制到某个目录下，然后在配置文�
 ./configure --with-http_ssl_module
 make;make install
 ```
-(3). 启动holer服务端
+(3). 启动Holer服务端
 
 Linux系统执行启动命令如下：
 ```
@@ -121,9 +123,9 @@ startup.bat
 ```
 或者双击 `startup.bat`
 
-### 3. 配置并启动holer服务端
+### 2.3. 配置并启动Holer服务端
 
-(1). 登录holer管理系统
+(1). 登录Holer管理系统
 
 如果配置文件`application.yaml`中设置了域名，并且指定了Nginx主目录，则在浏览器输入URL `http://holer.your-domain.com`
 如果没有设置域名访问，则通过IP和端口登录系统 `http://IP地址:600`
@@ -143,10 +145,10 @@ startup.bat
 在数据统计页面中查看报表信息
 `http://holer.your-domain.com/view/holer-report.html`
 
-(3). 配置holer客户端使其与holer服务端实现端口映射功能
+(3). 配置Holer客户端使其与Holer服务端实现端口映射功能
 
 在用户列表页面中选中一条客户端记录，在页面右上角点击详情按钮，弹出的详情框下点击复制按钮；
-然后将详情信息粘贴到记事本里，严格按照详情信息里的使用说明进行操作，这样即可完成holer客户端配置，从而实现基于自己holer服务端的端口映射功能。
+然后将详情信息粘贴到记事本里，严格按照详情信息里的使用说明进行操作，这样即可完成Holer客户端配置，从而实现基于自己Holer服务端的端口映射功能。
 
 # Support
 All of the above holer access keys and ports have been shared to public. Users can also apply for exclusive holer services.
