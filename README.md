@@ -81,7 +81,7 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 ### 2.2. 配置并启动Holer服务端
 解压软件包，打开配置文件 `holer-server/resources/application.yaml`
 
-(1). 修改数据库用户名和密码
+#### 2.2.1. 修改数据库用户名和密码
 
 ```
 spring:
@@ -90,7 +90,7 @@ spring:
     password: 123456
 ```
 
-(2). 修改域名和Nginx主目录
+#### 2.2.2. 修改域名和Nginx主目录
 
 ```
 holer:
@@ -109,7 +109,7 @@ Windows系统中可以先将Nginx复制到某个目录下，然后在配置文�
 ./configure --with-http_ssl_module
 make;make install
 ```
-(3). 启动Holer服务端
+#### 2.2.3 启动Holer服务端
 
 Linux系统执行启动命令如下：
 ```
@@ -126,7 +126,7 @@ startup.bat
 
 ### 2.3. 创建端口映射
 
-(1). 登录Holer管理系统
+#### 2.3.1. 登录Holer管理系统
 
 如果配置文件`application.yaml`中设置了域名，并且指定了Nginx主目录，则在浏览器输入URL `http://holer.your-domain.com`
 如果没有设置域名访问，则通过IP和端口登录系统 `http://IP地址:600`
@@ -135,7 +135,7 @@ startup.bat
 
 用户也可以在文件`holer-server/resources/conf/holer-data.sql`中修改默认的用户名和密码，然后重启Holer服务端使其生效。
 
-(2). 创建客户端和端口映射
+#### 2.3.2. 创建客户端和端口映射
 
 在用户列表页面中创建一个Holer客户端
 `http://holer.your-domain.com/view/holer-client.html`
@@ -146,7 +146,7 @@ startup.bat
 在数据统计页面中查看报表信息
 `http://holer.your-domain.com/view/holer-report.html`
 
-(3). 配置Holer客户端使其与Holer服务端实现端口映射功能
+#### 2.3.3. 配置Holer客户端使其与Holer服务端实现端口映射功能
 
 在用户列表页面中选中一条客户端记录，在页面右上角点击详情按钮，弹出的详情框下点击复制按钮；
 然后将详情信息粘贴到记事本里，严格按照详情信息里的使用说明进行操作，这样即可完成Holer客户端配置，从而实现基于自己Holer服务端的端口映射功能。
