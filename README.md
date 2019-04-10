@@ -64,7 +64,9 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 **Linux系统**:<br/>
 `nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE &`<br/>
 
+
 ## 2. Holer服务端软件使用
+
 用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases/download/v1.1/holer-server-1.1.zip) 搭建自己的Holer服务端。
 
 ### 2.1. 搭建Holer服务端准备工作
