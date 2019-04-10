@@ -51,7 +51,7 @@ HOLER_CLIENT-AF3E6391525F70E4|N/A|holer.org:65533|127.0.0.1:3389
 HOLER_CLIENT-822404317F9D8ADD|N/A|holer.org:65534|127.0.0.1:22
 HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
-如果您本地的tomcat端口是80或者8088，请选择匹配的key进行设置。<br/>
+如果您本地的Tomcat端口是80或者8088，请选择匹配的key进行设置。<br/>
 
 请参考[**博客文章**](http://blog.wdom.net/tag/Holer)获得更多的使用示例和帮助。<br/>
 
