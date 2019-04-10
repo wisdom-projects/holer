@@ -74,7 +74,7 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
 (2) 安装Java 1.8及以上版本，执行命令 `java -version` 检查Java是否可用；
 
-(3) 安装Nginx, 建议安装其稳定版本；
+(3) 安装并启动Nginx, 建议安装其稳定版本；
 
 (4) 安装MariaDB并设置root用户密码；
 
@@ -129,7 +129,7 @@ startup.bat
 ### 2.3. 创建端口映射
 
 #### 2.3.1. 登录Holer管理系统
-
+![Holer Login](https://github.com/Wisdom-Projects/holer/blob/master/Image/holer-login.png)
 如果配置文件`application.yaml`中设置了域名，并且指定了Nginx主目录，则在浏览器输入URL `http://holer.your-domain.com`
 如果没有设置域名访问，则通过IP和端口登录系统 `http://IP地址:600`
 
@@ -141,16 +141,20 @@ startup.bat
 
 在用户列表页面中创建一个Holer客户端
 `http://holer.your-domain.com/view/holer-client.html`
+![Holer Client](https://github.com/Wisdom-Projects/holer/blob/master/Image/holer-client.png)
 
 在端口映射页面中为该Holer客户端创建端口映射
 `http://holer.your-domain.com/view/holer-port.html`
+![Holer Port](https://github.com/Wisdom-Projects/holer/blob/master/Image/holer-port.png)
 
 在数据统计页面中查看报表信息
 `http://holer.your-domain.com/view/holer-report.html`
+![Holer Report](https://github.com/Wisdom-Projects/holer/blob/master/Image/holer-report.png)
 
 #### 2.3.3. 配置Holer客户端使其与Holer服务端实现端口映射功能
 
 在用户列表页面中选中一条客户端记录，在页面右上角点击详情按钮，弹出的详情框下点击复制按钮；
+![Holer Copy](https://github.com/Wisdom-Projects/holer/blob/master/Image/holer-copy.png)
 然后将详情信息粘贴到记事本里，严格按照详情信息里的使用说明进行操作，这样即可完成Holer客户端配置，从而实现基于自己Holer服务端的端口映射功能。
 
 # Support
