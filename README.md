@@ -8,12 +8,13 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 ## 1. Holer使用
 
 ### 1.1. 安装 Java
-安装`Java 1.7`或者更高版本
+安装Java 1.7或者更高版本；
+执行命令 `java -version` 检查Java是否可用。
 
 ### 1.2. 安装Web服务端
 
-以tomcat为例，安装并启动tomcat<br/><br/>
-在浏览器里输入如下URL来检查tomcat服务是否可以正常访问：<br/>
+以Tomcat为例，安装并启动Tomcat<br/><br/>
+在浏览器里输入如下URL来检查Tomcat服务是否可以正常访问：<br/>
 `http://127.0.0.1:8080`
 
 ### 1.3. 配置Holer 
@@ -24,7 +25,7 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 
 设置`HOLER_ACCESS_KEY`如下：
 
-`HOLER_ACCESS_KEY=HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
+`HOLER_ACCESS_KEY=HOLER_CLIENT-2F8D8B78B3C2A0AE`
 
 ### 1.4. 启动Holer
 
@@ -69,7 +70,7 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 ### 2.1. 搭建Holer服务端准备工作
 (1) 准备一台Linux系统或者Windows系统主机；
 
-(2) 安装Java 1.8及以上版本，执行命令：`java -version` 检查java是否可用；
+(2) 安装Java 1.8及以上版本，执行命令 `java -version` 检查Java是否可用；
 
 (3) 安装Nginx, 建议安装其稳定版本；
 
