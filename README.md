@@ -129,11 +129,10 @@ startup.bat
 ### 2.3. 创建端口映射
 
 #### 2.3.1. 登录Holer管理系统
-![Holer Login](https://github.com/Wisdom-Projects/holer/blob/master/Image/holer-login.png)
 
 如果配置文件`application.yaml`中设置了域名，并且指定了Nginx主目录，则在浏览器输入URL `http://holer.your-domain.com`
 如果没有设置域名访问，则通过IP和端口登录系统 `http://IP地址:600`
-
+![Holer Login](https://github.com/Wisdom-Projects/holer/blob/master/Image/holer-login.png)
 登录系统需要输入默认的管理员账号，默认用户名： `admin` 密码： `admin123`
 
 用户也可以在文件`holer-server/resources/conf/holer-data.sql`中修改默认的用户名和密码，然后重启Holer服务端使其生效。
