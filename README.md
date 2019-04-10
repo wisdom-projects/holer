@@ -5,39 +5,39 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 ![Demo](https://github.com/Wisdom-Projects/holer/blob/master/Image/demo.png)
 # How it works
 
-#### 1. Install `Java 1.7` or higher version;
-使用前请先安装`Java 1.7`或者更高版本；
+## Holer使用
 
-#### 2. Install web server, take `tomcat` as an example;
-安装Web服务端，以tomcat为例；<br/><br/>
-Install and start tomcat<br/>
-安装并启动tomcat<br/><br/>
-Input the following URL in browser to check if tomcat service is accessible :<br/>
+### 1. 安装`Java 1.7`或者更高版本；
+
+### 2. 安装Web服务端
+
+以tomcat为例，安装并启动tomcat<br/><br/>
 在浏览器里输入如下URL来检查tomcat服务是否可以正常访问：<br/>
 `http://127.0.0.1:8080`
 
-#### 3. Download and unzip software [*`holer-client.zip`*](https://github.com/Wisdom-Projects/holer/blob/master/Binary/Java), modify configuration file:
-下载并解压软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary/Java)，修改配置文件：<br/>
-`holer-client/conf/holer.conf`<br/><br/>
-Only need to set `HOLER_ACCESS_KEY` as follows:<br/>
+### 3. 下载并解压软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary/Java)
+
+修改配置文件：<br/>
+`holer-client/conf/holer.conf`<br/>
+
 只需设置`HOLER_ACCESS_KEY`如下：
 
 `HOLER_ACCESS_KEY=HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
 
-#### 4. Start holer
-启动Holer服务<br/>
-`cd holer-client/bin`<br/><br/>
+### 4. 启动Holer服务
+
+`cd holer-client/bin`<br/>
+
 **Windows**:<br/>
-Run command `startup.bat` or double click `startup.bat`<br/><br/>
+执行命令 `startup.bat` 或者双击 `startup.bat`<br/>
+
 **Linux**:<br/>
-Run command `sh startup.sh`
+执行命令 `sh startup.sh`
 
-Then visit web application through the following URL:<br/>
 然后就可以通过如下URL来访问Web应用：<br/><br/>
- `http://holer.org:65530` or `http://holer65530.wdom.net`
+`http://holer65530.wdom.net` 或者 `http://holer.org:65530` 
 
-#### 5. Internet and local address mapping
-公网和内网的地址映射关系
+### 5. 公网和内网的地址映射关系
 
 Holer Access Key             |Domain Name|Internet Address|Local Address
 -----------------------------|-----------|----------------|---------------
@@ -48,27 +48,23 @@ HOLER_CLIENT-AF3E6391525F70E4|N/A|holer.org:65533|127.0.0.1:3389
 HOLER_CLIENT-822404317F9D8ADD|N/A|holer.org:65534|127.0.0.1:22
 HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
-If your tomcat port is 80 or 8088, please select the matched key to configure.<br/>
 如果您本地的tomcat端口是80或者8088，请选择匹配的key进行设置。<br/>
 
-Please refer to [**the blogs**](http://blog.wdom.net/tag/Holer) for more demos and help.<br/>
 请参考[**博客文章**](http://blog.wdom.net/tag/Holer)获得更多的使用示例和帮助。<br/>
 
-#### 6. Other Holer Softwares
-其他的holer软件<br/><br/>
-These holer softwares ([source code](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[package](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)) are implemented by GO, and support many different OS and hardware architectures. <br/>
+### 6. 其他的版本的holer软件
+
 这些holer软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/><br/>
-Take `Windows & Linux x86-64bit` as an example, execute the following commands:<br/>
-这里以`Windows & Linux x86-64bit` 为例，执行如下命令：<br/><br/>
+这里以`Windows & Linux x86-64bit` 为例，启动holer执行如下命令：<br/><br/>
 **Windows**:<br/>
 `holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/><br/>
 **Linux**:<br/>
 `nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE &`<br/>
 
-#### 7. Holer服务端软件使用
+## Holer服务端软件使用
 用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases/download/v1.1/holer-server-1.1.zip) 搭建自己的holer服务端。
 
-##### 7.1 搭建holer服务端准备工作
+### 1. 搭建holer服务端准备工作
 (1) 准备一台Linux系统或者Windows系统主机；
 
 (2) 安装Java 1.8及以上版本，执行命令：`java -version` 检查java是否可用；
@@ -79,7 +75,7 @@ Take `Windows & Linux x86-64bit` as an example, execute the following commands:<
 
 (5) 建议申请域名并且完成域名备案，如果没有域名可以直接使用IP和端口访问。
 
-##### 7.2 配置并启动holer服务端
+### 2. 配置并启动holer服务端
 解压软件包，打开配置文件 `holer-server/resources/application.yaml`
 
 (1). 修改数据库用户名和密码
@@ -125,7 +121,7 @@ startup.bat
 ```
 或者双击 `startup.bat`
 
-##### 7.3 配置并启动holer服务端
+### 3. 配置并启动holer服务端
 
 (1). 登录holer管理系统
 
