@@ -130,6 +130,7 @@ startup.bat
 
 #### 2.3.1. 登录Holer管理系统
 ![Holer Login](https://github.com/Wisdom-Projects/holer/blob/master/Image/holer-login.png)
+
 如果配置文件`application.yaml`中设置了域名，并且指定了Nginx主目录，则在浏览器输入URL `http://holer.your-domain.com`
 如果没有设置域名访问，则通过IP和端口登录系统 `http://IP地址:600`
 
@@ -155,6 +156,7 @@ startup.bat
 
 在用户列表页面中选中一条客户端记录，在页面右上角点击详情按钮，弹出的详情框下点击复制按钮；
 ![Holer Copy](https://github.com/Wisdom-Projects/holer/blob/master/Image/holer-copy.png)
+
 然后将详情信息粘贴到记事本里，严格按照详情信息里的使用说明进行操作，这样即可完成Holer客户端配置，从而实现基于自己Holer服务端的端口映射功能。
 
 # Support
