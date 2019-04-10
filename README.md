@@ -36,7 +36,7 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 **Linux**:<br/>
 执行命令 `sh startup.sh`
 
-然后就可以通过如下URL来访问Web应用：<br/><br/>
+然后就可以通过如下URL来访问Web应用：<br/>
 `http://holer65530.wdom.net` 或者 `http://holer.org:65530` 
 
 ### 1.5. 公网和内网的地址映射关系
@@ -123,7 +123,7 @@ startup.bat
 ```
 或者双击 `startup.bat`
 
-### 2.3. 配置并启动Holer服务端
+### 2.3. 创建端口映射
 
 (1). 登录Holer管理系统
 
@@ -132,14 +132,14 @@ startup.bat
 
 登录系统需要输入默认的管理员账号，默认用户名： `admin` 密码： `admin123`
 
-用户也可以在文件`holer-server/resources/conf/holer-data.sql`中修改默认的用户名和密码，然后重启holer服务端使其生效。
+用户也可以在文件`holer-server/resources/conf/holer-data.sql`中修改默认的用户名和密码，然后重启Holer服务端使其生效。
 
 (2). 创建客户端和端口映射
 
-在用户列表页面中创建一个holer客户端
+在用户列表页面中创建一个Holer客户端
 `http://holer.your-domain.com/view/holer-client.html`
 
-在端口映射页面中为该holer客户端创建端口映射
+在端口映射页面中为该Holer客户端创建端口映射
 `http://holer.your-domain.com/view/holer-port.html`
 
 在数据统计页面中查看报表信息
@@ -157,9 +157,9 @@ If you want to have **exclusive holer services**, please contact by QQ for appli
 _**QQ**    : 2353941272_<br/>
 
 # Donate
-如果 **holer** 工具对您帮助很大，并且您很愿意支持工具的后续开发和维护，您可以扫下方二维码随意打赏，就当是请我喝杯茶或是咖啡，将不胜感激。 **♥ 谢谢 ♥**
+如果 **Holer** 工具对您帮助很大，并且您很愿意支持工具的后续开发和维护，您可以扫下方二维码随意打赏，就当是请我喝杯茶或是咖啡，将不胜感激。 **♥ 谢谢 ♥**
 
-If **holer** helps you a lot, and you would like to support this tool's further development and the continuous maintenance of this tool. You can sweep the following QR code free to donate me, which asked me to have a cup of tea or coffee. Your donation is highly appreciated. **♥ Thank you ♥** <br/>
+If **Holer** helps you a lot, and you would like to support this tool's further development and the continuous maintenance of this tool. You can sweep the following QR code free to donate me, which asked me to have a cup of tea or coffee. Your donation is highly appreciated. **♥ Thank you ♥** <br/>
 
 **♥ Donate ♥ by Alipay, WeChat Pay**.
 
