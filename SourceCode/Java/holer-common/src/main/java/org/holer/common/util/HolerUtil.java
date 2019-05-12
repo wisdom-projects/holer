@@ -72,6 +72,31 @@ public class HolerUtil
     * @Title      : toObject 
     * @Description: JSON to object 
     * @Param      : @param json
+    * @Param      : @param clas
+    * @Param      : @return 
+    * @Return     : T
+    * @Throws     :
+     */
+    public static <T> T toObject(String json, Class<T> clas)
+    {
+        ObjectMapper mapper = new ObjectMapper();
+        try
+        {
+            return (T) mapper.readValue(json, clas);
+        }
+        catch(Exception e)
+        {
+            log.error("Failed to change json text [" + json + "] to object.", e);
+        }
+
+        return null;
+    }
+
+    /**
+    * 
+    * @Title      : toObject 
+    * @Description: JSON to object 
+    * @Param      : @param json
     * @Param      : @param typeToken
     * @Param      : @return 
     * @Return     : T
