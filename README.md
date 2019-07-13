@@ -97,8 +97,7 @@ spring:
 #### 2.2.2. 修改域名和Nginx主目录
 
 ```
-holer:
-  ...
+holer
   domain:
     name: your-domain.com
   nginx:
