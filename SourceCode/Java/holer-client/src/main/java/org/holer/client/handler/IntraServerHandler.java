@@ -34,7 +34,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
  * @Author     : Yudong (Dom) Wang
  * @Email      : wisdomtool@qq.com
  * @Date       : Mar 20, 2018 10:25:11 PM
- * @Version    : Holer V1.1
+ * @Version    : Holer V1.2
  */
 public class IntraServerHandler extends SimpleChannelInboundHandler<ByteBuf>
 {

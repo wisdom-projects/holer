@@ -29,7 +29,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 * @Author     : Yudong (Dom) Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Mar 22, 2018 10:35:16 AM 
-* @Version    : Holer V1.1 
+* @Version    : Holer V1.2 
 */
 public class MsgEncoder extends MessageToByteEncoder<HolerMsg>
 {

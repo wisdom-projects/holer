@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 * @Author     : Yudong (Dom) Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Mar 20, 2018 9:16:15 PM 
-* @Version    : Holer V1.1 
+* @Version    : Holer V1.2 
 */
 public class HolerConfig
 {
@@ -48,27 +48,6 @@ public class HolerConfig
             config = new HolerConfig();
         }
         return config;
-    }
-
-    public static HolerConfig getConfig(String path)
-    {
-        if (null == config)
-        {
-            config = new HolerConfig(path);
-        }
-        return config;
-    }
-
-    /**
-    * 
-    * @Title      : HolerConfig 
-    * @Description: constructor 
-    * @Param      : @param path
-     */
-    public HolerConfig(String path)
-    {
-        this.initConfig(HolerConst.HOLER_CONF_DIR + HolerConst.HOLER_CONF);
-        this.initConfig(path + HolerConst.HOLER_CONF);
     }
 
     /** 

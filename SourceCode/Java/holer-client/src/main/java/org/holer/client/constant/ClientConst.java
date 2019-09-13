@@ -22,7 +22,7 @@ package org.holer.client.constant;
 * @Author     : Yudong (Dom) Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Apr 13, 2018 1:12:09 PM 
-* @Version    : Holer V1.1 
+* @Version    : Holer V1.2 
 */
 public class ClientConst
 {

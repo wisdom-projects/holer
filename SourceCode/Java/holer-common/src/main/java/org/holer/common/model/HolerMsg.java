@@ -24,7 +24,7 @@ import java.util.Arrays;
 * @Author     : Dom Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Mar 19, 2018 12:27:20 PM 
-* @Version    : Holer V1.1 
+* @Version    : Holer V1.2 
 */
 public class HolerMsg
 {

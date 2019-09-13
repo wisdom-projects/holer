@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
 * @Author     : Yudong (Dom) Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Apr 13, 2018 5:09:44 PM 
-* @Version    : Holer V1.1 
+* @Version    : Holer V1.2 
 */
 public class SSLCreator
 {

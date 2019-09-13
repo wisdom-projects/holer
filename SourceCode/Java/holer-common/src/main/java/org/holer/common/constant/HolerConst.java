@@ -25,7 +25,7 @@ import io.netty.util.AttributeKey;
 * @Author     : Dom Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Mar 19, 2018 11:15:15 AM 
-* @Version    : Holer V1.1 
+* @Version    : Holer V1.2 
 */
 public class HolerConst
 {    
@@ -104,7 +104,7 @@ public class HolerConst
 
     public static final String HOLER_SSL_PASSWD_DEFAULT = "Wisdom-Holer";
 
-    public static final String HOLER_CONF_DIR = "org/holer/conf/";
+    public static final String HOLER_CONF_DIR = "conf/";
 
     public static final String HOLER_SSL_JKS_DEFAULT = HOLER_CONF_DIR + "holer.jks";
 

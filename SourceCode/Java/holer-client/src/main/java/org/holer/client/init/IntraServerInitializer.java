@@ -27,7 +27,7 @@ import io.netty.channel.socket.SocketChannel;
 * @Author     : Yudong (Dom) Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Mar 01, 2019 10:23:37 PM 
-* @Version    : Holer V1.1 
+* @Version    : Holer V1.2 
 */
 public class IntraServerInitializer extends ChannelInitializer<SocketChannel>
 {

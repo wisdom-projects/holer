@@ -30,7 +30,7 @@ import io.netty.handler.timeout.IdleStateHandler;
 * @Author     : Yudong (Dom) Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Mar 22, 2018 12:22:55 PM 
-* @Version    : Holer V1.1 
+* @Version    : Holer V1.2 
 */
 public class IdleChecker extends IdleStateHandler
 {

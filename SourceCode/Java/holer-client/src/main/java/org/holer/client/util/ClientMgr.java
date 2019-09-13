@@ -39,7 +39,7 @@ import io.netty.channel.ChannelOption;
 * @Author     : Yudong (Dom) Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Mar 21, 2018 11:02:57 AM 
-* @Version    : Holer V1.1 
+* @Version    : Holer V1.2 
 */
 public class ClientMgr
 {

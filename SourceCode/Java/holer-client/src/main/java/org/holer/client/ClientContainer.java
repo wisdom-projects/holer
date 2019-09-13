@@ -36,7 +36,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 * @Author     : Yudong (Dom) Wang 
 * @Email      : wisdomtool@qq.com
 * @Date       : Mar 20, 2018 8:11:57 PM 
-* @Version    : Holer V1.1 
+* @Version    : Holer V1.2 
 */
 public class ClientContainer
 {

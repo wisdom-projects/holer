@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.holer</groupId>
         <artifactId>holer</artifactId>
-        <version>1.1</version>
+        <version>1.2</version>
     </parent>
     <artifactId>holer-client</artifactId>
     <packaging>jar</packaging>
@@ -14,16 +14,31 @@
         <dependency>
             <groupId>org.holer</groupId>
             <artifactId>holer-common</artifactId>
-            <version>1.1</version>
+            <version>1.2</version>
         </dependency>
     </dependencies>
     <build>
-        <finalName>holer-client-${project.version}</finalName>
+        <finalName>holer-client</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib</classpathPrefix>
+                            <mainClass>org.holer.client.ClientContainer</mainClass>
+                        </manifest>
+                        <manifestEntries>
+                            <Class-Path>conf/</Class-Path>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.2</version>
                 <executions>
                     <execution>
                         <id>copy-dependencies</id>
@@ -32,86 +47,39 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>../Wisdom-Holer-${project.version}/holer-client/lib</outputDirectory>
-                            <overWriteReleases>false</overWriteReleases>
-                            <overWriteSnapshots>false</overWriteSnapshots>
-                            <overWriteIfNewer>true</overWriteIfNewer>
+                            <outputDirectory>${project.build.directory}/holer/lib</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <excludes>
-                        <exclude>**/*.properties</exclude>
-                        <exclude>**/*.sh</exclude>
-                        <exclude>**/*.bat</exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>2.6</version>
                 <executions>
                     <execution>
-                        <id>copy-config</id>
+                        <id>copy-resources</id>
                         <phase>package</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <encoding>UTF-8</encoding>
-                            <outputDirectory>../Wisdom-Holer-${project.version}/holer-client/conf</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources/org/holer/conf</directory>
-                                    <includes>
-                                        <include>*.properties</include>
-                                        <include>*.conf</include>
-                                        <include>*.json</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-sh</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <encoding>UTF-8</encoding>
-                            <outputDirectory>../Wisdom-Holer-${project.version}/holer-client/bin</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources/org/holer/bin</directory>
-                                    <includes>
-                                        <include>*.sh</include>
-                                        <include>*.bat</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-dist-jar</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <encoding>UTF-8</encoding>
-                            <outputDirectory>../Wisdom-Holer-${project.version}/holer-client/lib</outputDirectory>
+                            <outputDirectory>${project.build.directory}/holer</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>target</directory>
                                     <includes>
                                         <include>*.jar</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>src/main/resources</directory>
+                                    <includes>
+                                        <include>**/*.conf</include>
+                                        <include>**/*.properties</include>
+                                        <include>**/*.sh</include>
+                                        <include>**/*.bat</include>
+                                        <include>**/*.vbs</include>
+                                        <include>**/holer</include>
                                     </includes>
                                 </resource>
                             </resources>
@@ -120,5 +88,20 @@
                 </executions>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.jks</include>
+                    <include>**/*.conf</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
 </project>
