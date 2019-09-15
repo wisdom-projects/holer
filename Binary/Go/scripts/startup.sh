@@ -19,24 +19,15 @@
 # -----------------------------------------------------------------------------
 cd `dirname $0`
 
-HOLER_CONF=`pwd`/holer.conf
-if [ -f $HOLER_CONF ]; then
-    . $HOLER_CONF
-fi
-
-if [ "$HOLER_HOME" == "" ]; then    
-    HOLER_HOME=`pwd`
-    echo "HOLER_HOME=$HOLER_HOME" > $HOLER_CONF
-fi
-
 HOLER_OK=0
 HOLER_ERR=1
 HOLER_PID=""
 
+HOLER_HOME=`pwd`
 HOLER_LOG_DIR=$HOLER_HOME/logs
 HOLER_LOG=$HOLER_LOG_DIR/holer-client.log
 HOLER_BIN=$HOLER_HOME/holer-linux-amd64
-
+HOLER_CONF=$HOLER_HOME/holer.conf
 
 function pid() 
 {
@@ -55,6 +46,10 @@ function status()
 
 function input() 
 {
+    if [ -f $HOLER_CONF ]; then
+        . $HOLER_CONF
+    fi
+
     # Asking for the holer access key
     if [ "$HOLER_ACCESS_KEY" == "" ]; then
         echo "Enter holer access key:"
@@ -63,7 +58,7 @@ function input()
             echo "Please enter holer access key."
             exit $HOLER_ERR
         fi
-        echo "HOLER_ACCESS_KEY=$HOLER_ACCESS_KEY" >> $HOLER_CONF
+        echo "HOLER_ACCESS_KEY=$HOLER_ACCESS_KEY" > $HOLER_CONF
     fi
 
     # Asking for the holer server host

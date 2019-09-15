@@ -19,19 +19,11 @@
 # -----------------------------------------------------------------------------
 cd `dirname $0`
 
-HOLER_CONF=`pwd`/holer.conf
-if [ -f $HOLER_CONF ]; then
-    . $HOLER_CONF
-fi
-
-if [ "$HOLER_HOME" == "" ]; then
-    HOLER_HOME=`pwd`
-fi
-
 HOLER_OK=0
 HOLER_ERR=1
 HOLER_PID=""
 
+HOLER_HOME=`pwd`
 HOLER_LOG_DIR=$HOLER_HOME/logs
 HOLER_LOG=$HOLER_LOG_DIR/holer-client.log
 HOLER_BIN=$HOLER_HOME/holer-linux-amd64

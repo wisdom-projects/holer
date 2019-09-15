@@ -19,20 +19,11 @@
 # -----------------------------------------------------------------------------
 cd `dirname $0`
 
-HOLER_CONF=`pwd`/holer.conf
-if [ -f $HOLER_CONF ]; then
-    . $HOLER_CONF
-fi
-
-if [ "$HOLER_HOME" == "" ]; then
-    HOLER_HOME=`pwd`
-    echo "HOLER_HOME=$HOLER_HOME" > $HOLER_CONF
-fi
-
 HOLER_OK=0
 HOLER_ERR=1
-
 HOLER_NAME="holer"
+HOLER_HOME=`pwd`
+HOLER_CONF=$HOLER_HOME/holer.conf
 RC_INIT_DIR="/etc/rc.d/init.d"
 
 function input() 
@@ -45,7 +36,7 @@ function input()
             echo "Please enter holer access key."
             exit $HOLER_ERR
         fi
-        echo "HOLER_ACCESS_KEY=$HOLER_ACCESS_KEY" >> $HOLER_CONF
+        echo "HOLER_ACCESS_KEY=$HOLER_ACCESS_KEY" > $HOLER_CONF
     fi
 
     # Asking for the holer server host
@@ -66,8 +57,6 @@ function init()
 
     cp $HOLER_HOME/$HOLER_NAME $RC_INIT_DIR/
     sed -i "s|@HOLER_HOME@|$HOLER_HOME|" $RC_INIT_DIR/$HOLER_NAME
-    sed -i "s|@HOLER_ACCESS_KEY@|$HOLER_ACCESS_KEY|" $RC_INIT_DIR/$HOLER_NAME
-    sed -i "s|@HOLER_SERVER_HOST@|$HOLER_SERVER_HOST|" $RC_INIT_DIR/$HOLER_NAME
 
     chmod +x $RC_INIT_DIR/$HOLER_NAME
     chmod +x $HOLER_HOME/$HOLER_NAME*

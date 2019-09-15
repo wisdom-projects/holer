@@ -23,10 +23,8 @@ set errorlevel=
 set HOLER_OK=0
 set HOLER_ERR=1
 
-if "!HOLER_HOME!" equ "" (
-    set HOLER_HOME=%~dp0
-)
-
+set HOLER_HOME=%~dp0
+set HOLER_CONF=!HOLER_HOME!\holer.conf
 set HOLER_BIN=holer-windows-amd64.exe
 set HOLER_LOG_DIR=!HOLER_HOME!\logs
 set HOLER_LOG=!HOLER_LOG_DIR!\holer-client.log
@@ -37,7 +35,12 @@ if not exist "!HOLER_LOG_DIR!" (
     mkdir "!HOLER_LOG_DIR!"
 )
 
-@REM  Asking for the HOLER_ACCESS_KEY
+@REM Set HOLER ENV
+if exist "!HOLER_CONF!" (
+    for /f "usebackq eol=# delims== tokens=1,*" %%i in ("!HOLER_CONF!") do set %%i=%%j
+)
+
+@REM Asking for the HOLER_ACCESS_KEY
 if "!HOLER_ACCESS_KEY!" equ "" (
     @echo !HOLER_LINE!
     set /p HOLER_ACCESS_KEY="Enter holer access key: "
@@ -47,9 +50,10 @@ if "!HOLER_ACCESS_KEY!" equ "" (
         pause
         exit /b !HOLER_ERR!
     )
+    @echo HOLER_ACCESS_KEY=!HOLER_ACCESS_KEY!> !HOLER_CONF!
 )
 
-@REM  Asking for the HOLER_SERVER_HOST
+@REM Asking for the HOLER_SERVER_HOST
 if "!HOLER_SERVER_HOST!" equ "" (
     @echo !HOLER_LINE!
     set /p HOLER_SERVER_HOST="Enter holer server host: "
@@ -59,13 +63,14 @@ if "!HOLER_SERVER_HOST!" equ "" (
         pause
         exit /b !HOLER_ERR!
     )
+    @echo HOLER_SERVER_HOST=!HOLER_SERVER_HOST!>> !HOLER_CONF!
 )
 
 @echo !HOLER_LINE!
 @echo Starting holer client...
 
-start /b !HOLER_BIN! -k !HOLER_ACCESS_KEY! -s !HOLER_SERVER_HOST! >> !HOLER_LOG!
-timeout /T 4 /NOBREAK
+start /b /min !HOLER_BIN! -k !HOLER_ACCESS_KEY! -s !HOLER_SERVER_HOST! >> !HOLER_LOG!
+timeout /T 3 /NOBREAK
 
 @echo !HOLER_LINE!
 tasklist | findstr !HOLER_BIN!
@@ -81,7 +86,7 @@ if !errorlevel! equ 0 (
     @echo Holer client is stopped.
     @echo Please check the log file for details [ !HOLER_LOG! ]
     @echo !HOLER_LINE!
-    pause
 )
 
+pause
 goto:eof

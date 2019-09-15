@@ -21,26 +21,24 @@
 # Holer Script
 # -----------------------------------------------------------------------------
 
-#---------------------------------------------------
-# *NOTE*: Update the below configurations with yours
-#---------------------------------------------------
-HOLER_HOME="@HOLER_HOME@"
-HOLER_ACCESS_KEY="@HOLER_ACCESS_KEY@"
-HOLER_SERVER_HOST="@HOLER_SERVER_HOST@"
-#---------------------------------------------------
-
 HOLER_OK=0
 HOLER_ERR=1
 HOLER_PID=""
 
+HOLER_HOME="@HOLER_HOME@"
 HOLER_LOG_DIR=$HOLER_HOME/logs
 HOLER_LOG=$HOLER_LOG_DIR/holer-client.log
 HOLER_BIN=$HOLER_HOME/holer-linux-amd64
+HOLER_CONF=$HOLER_HOME/holer.conf
 
 # Source function library
 INIT_FUNCTIONS="/etc/init.d/functions"
 if [ -f $INIT_FUNCTIONS ]; then
     . $INIT_FUNCTIONS
+fi
+
+if [ -f $HOLER_CONF ]; then
+    . $HOLER_CONF
 fi
 
 if [ ! -d $HOLER_LOG_DIR ]; then

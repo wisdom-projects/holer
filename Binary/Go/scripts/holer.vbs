@@ -24,6 +24,7 @@ Dim HOLER_LINE
 Dim HOLER_HOME
 Dim HOLER_LOG
 Dim HOLER_LOG_DIR
+Dim HOLER_CONTENTS
 
 Dim HOLER_ACCESS_KEY
 Dim HOLER_SERVER_HOST
@@ -32,17 +33,17 @@ Set HOLER_FSO = CreateObject("Scripting.FileSystemObject")
 Set HOLER_WSH = CreateObject("WScript.Shell")
 Set HOLER_ENV = HOLER_WSH.Environment("USER")
 
-HOLER_HOME = HOLER_ENV("HOLER_HOME")
 HOLER_ACCESS_KEY = HOLER_ENV("HOLER_ACCESS_KEY")
 HOLER_SERVER_HOST = HOLER_ENV("HOLER_SERVER_HOST")
+HOLER_HOME = HOLER_ENV("HOLER_HOME")
 
 If HOLER_HOME = Empty Then
     HOLER_HOME = HOLER_FSO.GetFolder(".").Path & "\"
-    HOLER_ENV("HOLER_HOME") = HOLER_HOME
 End If
 
 HOLER_BIN = "holer-windows-amd64.exe"
 HOLER_BIN_PATH = HOLER_HOME & HOLER_BIN
+HOLER_CONF = HOLER_HOME & "holer.conf"
 HOLER_LOG_DIR = HOLER_HOME & "logs"
 HOLER_LOG = HOLER_LOG_DIR & "\holer-client.log"
 HOLER_LINE = "------------------------------------------"
@@ -75,6 +76,7 @@ Function InputParam()
             WScript.Quit
         End If
         HOLER_ENV("HOLER_ACCESS_KEY") = HOLER_ACCESS_KEY
+        HOLER_CONTENTS = "HOLER_ACCESS_KEY=" & HOLER_ACCESS_KEY & vbCrLf
     End If
 
     If HOLER_SERVER_HOST = Empty Then
@@ -84,7 +86,23 @@ Function InputParam()
             WScript.Quit
         End If
         HOLER_ENV("HOLER_SERVER_HOST") = HOLER_SERVER_HOST
+        HOLER_CONTENTS = HOLER_CONTENTS & "HOLER_SERVER_HOST=" & HOLER_SERVER_HOST
+        WriteFile HOLER_CONF, HOLER_CONTENTS
     End If
+End Function
+
+'---------------------------------------------------
+' Write contents to file
+'---------------------------------------------------
+Function WriteFile(file, contents)
+    Dim OutStream, FSO
+
+    on error resume Next
+    Set FSO = CreateObject("Scripting.FileSystemObject")
+    Set OutStream = FSO.OpenTextFile(file, 2, True)
+
+    OutStream.Write contents
+    OutStream.close
 End Function
 
 '---------------------------------------------------
@@ -100,6 +118,6 @@ Function LaunchHoler()
     '---------------------------------------------------
     ' Find holer daemon
     '---------------------------------------------------
-    HOLER_CMD = "cmd.exe /c echo Starting holer client... & timeout /T 4 /NOBREAK & echo " & HOLER_LINE & " & echo The running holer client: & tasklist | findstr " & HOLER_BIN & " & echo " & HOLER_LINE & " & pause"
+    HOLER_CMD = "cmd.exe /c echo Starting holer client... & timeout /T 3 /NOBREAK & echo " & HOLER_LINE & " & echo The running holer client: & tasklist | findstr " & HOLER_BIN & " & echo " & HOLER_LINE & " & pause"
     HOLER_WSH.Run HOLER_CMD, 1, True
 End Function

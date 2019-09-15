@@ -23,14 +23,17 @@ Dim HOLER_ACCESS_KEY
 Dim HOLER_SERVER_HOST
 Dim HOLER_VBS_FILE
 Dim HOLER_BOOT_DIR
+Dim HOLER_CONTENTS
 
 Set HOLER_FSO = CreateObject("Scripting.FileSystemObject")
 Set HOLER_WSH = CreateObject("WScript.Shell")
 Set HOLER_ENV = HOLER_WSH.Environment("USER")
 
-HOLER_VBS_FILE = "startup.vbs"
+HOLER_VBS_FILE = "holer.vbs"
+HOLER_VBS_STARTUP = "startup.vbs"
 HOLER_BOOT_DIR = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\"
 HOLER_HOME = HOLER_FSO.GetFolder(".").Path & "\"
+HOLER_CONF = HOLER_HOME & "holer.conf"
 
 '---------------------------------------------------
 ' Input parameters
@@ -44,10 +47,14 @@ HOLER_ENV("HOLER_HOME") = HOLER_HOME
 HOLER_ENV("HOLER_ACCESS_KEY") = HOLER_ACCESS_KEY
 HOLER_ENV("HOLER_SERVER_HOST") = HOLER_SERVER_HOST
 
+HOLER_CONTENTS = "HOLER_ACCESS_KEY=" & HOLER_ACCESS_KEY & vbCrLf & "HOLER_SERVER_HOST=" & HOLER_SERVER_HOST
+WriteFile HOLER_CONF, HOLER_CONTENTS
+
 '---------------------------------------------------
 ' Set startup
 '---------------------------------------------------
 HOLER_FSO.CopyFile HOLER_VBS_FILE, HOLER_BOOT_DIR
+HOLER_FSO.CopyFile HOLER_BOOT_DIR & HOLER_VBS_FILE, HOLER_VBS_STARTUP
 
 MsgBox("Done")
 WScript.Quit
@@ -67,4 +74,18 @@ Function InputParam()
         MsgBox "Please enter holer server host"
         WScript.Quit
     End If
+End Function
+
+'---------------------------------------------------
+' Write contents to file
+'---------------------------------------------------
+Function WriteFile(file, contents)
+    Dim OutStream, FSO
+
+    on error resume Next
+    Set FSO = CreateObject("Scripting.FileSystemObject")
+    Set OutStream = FSO.OpenTextFile(file, 2, True)
+
+    OutStream.Write contents
+    OutStream.close
 End Function
