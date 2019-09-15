@@ -167,6 +167,9 @@ startup.bat
 
 **Windows系统**:<br/>
 双击 `setup.vbs` <br/>
+**注意事项：** <br/>
+请确保当前用户对如下目录具有读取、写入、执行、修改等权限：<br/>
+`C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp `<br/>
 
 **Linux系统**:<br/>
 执行命令 `sh setup.sh`
