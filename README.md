@@ -75,7 +75,7 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
 这里以`Windows & Linux x86-64bit` 为例，启动Holer执行如下命令：<br/><br/>
 **Windows系统**:<br/>
-`holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/><br/>
+`holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
 也可以执行命令 `startup.bat` 或者双击 `startup.bat`
 
 **Linux系统**:<br/>
@@ -90,9 +90,9 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
 **Windows系统**:<br/>
 双击 `setup.vbs` <br/>
-**注意事项：**
-请确保当前用户对如下目录具有读取、写入、执行、修改等权限：
-`C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp `
+**注意事项：** <br/>
+请确保当前用户对如下目录具有读取、写入、执行、修改等权限：<br/>
+`C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp `<br/>
 
 **Linux系统**:<br/>
 执行命令 `sh setup.sh`
