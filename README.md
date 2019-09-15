@@ -40,7 +40,19 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 然后就可以通过如下URL来访问Web应用：<br/>
 `http://holer65530.wdom.net` 或者 `http://holer.org:65530` 
 
-### 1.5. 公网和内网的地址映射关系
+### 1.5. 设置开机启动
+
+`cd holer-client/bin`<br/>
+
+**Windows系统**:<br/>
+双击 `setup.vbs` <br/>
+
+**Linux系统**:<br/>
+执行命令 `sh setup.sh`
+
+根据提示输入**holer access key**和**holer server host**
+
+### 1.6. 公网和内网的地址映射关系
 
 Holer Access Key             |Domain Name|Internet Address|Local Address
 -----------------------------|-----------|----------------|---------------
@@ -55,7 +67,7 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
 请参考[**博客文章**](http://blog.wdom.net/tag/Holer)获得更多的使用示例和帮助。<br/>
 
-### 1.6. 其他版本的Holer软件
+### 1.7. 其他版本的Holer软件
 
 这些Holer软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/><br/>
 这里以`Windows & Linux x86-64bit` 为例，启动Holer执行如下命令：<br/><br/>
