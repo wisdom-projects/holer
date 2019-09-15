@@ -69,7 +69,7 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
 ### 1.7. 其他版本的Holer软件
 
-这些Holer软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/><br/>
+这些Holer软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/>
 
 #### 1.7.1. 启动Holer
 
@@ -90,6 +90,9 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
 **Windows系统**:<br/>
 双击 `setup.vbs` <br/>
+**注意事项：**
+请确保当前用户对如下目录具有读取、写入、执行、修改等权限：
+`C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp `
 
 **Linux系统**:<br/>
 执行命令 `sh setup.sh`
