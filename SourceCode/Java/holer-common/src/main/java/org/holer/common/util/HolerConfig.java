@@ -95,7 +95,8 @@ public class HolerConfig
 
     public String strValue(String key)
     {
-        return this.holerConf.getProperty(key);
+        String value = this.holerConf.getProperty(key);
+        return StringUtils.trim(value);
     }
 
     public String strValue(String key, String defaultValue)
@@ -110,7 +111,7 @@ public class HolerConfig
 
     public Integer intValue(String key)
     {
-        String value = this.holerConf.getProperty(key);
+        String value = this.strValue(key);
         if (StringUtils.isEmpty(value))
         {
             return null;
@@ -134,7 +135,7 @@ public class HolerConfig
 
     public Boolean boolValue(String key)
     {
-        String value = this.holerConf.getProperty(key);
+        String value = this.strValue(key);
         if (StringUtils.isBlank(value))
         {
             return null;

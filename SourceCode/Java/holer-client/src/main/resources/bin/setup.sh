@@ -21,12 +21,10 @@ cd `dirname $0`/..
 
 HOLER_OK=0
 HOLER_ERR=1
-
+HOLER_NAME="holer"
 HOLER_HOME=`pwd`
 HOLER_BIN=$HOLER_HOME/bin
-HOLER_CONF_DIR=$HOLER_HOME/conf
-HOLER_CONF=$HOLER_CONF_DIR/holer.conf
-HOLER_NAME="holer"
+HOLER_CONF=$HOLER_HOME/conf/holer.conf
 RC_INIT_DIR="/etc/rc.d/init.d"
 
 function input() 

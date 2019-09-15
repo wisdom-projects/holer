@@ -24,11 +24,10 @@ HOLER_ERR=1
 HOLER_PID=""
 
 HOLER_HOME=`pwd`
-HOLER_CONF_DIR=$HOLER_HOME/conf
-HOLER_CONF=$HOLER_CONF_DIR/holer.conf
 HOLER_LOG_DIR=$HOLER_HOME/logs
 HOLER_LOG=$HOLER_LOG_DIR/holer-client.log
 HOLER_APP=$HOLER_HOME/holer-client.jar
+HOLER_CONF=$HOLER_HOME/conf/holer.conf
 HOLER_ARGS="-Dapp.home=$HOLER_HOME"
 
 function pid() 
@@ -48,6 +47,10 @@ function status()
 
 function input() 
 {
+    if [ -f $HOLER_CONF ]; then
+        . $HOLER_CONF
+    fi
+
     # Asking for the holer access key
     if [ "$HOLER_ACCESS_KEY" == "" ]; then
         echo "Enter holer access key:"
@@ -73,10 +76,6 @@ function input()
 
 function start() 
 {
-    if [ -f $HOLER_CONF ]; then
-        . $HOLER_CONF
-    fi
-
     if [ ! -d $HOLER_LOG_DIR ]; then
         mkdir -p $HOLER_LOG_DIR
     fi

@@ -34,13 +34,12 @@ Set HOLER_ENV = HOLER_WSH.Environment("USER")
 
 JAVA_BIN = "javaw"
 
-HOLER_HOME = HOLER_ENV("HOLER_HOME")
 HOLER_ACCESS_KEY = HOLER_ENV("HOLER_ACCESS_KEY")
 HOLER_SERVER_HOST = HOLER_ENV("HOLER_SERVER_HOST")
+HOLER_HOME = HOLER_ENV("HOLER_HOME")
 
 If HOLER_HOME = Empty Then
     HOLER_HOME = HOLER_FSO.GetFolder("..\").Path & "\"
-    HOLER_ENV("HOLER_HOME") = HOLER_HOME
 End If
 
 HOLER_APP = HOLER_HOME & "holer-client.jar"
@@ -120,6 +119,6 @@ Function LaunchHoler()
     '---------------------------------------------------
     ' Find holer daemon
     '---------------------------------------------------
-    HOLER_CMD = "cmd.exe /c echo Starting holer client... & timeout /T 4 /NOBREAK & echo " & HOLER_LINE & " & echo The running holer client: & tasklist | findstr " & JAVA_BIN & " & echo " & HOLER_LINE & " & pause"
+    HOLER_CMD = "cmd.exe /c echo Starting holer client... & timeout /T 3 /NOBREAK & echo " & HOLER_LINE & " & echo The running holer client: & tasklist | findstr " & JAVA_BIN & " & echo " & HOLER_LINE & " & pause"
     HOLER_WSH.Run HOLER_CMD, 1, True
 End Function

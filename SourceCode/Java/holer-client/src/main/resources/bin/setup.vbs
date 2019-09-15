@@ -29,7 +29,7 @@ Set HOLER_FSO = CreateObject("Scripting.FileSystemObject")
 Set HOLER_WSH = CreateObject("WScript.Shell")
 Set HOLER_ENV = HOLER_WSH.Environment("USER")
 
-HOLER_VBS_FILE = "startup.vbs"
+HOLER_VBS_FILE = "holer.vbs"
 HOLER_BOOT_DIR = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\"
 HOLER_HOME = HOLER_FSO.GetFolder("..\").Path & "\"
 HOLER_CONF = HOLER_HOME & "conf\holer.conf"

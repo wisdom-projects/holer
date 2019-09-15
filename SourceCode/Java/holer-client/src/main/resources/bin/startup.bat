@@ -24,11 +24,9 @@ set HOLER_OK=0
 set HOLER_ERR=1
 set JAVA_BIN=java
 
-if "!HOLER_HOME!" equ "" (
-    set HOLER_HOME=%~dp0\..
-)
-
+set HOLER_HOME=%~dp0\..
 set HOLER_ARGS=-Dapp.home=!HOLER_HOME!
+set HOLER_CONF=!HOLER_HOME!\conf\holer.conf
 set HOLER_APP=!HOLER_HOME!\holer-client.jar
 set HOLER_LOG_DIR=!HOLER_HOME!\logs
 set HOLER_LOG=!HOLER_LOG_DIR!\holer-client.log
@@ -51,7 +49,12 @@ if !errorlevel! neq 0 (
     goto:eof
 )
 
-@REM  Asking for the HOLER_ACCESS_KEY
+@REM Set HOLER ENV
+if exist "!HOLER_CONF!" (
+    for /f "usebackq eol=# delims== tokens=1,*" %%i in ("!HOLER_CONF!") do set %%i=%%j
+)
+
+@REM Asking for the HOLER_ACCESS_KEY
 if "!HOLER_ACCESS_KEY!" equ "" (
     @echo !HOLER_LINE!
     set /p HOLER_ACCESS_KEY="Enter holer access key: "
@@ -61,9 +64,10 @@ if "!HOLER_ACCESS_KEY!" equ "" (
         pause
         exit /b !HOLER_ERR!
     )
+    @echo HOLER_ACCESS_KEY=!HOLER_ACCESS_KEY!> !HOLER_CONF!
 )
 
-@REM  Asking for the HOLER_SERVER_HOST
+@REM Asking for the HOLER_SERVER_HOST
 if "!HOLER_SERVER_HOST!" equ "" (
     @echo !HOLER_LINE!
     set /p HOLER_SERVER_HOST="Enter holer server host: "
@@ -73,13 +77,14 @@ if "!HOLER_SERVER_HOST!" equ "" (
         pause
         exit /b !HOLER_ERR!
     )
+    @echo HOLER_SERVER_HOST=!HOLER_SERVER_HOST!>> !HOLER_CONF!
 )
 
 @echo !HOLER_LINE!
 @echo Starting holer client...
 
 start /b !JAVA_BIN!w !HOLER_ARGS! -jar !HOLER_APP! >> !HOLER_LOG!
-timeout /T 4 /NOBREAK
+timeout /T 3 /NOBREAK
 
 @echo !HOLER_LINE!
 tasklist | findstr !JAVA_BIN!w
