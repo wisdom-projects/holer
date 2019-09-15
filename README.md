@@ -70,12 +70,31 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 ### 1.7. 其他版本的Holer软件
 
 这些Holer软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/><br/>
+
+#### 1.7.1. 启动Holer
+
 这里以`Windows & Linux x86-64bit` 为例，启动Holer执行如下命令：<br/><br/>
 **Windows系统**:<br/>
 `holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/><br/>
+也可以执行命令 `startup.bat` 或者双击 `startup.bat`
+
 **Linux系统**:<br/>
 `nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE &`<br/>
+也可以执行命令 `sh startup.sh`
 
+首次启动根据提示输入**holer access key**和**holer server host**
+
+#### 1.7.2. 设置开机启动
+
+`cd holer-client/bin`<br/>
+
+**Windows系统**:<br/>
+双击 `setup.vbs` <br/>
+
+**Linux系统**:<br/>
+执行命令 `sh setup.sh`
+
+根据提示输入**holer access key**和**holer server host**
 
 ## 2. Holer服务端软件使用
 
@@ -124,7 +143,7 @@ Windows系统中可以先将Nginx复制到某个目录下，然后在配置文�
 ./configure --with-http_ssl_module
 make;make install
 ```
-#### 2.2.3 启动Holer服务端
+#### 2.2.3. 启动Holer服务端
 
 Linux系统执行启动命令如下：
 ```
@@ -138,6 +157,16 @@ cd holer-server
 startup.bat
 ```
 或者双击 `startup.bat`
+
+#### 2.2.4. 设置开机启动
+
+`cd holer-server/bin`<br/>
+
+**Windows系统**:<br/>
+双击 `setup.vbs` <br/>
+
+**Linux系统**:<br/>
+执行命令 `sh setup.sh`
 
 ### 2.3. 创建端口映射
 
