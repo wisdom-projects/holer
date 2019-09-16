@@ -29,6 +29,7 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 
 ### 1.4. 启动Holer
 
+进入目录：<br/>
 `cd holer-client/bin`<br/>
 
 **Windows系统**:<br/>
@@ -42,6 +43,7 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 
 ### 1.5. 设置开机启动
 
+进入目录：<br/>
 `cd holer-client/bin`<br/>
 
 **Windows系统**:<br/>
@@ -88,7 +90,7 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 首次启动根据提示输入**holer access key**和**holer server host**
 
 #### 1.7.2. 设置开机启动
-
+进入目录：<br/>
 `cd holer-client/bin`<br/>
 
 **Windows系统**:<br/>
@@ -166,6 +168,7 @@ startup.bat
 
 #### 2.2.4. 设置开机启动
 
+进入目录：<br/>
 `cd holer-server/bin`<br/>
 
 **Windows系统**:<br/>
