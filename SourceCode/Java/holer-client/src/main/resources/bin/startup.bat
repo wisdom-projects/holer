@@ -24,7 +24,7 @@ set HOLER_OK=0
 set HOLER_ERR=1
 set JAVA_BIN=java
 
-set HOLER_HOME=%~dp0\..
+set HOLER_HOME="%cd%"\..
 set HOLER_ARGS=-Dapp.home=!HOLER_HOME!
 set HOLER_CONF=!HOLER_HOME!\conf\holer.conf
 set HOLER_APP=!HOLER_HOME!\holer-client.jar
