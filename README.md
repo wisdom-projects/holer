@@ -219,11 +219,3 @@ If you want to have **exclusive holer services**, please contact by QQ for appli
 以上的全部key和端口都已公开共享。用户也可以申请holer服务，如果您需要**holer服务**，请QQ联系开通。Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/><br/>
 _**QQ**    : 2353941272_<br/>
 
-# Donate
-如果 **Holer** 工具对您帮助很大，并且您很愿意支持工具的后续开发和维护，您可以扫下方二维码随意打赏，就当是请我喝杯茶或是咖啡，将不胜感激。 **♥ 谢谢 ♥**
-
-If **Holer** helps you a lot, and you would like to support this tool's further development and the continuous maintenance of this tool. You can sweep the following QR code free to donate me, which asked me to have a cup of tea or coffee. Your donation is highly appreciated. **♥ Thank you ♥** <br/>
-
-**♥ Donate ♥ by Alipay, WeChat Pay**.
-
-![Donate by pay](https://github.com/Wisdom-Projects/rest-client/blob/master/images/donate_pay.png)
