@@ -169,7 +169,7 @@ cd holer-server
 chmod 755 holer
 ./holer start
 ```
-<br/>
+
 **注意事项：** <br/>
 在**Ubuntu系统**上执行脚本，请先执行命令`bash`切换至bash模式<br/>
 
