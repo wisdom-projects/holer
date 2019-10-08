@@ -54,6 +54,9 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 
 **Linux系统**:<br/>
 执行命令 `sh setup.sh`
+**注意事项：** <br/>
+CentOS 7, RedHat 7, Ubuntu 18 及以上版本可以执行命令`sh setup-service.sh`<br/>
+在**Ubuntu系统**上执行脚本，请先执行命令`bash`切换至bash模式<br/>
 
 根据提示输入**holer access key**和**holer server host**
 
