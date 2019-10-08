@@ -72,9 +72,9 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
 请参考[**博客文章**](http://blog.wdom.net/tag/Holer)获得更多的使用示例和帮助。<br/>
 
-### 1.7. 其他版本的Holer软件
+### 1.7. Go版本的Holer客户端
 
-这些Holer软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/>
+Go版本的Holer客户端软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/>
 
 #### 1.7.1. 启动Holer
 
@@ -216,7 +216,7 @@ startup.bat
 # Support
 All of the above holer access keys and ports have been shared to public. Users can also apply for exclusive holer services.
 If you want to have **exclusive holer services**, please contact by QQ for application. For more details about holer services, please visit [**Wisdom**](http://www.wdom.net).<br/><br/>
-以上的全部key和端口都已公开共享。用户也可以申请专属的holer服务，如果您需要**专属的holer服务**，请QQ联系开通。Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/><br/>
+以上的全部key和端口都已公开共享。用户也可以申请holer服务，如果您需要**holer服务**，请QQ联系开通。Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/><br/>
 _**QQ**    : 2353941272_<br/>
 
 # Donate
