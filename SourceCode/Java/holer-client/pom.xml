@@ -79,6 +79,7 @@
                                         <include>**/*.sh</include>
                                         <include>**/*.bat</include>
                                         <include>**/*.vbs</include>
+                                        <include>**/*.service</include>
                                         <include>**/holer</include>
                                     </includes>
                                 </resource>
