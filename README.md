@@ -36,9 +36,7 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 执行命令 `startup.bat` 或者双击 `startup.bat`<br/>
 
 **Linux系统**:<br/>
-执行命令 `sh startup.sh`<br/>
-**注意事项：** <br/>
-在**Ubuntu系统**上执行脚本，请先执行命令`bash`切换至bash模式；<br/>
+执行命令 `bash startup.sh`<br/>
 
 然后就可以通过如下URL来访问Web应用：<br/>
 `http://holer65530.wdom.net` 或者 `http://holer.org:65530` 
@@ -55,10 +53,9 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp `<br/>
 
 **Linux系统**:<br/>
-执行命令 `sh setup.sh`<br/>
+执行命令 `bash setup.sh`<br/>
 **注意事项：** <br/>
-**CentOS 7, RedHat 7, Ubuntu 18** 及更高版本，建议执行命令`sh setup-service.sh`设置开机启动；<br/>
-在**Ubuntu系统**上执行脚本，请先执行命令`bash`切换至bash模式；<br/>
+**CentOS 7, RedHat 7, Ubuntu 18** 及更高版本，建议执行命令`bash setup-service.sh`设置开机启动；<br/>
 
 根据提示输入**holer access key**和**holer server host**
 
@@ -90,10 +87,7 @@ Go版本的Holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 
 **Linux系统**:<br/>
 `nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE &`<br/>
-也可以执行命令 `sh startup.sh`<br/>
-**注意事项：** <br/>
-在**Ubuntu系统**上执行脚本，请先执行命令`bash`切换至bash模式；<br/>
-
+也可以执行命令 `bash startup.sh`<br/>
 首次启动根据提示输入**holer access key**和**holer server host**
 
 #### 1.7.2. 设置开机启动
@@ -107,11 +101,9 @@ Go版本的Holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp `<br/>
 
 **Linux系统**:<br/>
-执行命令 `sh setup.sh`<br/>
+执行命令 `bash setup.sh`<br/>
 **注意事项：** <br/>
 **CentOS 7, RedHat 7, Ubuntu 18** 及更高版本，建议执行命令`sh setup-service.sh`设置开机启动；<br/>
-在**Ubuntu系统**上执行脚本，请先执行命令`bash`切换至bash模式；<br/>
-
 根据提示输入**holer access key**和**holer server host**
 
 ## 2. Holer服务端软件使用
@@ -167,12 +159,8 @@ Linux系统执行启动命令如下：
 ```
 cd holer-server
 chmod 755 holer
-./holer start
+bash holer start
 ```
-
-**注意事项：** <br/>
-在**Ubuntu系统**上执行脚本，请先执行命令`bash`切换至bash模式；<br/>
-
 Windows系统执行启动命令如下：
 ```
 cd holer-server
@@ -192,10 +180,9 @@ startup.bat
 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp `<br/>
 
 **Linux系统**:<br/>
-执行命令 `sh setup.sh`<br/>
+执行命令 `bash setup.sh`<br/>
 **注意事项：** <br/>
-**CentOS 7, RedHat 7, Ubuntu 18** 及更高版本，建议执行命令`sh setup-service.sh`设置开机启动；<br/>
-在**Ubuntu系统**上执行脚本，请先执行命令`bash`切换至bash模式。<br/>
+**CentOS 7, RedHat 7, Ubuntu 18** 及更高版本，建议执行命令`bash setup-service.sh`设置开机启动。<br/>
 
 ### 2.3. 创建端口映射
 
