@@ -103,7 +103,7 @@ Go版本的Holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 **Linux系统**:<br/>
 执行命令 `bash setup.sh`<br/>
 **注意事项：** <br/>
-**CentOS 7, RedHat 7, Ubuntu 18** 及更高版本，建议执行命令`sh setup-service.sh`设置开机启动；<br/>
+**CentOS 7, RedHat 7, Ubuntu 18** 及更高版本，建议执行命令`bash setup-service.sh`设置开机启动；<br/>
 根据提示输入**holer access key**和**holer server host**
 
 ## 2. Holer服务端软件使用
