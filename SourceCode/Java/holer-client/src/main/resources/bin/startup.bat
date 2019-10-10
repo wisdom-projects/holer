@@ -23,9 +23,9 @@ set errorlevel=
 set HOLER_OK=0
 set HOLER_ERR=1
 set JAVA_BIN=java
-
-set HOLER_HOME=%~dp0\..
-set HOLER_ARGS=-Dapp.home=!HOLER_HOME!
+cd..
+set HOLER_HOME=%cd%
+set HOLER_ARGS=-Dapp.home="!HOLER_HOME!"
 set HOLER_CONF=!HOLER_HOME!\conf\holer.conf
 set HOLER_APP=!HOLER_HOME!\holer-client.jar
 set HOLER_LOG_DIR=!HOLER_HOME!\logs
@@ -64,7 +64,7 @@ if "!HOLER_ACCESS_KEY!" equ "" (
         pause
         exit /b !HOLER_ERR!
     )
-    @echo HOLER_ACCESS_KEY=!HOLER_ACCESS_KEY!> !HOLER_CONF!
+    @echo HOLER_ACCESS_KEY=!HOLER_ACCESS_KEY!> "!HOLER_CONF!"
 )
 
 @REM Asking for the HOLER_SERVER_HOST
@@ -77,13 +77,13 @@ if "!HOLER_SERVER_HOST!" equ "" (
         pause
         exit /b !HOLER_ERR!
     )
-    @echo HOLER_SERVER_HOST=!HOLER_SERVER_HOST!>> !HOLER_CONF!
+    @echo HOLER_SERVER_HOST=!HOLER_SERVER_HOST!>> "!HOLER_CONF!"
 )
 
 @echo !HOLER_LINE!
 @echo Starting holer client...
 
-start /b !JAVA_BIN!w !HOLER_ARGS! -jar !HOLER_APP! >> !HOLER_LOG!
+start /b !JAVA_BIN!w !HOLER_ARGS! -jar "!HOLER_APP!" >> "!HOLER_LOG!"
 timeout /T 3 /NOBREAK
 
 @echo !HOLER_LINE!
