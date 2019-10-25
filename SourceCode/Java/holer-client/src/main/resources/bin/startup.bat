@@ -20,10 +20,10 @@ title holer-client
 setlocal enabledelayedexpansion
 set errorlevel=
 
-set HOLER_OK=0
-set HOLER_ERR=1
 set JAVA_BIN=java
-cd..
+
+set HOLER_CURDIR=%~dp0
+cd /d %HOLER_CURDIR%\..
 set HOLER_HOME=%cd%
 set HOLER_ARGS=-Dapp.home="!HOLER_HOME!"
 set HOLER_CONF=!HOLER_HOME!\conf\holer.conf
@@ -31,6 +31,8 @@ set HOLER_APP=!HOLER_HOME!\holer-client.jar
 set HOLER_LOG_DIR=!HOLER_HOME!\logs
 set HOLER_LOG=!HOLER_LOG_DIR!\holer-client.log
 set HOLER_LINE=------------------------------------------
+set HOLER_OK=0
+set HOLER_ERR=1
 
 @REM Create logs directory
 if not exist "!HOLER_LOG_DIR!" (
