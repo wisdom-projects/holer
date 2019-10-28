@@ -19,6 +19,8 @@
 # -----------------------------------------------------------------------------
 cd `dirname $0`/..
 
+JAVA_BIN=$JAVA_HOME/bin/java
+
 HOLER_OK=0
 HOLER_ERR=1
 HOLER_PID=""
@@ -86,9 +88,11 @@ function start()
         return $HOLER_OK
     fi
 
-    JAVA_BIN=`which java`
     if [ ! -f "$JAVA_BIN" ]; then
-        JAVA_BIN=java
+        JAVA_BIN=`which java`
+        if [ ! -f "$JAVA_BIN" ]; then
+            JAVA_BIN=java
+        fi
     fi
 
     input
