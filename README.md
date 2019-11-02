@@ -2,7 +2,7 @@
 Holer exposes local servers behind NATs and firewalls to the public internet over secure tunnels. <br/>
 Support forwarding message based on TCP protocol.<br/><br/>
 Holer是一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于TCP协议的报文。
-![Demo](http://blog.wdom.net/upload/2018/12/o8djr3vomojivqalun1r4eusph.png)
+![Demo](http://blog.wdom.net/upload/2018/05/pb96rrmoh6h25osklskr2q0u0f.png)
 # How it works
 
 ## 1. Holer使用
