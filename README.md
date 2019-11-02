@@ -2,7 +2,7 @@
 Holer exposes local servers behind NATs and firewalls to the public internet over secure tunnels. <br/>
 Support forwarding message based on TCP protocol.<br/><br/>
 Holer是一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于TCP协议的报文。
-![Demo](https://github.com/Wisdom-Projects/holer/blob/master/Image/demo.png)
+![Demo](http://blog.wdom.net/upload/2018/12/o8djr3vomojivqalun1r4eusph.png)
 # How it works
 
 ## 1. Holer使用
@@ -219,9 +219,7 @@ startup.bat
 
 # Support
 All of the above holer access keys and ports have been shared to public. Users can also apply for exclusive holer services.
-If you want to have **exclusive holer services**, please contact by QQ for application. For more details about holer services, please visit [**Wisdom**](http://www.wdom.net).<br/><br/>
-以上的全部key和端口都已公开共享。用户也可以申请holer服务，如果您需要**holer服务**，请QQ联系开通。Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/><br/>
-_**QQ**    : 2353941272_<br/>
+If you want to have **exclusive holer services**, please contact by **QQ 2353941272** for application. For more details about holer services, please visit [**Wisdom**](http://www.wdom.net).<br/><br/>
+以上的全部key和端口都已公开共享。用户也可以申请holer服务，如果您需要**holer服务**，请**QQ 2353941272**联系开通。Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/><br/>
 
 如果下载holer软件遇到问题，请从百度网盘下载，[**下载地址**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA)。
-
