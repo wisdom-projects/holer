@@ -17,7 +17,7 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 在浏览器里输入如下URL来检查Tomcat服务是否可以正常访问：<br/>
 `http://127.0.0.1:8080`
 
-### 1.3. 配置Holer 
+### 1.3. 配置holer 
 下载并解压软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary/Java)
 
 修改配置文件：<br/>
@@ -27,7 +27,7 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 
 `HOLER_ACCESS_KEY=HOLER_CLIENT-2F8D8B78B3C2A0AE`
 
-### 1.4. 启动Holer
+### 1.4. 启动holer
 
 进入目录：<br/>
 `cd holer-client/bin`<br/>
@@ -74,13 +74,13 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
 请参考[**博客文章**](http://blog.wdom.net/tag/Holer)获得更多的使用示例和帮助。<br/>
 
-### 1.7. Go版本的Holer客户端
+### 1.7. Go版本的holer客户端
 
-Go版本的Holer客户端软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/>
+Go版本的holer客户端软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/>
 
-#### 1.7.1. 启动Holer
+#### 1.7.1. 启动holer
 
-这里以`Windows & Linux x86-64bit` 为例，启动Holer执行如下命令：<br/><br/>
+这里以`Windows & Linux x86-64bit` 为例，启动holer执行如下命令：<br/><br/>
 **Windows系统**:<br/>
 `holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
 也可以执行命令 `startup.bat` 或者双击 `startup.bat`
@@ -108,9 +108,9 @@ Go版本的Holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 
 ## 2. Holer服务端软件使用
 
-用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases) 搭建自己的Holer服务端。
+用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases) 搭建自己的holer服务端。
 
-### 2.1. 搭建Holer服务端准备工作
+### 2.1. 搭建holer服务端准备工作
 (1) 准备一台Linux系统或者Windows系统主机；
 
 (2) 安装Java 1.8及以上版本，执行命令 `java -version` 检查Java是否可用；
@@ -119,11 +119,11 @@ Go版本的Holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 
 (4) 安装MariaDB并设置root用户密码；
 
-(5) 设置安全规则，允许访问Holer服务端端口6060、600以及端口映射规则所涉及的端口；
+(5) 设置安全规则，允许访问holer服务端端口6060、600以及端口映射规则所涉及的端口；
 
 (6) 建议申请域名并且完成域名备案，如果没有域名可以直接使用IP和端口访问。
 
-### 2.2. 配置并启动Holer服务端
+### 2.2. 配置并启动holer服务端
 解压软件包，打开配置文件 `holer-server/resources/application.yaml`
 
 #### 2.2.1. 修改数据库用户名和密码
@@ -153,7 +153,7 @@ Windows系统中可以先将Nginx复制到某个目录下，然后在配置文�
 ./configure --with-http_ssl_module
 make;make install
 ```
-#### 2.2.3. 启动Holer服务端
+#### 2.2.3. 启动holer服务端
 
 Linux系统执行启动命令如下：
 ```
@@ -186,7 +186,7 @@ startup.bat
 
 ### 2.3. 创建端口映射
 
-#### 2.3.1. 登录Holer管理系统
+#### 2.3.1. 登录holer管理系统
 
 如果配置文件`application.yaml`中设置了域名，并且指定了Nginx主目录，则在浏览器输入URL `http://holer.your-domain.com`
 如果没有设置域名访问，则通过IP和端口登录系统 `http://IP地址:600`
@@ -194,15 +194,15 @@ startup.bat
 
 登录系统需要输入默认的管理员账号，默认用户名： `admin` 密码： `admin123`
 
-用户也可以在文件`holer-server/resources/conf/holer-data.sql`中修改默认的用户名和密码，然后重启Holer服务端使其生效。
+用户也可以在文件`holer-server/resources/conf/holer-data.sql`中修改默认的用户名和密码，然后重启holer服务端使其生效。
 
 #### 2.3.2. 创建客户端和端口映射
 
-在用户列表页面中创建一个Holer客户端<br/>
+在用户列表页面中创建一个holer客户端<br/>
 `http://holer.your-domain.com/view/holer-client.html`
 ![Holer Client](http://blog.wdom.net/upload/2019/04/1he44jumd2g9no95c6f8fsa5re.png)
 
-在端口映射页面中为该Holer客户端创建端口映射<br/>
+在端口映射页面中为该holer客户端创建端口映射<br/>
 `http://holer.your-domain.com/view/holer-port.html`
 ![Holer Port](http://blog.wdom.net/upload/2019/04/0s78i863v4h6tr1vfdg3eo3trv.png)
 
@@ -210,16 +210,15 @@ startup.bat
 `http://holer.your-domain.com/view/holer-report.html`
 ![Holer Report](http://blog.wdom.net/upload/2019/04/5atk5j8ii2gl1rqfl3l6672sdq.png)
 
-#### 2.3.3. 配置Holer客户端使其与Holer服务端实现端口映射功能
+#### 2.3.3. 配置holer客户端使其与holer服务端实现端口映射功能
 
 在用户列表页面中选中一条客户端记录，在页面右上角点击详情按钮，弹出的详情框下点击复制按钮；
 ![Holer Copy](http://blog.wdom.net/upload/2019/04/q7ffnsuu6ghf4p66chtb3001r3.png)
 
-然后将详情信息粘贴到记事本里，严格按照详情信息里的使用说明进行操作，这样即可完成Holer客户端配置，从而实现基于自己Holer服务端的端口映射功能。
+然后将详情信息粘贴到记事本里，严格按照详情信息里的使用说明进行操作，这样即可完成holer客户端配置，从而实现基于自己holer服务端的端口映射功能。
 
 # Support
 All of the above holer access keys and ports have been shared to public. Users can also apply for exclusive holer services.
 If you want to have **exclusive holer services**, please contact by **QQ 2353941272** for application. For more details about holer services, please visit [**Wisdom**](http://www.wdom.net).<br/><br/>
-以上的全部key和端口都已公开共享。用户也可以申请holer服务，如果您需要**holer服务**，请**QQ 2353941272**联系开通。Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/><br/>
-
+以上的全部key和端口都已公开共享。用户也可以申请holer服务，如果您需要**holer服务**，请**QQ 2353941272**联系开通。Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/>
 如果下载holer软件遇到问题，请从百度网盘下载，[**下载地址**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA)。
