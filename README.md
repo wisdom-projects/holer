@@ -2,7 +2,7 @@
 Holer exposes local servers behind NATs and firewalls to the public internet over secure tunnels. <br/>
 Support forwarding message based on TCP protocol.<br/><br/>
 Holer是一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于TCP协议的报文。
-![Demo](http://blog.wdom.net/upload/2018/05/pb96rrmoh6h25osklskr2q0u0f.png)
+![Demo](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/demo.png)
 # How it works
 
 ## 1. Holer使用
@@ -190,7 +190,7 @@ startup.bat
 
 如果配置文件`application.yaml`中设置了域名，并且指定了Nginx主目录，则在浏览器输入URL `http://holer.your-domain.com`
 如果没有设置域名访问，则通过IP和端口登录系统 `http://IP地址:600`
-![Holer Login](http://blog.wdom.net/upload/2019/04/oru7f1ojueilep57qkfkimrobf.png)
+![Holer Login](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-login.png)
 
 登录系统需要输入默认的管理员账号，默认用户名： `admin` 密码： `admin123`
 
@@ -200,20 +200,20 @@ startup.bat
 
 在用户列表页面中创建一个holer客户端<br/>
 `http://holer.your-domain.com/view/holer-client.html`
-![Holer Client](http://blog.wdom.net/upload/2019/04/1he44jumd2g9no95c6f8fsa5re.png)
+![Holer Client](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-client.png)
 
 在端口映射页面中为该holer客户端创建端口映射<br/>
 `http://holer.your-domain.com/view/holer-port.html`
-![Holer Port](http://blog.wdom.net/upload/2019/04/0s78i863v4h6tr1vfdg3eo3trv.png)
+![Holer Port](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-port.png)
 
 在数据统计页面中查看报表信息<br/>
 `http://holer.your-domain.com/view/holer-report.html`
-![Holer Report](http://blog.wdom.net/upload/2019/04/5atk5j8ii2gl1rqfl3l6672sdq.png)
+![Holer Report](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-report.png)
 
 #### 2.3.3. 配置holer客户端使其与holer服务端实现端口映射功能
 
 在用户列表页面中选中一条客户端记录，在页面右上角点击详情按钮，弹出的详情框下点击复制按钮；
-![Holer Copy](http://blog.wdom.net/upload/2019/04/q7ffnsuu6ghf4p66chtb3001r3.png)
+![Holer Copy](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-copy.png)
 
 然后将详情信息粘贴到记事本里，严格按照详情信息里的使用说明进行操作，这样即可完成holer客户端配置，从而实现基于自己holer服务端的端口映射功能。
 
