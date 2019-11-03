@@ -30,7 +30,6 @@ HOLER_LOG_DIR=$HOLER_HOME/logs
 HOLER_LOG=$HOLER_LOG_DIR/holer-client.log
 HOLER_APP=$HOLER_HOME/holer-client.jar
 HOLER_CONF=$HOLER_HOME/conf/holer.conf
-HOLER_ARGS="-Dapp.home=$HOLER_HOME"
 
 function pid() 
 {
@@ -96,7 +95,7 @@ function start()
     fi
 
     input
-    nohup $JAVA_BIN $HOLER_ARGS -jar $HOLER_APP >> $HOLER_LOG 2>&1 &
+    nohup $JAVA_BIN -jar $HOLER_APP >> $HOLER_LOG 2>&1 &
     status
 }
 

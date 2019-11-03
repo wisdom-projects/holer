@@ -22,17 +22,16 @@ set errorlevel=
 
 set JAVA_BIN=java
 
+set HOLER_OK=0
+set HOLER_ERR=1
 set HOLER_CURDIR=%~dp0
 cd /d %HOLER_CURDIR%\..
 set HOLER_HOME=%cd%
-set HOLER_ARGS=-Dapp.home="!HOLER_HOME!"
-set HOLER_CONF=!HOLER_HOME!\conf\holer.conf
 set HOLER_APP=!HOLER_HOME!\holer-client.jar
 set HOLER_LOG_DIR=!HOLER_HOME!\logs
 set HOLER_LOG=!HOLER_LOG_DIR!\holer-client.log
 set HOLER_LINE=------------------------------------------
-set HOLER_OK=0
-set HOLER_ERR=1
+set HOLER_CONF=!HOLER_HOME!\conf\holer.conf
 
 @REM Create logs directory
 if not exist "!HOLER_LOG_DIR!" (
@@ -85,7 +84,7 @@ if "!HOLER_SERVER_HOST!" equ "" (
 @echo !HOLER_LINE!
 @echo Starting holer client...
 
-start /b !JAVA_BIN!w !HOLER_ARGS! -jar "!HOLER_APP!" >> "!HOLER_LOG!"
+start /b !JAVA_BIN!w -jar "!HOLER_APP!" >> "!HOLER_LOG!"
 timeout /T 3 /NOBREAK
 
 @echo !HOLER_LINE!

@@ -22,6 +22,7 @@ cd `dirname $0`/..
 HOLER_OK=0
 HOLER_ERR=1
 
+HOLER_NAME="holer"
 HOLER_HOME=`pwd`
 HOLER_BIN=$HOLER_HOME/bin
 HOLER_CONF=$HOLER_HOME/conf/holer.conf
@@ -58,6 +59,8 @@ function setup()
     input
     cp $HOLER_BIN/$HOLER_SERVICE $SYSD_DIR/
     sed -i "s|@HOLER_HOME@|$HOLER_HOME|" $SYSD_DIR/$HOLER_SERVICE
+
+    chmod +x $HOLER_BIN/$HOLER_NAME*
     chmod +x $HOLER_BIN/*.sh
 
     systemctl enable $HOLER_SERVICE
