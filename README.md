@@ -190,7 +190,7 @@ startup.bat
 
 如果配置文件`application.yaml`中设置了域名，并且指定了Nginx主目录，则在浏览器输入URL `http://holer.your-domain.com`
 如果没有设置域名访问，则通过IP和端口登录系统 `http://IP地址:600`
-![Holer Login](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-login.png)
+![Holer Login](http://blog.wdom.net/upload/2019/04/oru7f1ojueilep57qkfkimrobf.png)
 
 登录系统需要输入默认的管理员账号，默认用户名： `admin` 密码： `admin123`
 
