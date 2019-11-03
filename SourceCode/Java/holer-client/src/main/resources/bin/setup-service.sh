@@ -32,10 +32,10 @@ SYSD_DIR="/lib/systemd/system"
 function input() 
 {
     # Asking for the holer access key
-    if [ "$HOLER_ACCESS_KEY" == "" ]; then
+    if [ -z "$HOLER_ACCESS_KEY" ]; then
         echo "Enter holer access key:"
         read HOLER_ACCESS_KEY
-        if [ "$HOLER_ACCESS_KEY" == "" ]; then
+        if [ -z "$HOLER_ACCESS_KEY" ]; then
             echo "Please enter holer access key."
             exit $HOLER_ERR
         fi
@@ -43,10 +43,10 @@ function input()
     fi
 
     # Asking for the holer server host
-    if [ "$HOLER_SERVER_HOST" == "" ]; then
+    if [ -z "$HOLER_SERVER_HOST" ]; then
         echo "Enter holer server host:"
         read HOLER_SERVER_HOST
-        if [ "$HOLER_SERVER_HOST" == "" ]; then
+        if [ -z "$HOLER_SERVER_HOST" ]; then
             echo "Please enter holer server host."
             exit $HOLER_ERR
         fi
