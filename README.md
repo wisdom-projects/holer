@@ -219,7 +219,7 @@ startup.bat
 
 # Support
 
-如果下载holer软件遇到问题，请从百度网盘下载：[**软件地址**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA)。<br/>
+如果下载holer软件遇到问题，请从百度网盘下载：[**软件地址**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA)<br/>
 用户可以使用上述公开的key和端口，也可以申请holer服务；<br/>
 如果需要**holer服务**，请联系**QQ 2353941272**开通。<br/>
 Holer服务详情，请访问[**Wisdom**](http://www.wdom.net) <br/>
