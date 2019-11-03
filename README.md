@@ -218,7 +218,10 @@ startup.bat
 然后将详情信息粘贴到记事本里，严格按照详情信息里的使用说明进行操作，这样即可完成holer客户端配置，从而实现基于自己holer服务端的端口映射功能。
 
 # Support
-All of the above holer access keys and ports have been shared to public. Users can also apply for exclusive holer services.
-If you want to have **exclusive holer services**, please contact **QQ 2353941272** for application. For more details about holer services, please visit [**Wisdom**](http://www.wdom.net).<br/><br/>
-以上的全部key和端口都已公开共享。用户也可以申请holer服务，如果您需要**holer服务**，请联系**QQ 2353941272**开通。Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/>
-如果下载holer软件遇到问题，请从百度网盘下载：[**软件地址**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA)
+
+如果下载holer软件遇到问题，请从百度网盘下载：[**软件地址**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA) <br/>
+用户可以使用上述公开的key和端口，也可以申请holer服务，如果您需要**holer服务**，请联系**QQ 2353941272**开通。<br/>
+Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/>
+![Wisdom](https://github.com/wisdom-projects/rest-client/blob/master/images/logo.gif)
+
+
