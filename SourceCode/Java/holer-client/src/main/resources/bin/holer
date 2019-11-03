@@ -36,7 +36,6 @@ fi
 HOLER_LOG_DIR=$HOLER_HOME/logs
 HOLER_LOG=$HOLER_LOG_DIR/holer-client.log
 HOLER_APP=$HOLER_HOME/holer-client.jar
-HOLER_ARGS="-Dapp.home=$HOLER_HOME"
 
 # Source function library
 INIT_FUNCTIONS="/etc/init.d/functions"
@@ -78,7 +77,7 @@ function start()
         fi
     fi
 
-    nohup $JAVA_BIN $HOLER_ARGS -jar $HOLER_APP >>$HOLER_LOG 2>&1 &
+    nohup $JAVA_BIN -jar $HOLER_APP >>$HOLER_LOG 2>&1 &
     status
 }
 
