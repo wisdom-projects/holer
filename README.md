@@ -9,8 +9,8 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 
 Holer支持如下两种使用方式：
 
-(1). 使用公开的holer或者开通holer服务，通过holer客户端软件经**holer服务器**实现公网访问；<br/>
-(2). 使用**holer服务端软件**搭建holer服务，通过holer客户端软件经**自己服务器**实现公网访问。
+(1) 使用公开的holer或者开通holer服务，通过holer客户端软件经**holer服务器**实现公网访问；<br/>
+(2) 使用**holer服务端软件**搭建holer服务，通过holer客户端软件经**自己服务器**实现公网访问。
 
 如果在GitHub上下载holer软件遇到问题，可以点击这里下载：[**软件地址**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA)<br/>
 
