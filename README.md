@@ -145,6 +145,9 @@ holer
     #home: /usr/local/nginx
     home: C:/nginx-1.14.2
 ```
+
+将示例中的域名`your-domain.com`修改成自己**备案过**的域名；
+
 Linux系统默认安装Nginx路径 `/usr/local/nginx`
 Windows系统中可以先将Nginx复制到某个目录下，然后在配置文件中指定其主目录。
 
