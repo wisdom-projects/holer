@@ -109,6 +109,7 @@ Go版本的holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 ## 2. Holer服务端软件使用
 
 用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases) 搭建自己的holer服务端。
+![Holer Server](http://blog.wdom.net/upload/2019/04/pnlmngj08sh4eqv8fdb97oto0p.png)
 
 ### 2.1. 搭建holer服务端准备工作
 (1) 准备一台Linux系统或者Windows系统主机；
