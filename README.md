@@ -213,7 +213,7 @@ startup.bat
 #### 2.3.3. 配置holer客户端使其与holer服务端实现端口映射功能
 
 在用户列表页面中选中一条客户端记录，在页面右上角点击详情按钮，弹出的详情框下点击复制按钮；
-![Holer Copy](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-copy.png)
+![Holer Copy](http://blog.wdom.net/upload/2019/04/q7ffnsuu6ghf4p66chtb3001r3.png)
 
 然后将详情信息粘贴到记事本里，严格按照详情信息里的使用说明进行操作，这样即可完成holer客户端配置，从而实现基于自己holer服务端的端口映射功能。
 
@@ -223,6 +223,6 @@ startup.bat
 用户可以使用上述公开的key和端口，也可以申请holer服务；<br/>
 如果需要**holer服务**，请联系**QQ 2353941272**开通。<br/>
 Holer服务详情，请访问[**Wisdom**](http://www.wdom.net) <br/>
-![Wisdom](https://github.com/wisdom-projects/rest-client/blob/master/images/logo.gif)
+![Wisdom](http://blog.wdom.net/upload/2019/09/6pb9liclg4jbercad2d4hhnj3j.gif)
 
 
