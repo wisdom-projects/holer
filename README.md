@@ -146,7 +146,7 @@ holer
     home: C:/nginx-1.14.2
 ```
 
-将示例中的域名`your-domain.com`修改成自己**备案过**的域名；
+将示例中的域名`your-domain.com`修改成自己**备案过**的域名，如果没有域名，请忽略该配置项。
 
 Linux系统默认安装Nginx路径 `/usr/local/nginx`
 Windows系统中可以先将Nginx复制到某个目录下，然后在配置文件中指定其主目录。
