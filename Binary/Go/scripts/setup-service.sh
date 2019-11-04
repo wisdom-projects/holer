@@ -27,13 +27,13 @@ HOLER_CONF=$HOLER_HOME/holer.conf
 HOLER_SERVICE="holer.service"
 SYSD_DIR="/lib/systemd/system"
 
-function input() 
+input() 
 {
     # Asking for the holer access key
-    if [ "$HOLER_ACCESS_KEY" == "" ]; then
+    if [ -z "$HOLER_ACCESS_KEY" ]; then
         echo "Enter holer access key:"
         read HOLER_ACCESS_KEY
-        if [ "$HOLER_ACCESS_KEY" == "" ]; then
+        if [ -z "$HOLER_ACCESS_KEY" ]; then
             echo "Please enter holer access key."
             exit $HOLER_ERR
         fi
@@ -41,10 +41,10 @@ function input()
     fi
 
     # Asking for the holer server host
-    if [ "$HOLER_SERVER_HOST" == "" ]; then
+    if [ -z "$HOLER_SERVER_HOST" ]; then
         echo "Enter holer server host:"
         read HOLER_SERVER_HOST
-        if [ "$HOLER_SERVER_HOST" == "" ]; then
+        if [ -z "$HOLER_SERVER_HOST" ]; then
             echo "Please enter holer server host."
             exit $HOLER_ERR
         fi
@@ -52,11 +52,12 @@ function input()
     fi
 }
 
-function setup()
+setup()
 {
     input
     cp $HOLER_HOME/$HOLER_SERVICE $SYSD_DIR/
     sed -i "s|@HOLER_HOME@|$HOLER_HOME|" $SYSD_DIR/$HOLER_SERVICE
+    chmod +x $HOLER_HOME/$HOLER_NAME*
     chmod +x $HOLER_HOME/*.sh
 
     systemctl enable $HOLER_SERVICE

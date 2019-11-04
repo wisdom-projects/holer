@@ -24,11 +24,11 @@ set HOLER_OK=0
 set HOLER_ERR=1
 
 set HOLER_HOME=%~dp0
-set HOLER_CONF=!HOLER_HOME!\holer.conf
 set HOLER_BIN=holer-windows-amd64.exe
 set HOLER_LOG_DIR=!HOLER_HOME!\logs
 set HOLER_LOG=!HOLER_LOG_DIR!\holer-client.log
 set HOLER_LINE=------------------------------------------
+set HOLER_CONF=!HOLER_HOME!\holer.conf
 
 @REM Create logs directory
 if not exist "!HOLER_LOG_DIR!" (
@@ -50,7 +50,7 @@ if "!HOLER_ACCESS_KEY!" equ "" (
         pause
         exit /b !HOLER_ERR!
     )
-    @echo HOLER_ACCESS_KEY=!HOLER_ACCESS_KEY!> !HOLER_CONF!
+    @echo HOLER_ACCESS_KEY=!HOLER_ACCESS_KEY!> "!HOLER_CONF!"
 )
 
 @REM Asking for the HOLER_SERVER_HOST
@@ -63,13 +63,13 @@ if "!HOLER_SERVER_HOST!" equ "" (
         pause
         exit /b !HOLER_ERR!
     )
-    @echo HOLER_SERVER_HOST=!HOLER_SERVER_HOST!>> !HOLER_CONF!
+    @echo HOLER_SERVER_HOST=!HOLER_SERVER_HOST!>> "!HOLER_CONF!"
 )
 
 @echo !HOLER_LINE!
 @echo Starting holer client...
 
-start /b /min !HOLER_BIN! -k !HOLER_ACCESS_KEY! -s !HOLER_SERVER_HOST! >> !HOLER_LOG!
+start /b /min !HOLER_BIN! -k !HOLER_ACCESS_KEY! -s !HOLER_SERVER_HOST! >> "!HOLER_LOG!"
 timeout /T 3 /NOBREAK
 
 @echo !HOLER_LINE!
