@@ -27,7 +27,7 @@ HOLER_BIN=$HOLER_HOME/bin
 HOLER_CONF=$HOLER_HOME/conf/holer.conf
 RC_INIT_DIR="/etc/rc.d/init.d"
 
-function input() 
+input() 
 {
     # Asking for the holer access key
     if [ -z "$HOLER_ACCESS_KEY" ]; then
@@ -52,7 +52,7 @@ function input()
     fi
 }
 
-function init()
+init()
 {
     input
 
@@ -64,7 +64,7 @@ function init()
     chmod +x $HOLER_BIN/*.sh
 }
 
-function setup()
+setup()
 {
     init
     chkconfig --add $HOLER_NAME
