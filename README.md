@@ -121,7 +121,7 @@ Go版本的holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 
 (5) 设置安全规则，允许访问holer服务端端口6060、600以及端口映射规则所涉及的端口；
 
-(6) 建议申请域名并且完成域名备案，如果没有域名可以直接使用IP和端口访问。
+(6) 建议申请域名并且完成**域名备案**，如果没有域名可以直接使用IP和端口访问。
 
 ### 2.2. 配置并启动holer服务端
 解压软件包，打开配置文件 `holer-server/resources/application.yaml`
@@ -149,7 +149,17 @@ holer
 将示例中的域名`your-domain.com`修改成自己**备案过**的域名，如果没有域名，请忽略该配置项。
 
 Linux系统默认安装Nginx路径 `/usr/local/nginx`
-Windows系统中可以先将Nginx复制到某个目录下，然后在配置文件中指定其主目录。
+Windows系统中可以先将Nginx复制到某个目录下，然后在配置文件中指定其主目录。<br/>
+**注意事项：** <br/>
+请确保Nginx主目录下存在文件：`conf/nginx.conf` <br/>
+Nginx目录结构示例：
+```
+nginx
+├── conf
+│   ├── nginx.conf
+.   .
+.   .
+```
 
 如果需要用到HTTPS功能，Window系统版本的Nginx默认支持HTTPS功能，Linux系统需要下载Nginx源码，配置和编译以及安装执行如下命令：
 ```
