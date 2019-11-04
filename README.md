@@ -57,7 +57,15 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 **注意事项：** <br/>
 **CentOS 7, RedHat 7, Ubuntu 18** 及更高版本，建议执行命令`bash setup-service.sh`设置开机启动；<br/>
 
-根据提示输入**holer access key**和**holer server host**
+根据提示输入**holer access key**和**holer server host** <br/>
+输入示例：
+```
+------------------------------------------
+Enter holer access key: HOLER_CLIENT-2F8D8B78B3C2A0AE
+------------------------------------------
+Enter holer server host: holer.org
+------------------------------------------
+```
 
 ### 1.6. 公网和内网的地址映射关系
 
@@ -82,13 +90,21 @@ Go版本的holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 
 这里以`Windows & Linux x86-64bit` 为例，启动holer执行如下命令：<br/><br/>
 **Windows系统**:<br/>
-`holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
+`holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE -s holer.org`<br/>
 也可以执行命令 `startup.bat` 或者双击 `startup.bat`
 
 **Linux系统**:<br/>
-`nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE &`<br/>
+`nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE -s holer.org &`<br/>
 也可以执行命令 `bash startup.sh`<br/>
-首次启动根据提示输入**holer access key**和**holer server host**
+首次启动根据提示输入**holer access key**和**holer server host** <br/>
+输入示例：
+```
+------------------------------------------
+Enter holer access key: HOLER_CLIENT-2F8D8B78B3C2A0AE
+------------------------------------------
+Enter holer server host: holer.org
+------------------------------------------
+```
 
 #### 1.7.2. 设置开机启动
 进入目录：<br/>
@@ -104,7 +120,15 @@ Go版本的holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 执行命令 `bash setup.sh`<br/>
 **注意事项：** <br/>
 **CentOS 7, RedHat 7, Ubuntu 18** 及更高版本，建议执行命令`bash setup-service.sh`设置开机启动；<br/>
-根据提示输入**holer access key**和**holer server host**
+根据提示输入**holer access key**和**holer server host** <br/>
+输入示例：
+```
+------------------------------------------
+Enter holer access key: HOLER_CLIENT-2F8D8B78B3C2A0AE
+------------------------------------------
+Enter holer server host: holer.org
+------------------------------------------
+```
 
 ## 2. Holer服务端软件使用
 
