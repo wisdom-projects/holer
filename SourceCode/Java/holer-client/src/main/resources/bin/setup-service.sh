@@ -29,7 +29,7 @@ HOLER_CONF=$HOLER_HOME/conf/holer.conf
 HOLER_SERVICE="holer.service"
 SYSD_DIR="/lib/systemd/system"
 
-function input() 
+input() 
 {
     # Asking for the holer access key
     if [ -z "$HOLER_ACCESS_KEY" ]; then
@@ -54,7 +54,7 @@ function input()
     fi
 }
 
-function setup()
+setup()
 {
     input
     cp $HOLER_BIN/$HOLER_SERVICE $SYSD_DIR/

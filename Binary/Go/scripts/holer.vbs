@@ -38,15 +38,16 @@ HOLER_SERVER_HOST = HOLER_ENV("HOLER_SERVER_HOST")
 HOLER_HOME = HOLER_ENV("HOLER_HOME")
 
 If HOLER_HOME = Empty Then
-    HOLER_HOME = HOLER_FSO.GetFolder(".").Path & "\"
+    MsgBox "Please set HOLER_HOME"
+    WScript.Quit
 End If
 
 HOLER_BIN = "holer-windows-amd64.exe"
 HOLER_BIN_PATH = HOLER_HOME & HOLER_BIN
-HOLER_CONF = HOLER_HOME & "holer.conf"
 HOLER_LOG_DIR = HOLER_HOME & "logs"
 HOLER_LOG = HOLER_LOG_DIR & "\holer-client.log"
 HOLER_LINE = "------------------------------------------"
+HOLER_CONF = HOLER_HOME & "holer.conf"
 
 '---------------------------------------------------
 ' Input parameters
@@ -112,7 +113,7 @@ Function LaunchHoler()
     '---------------------------------------------------
     ' Launch holer daemon
     '---------------------------------------------------
-    HOLER_CMD = "cmd.exe /c " & HOLER_BIN_PATH & " -k " & HOLER_ACCESS_KEY & " -s " & HOLER_SERVER_HOST & " >> " & HOLER_LOG
+    HOLER_CMD = "cmd.exe /c """ & HOLER_BIN_PATH & """ -k " & HOLER_ACCESS_KEY & " -s " & HOLER_SERVER_HOST & " >> " & HOLER_LOG
     HOLER_WSH.Run HOLER_CMD, 0, False
 
     '---------------------------------------------------

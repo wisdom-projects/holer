@@ -47,12 +47,12 @@ if [ ! -d $HOLER_LOG_DIR ]; then
     mkdir -p $HOLER_LOG_DIR
 fi
 
-function pid() 
+pid() 
 {
     HOLER_PID=`ps -ef | grep -v grep | grep "$HOLER_APP" |awk '{print $2}'`
 }
 
-function status() 
+status() 
 {
     pid
     if [ -n "$HOLER_PID" ]; then
@@ -62,7 +62,7 @@ function status()
     fi
 }
 
-function start() 
+start() 
 {
     pid
     if [ -n "$HOLER_PID" ]; then
@@ -81,7 +81,7 @@ function start()
     status
 }
 
-function stop() 
+stop() 
 {
     pid
     if [ -z "$HOLER_PID" ]; then

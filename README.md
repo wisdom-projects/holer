@@ -1,11 +1,18 @@
-# What is holer
+# ![Holer](http://blog.wdom.net/upload/2019/11/v3sonj7kuogp1orspp1ek7t4jt.png)
 Holer exposes local servers behind NATs and firewalls to the public internet over secure tunnels. <br/>
 Support forwarding message based on TCP protocol.<br/><br/>
 Holer是一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于TCP协议的报文。
-![Demo](http://blog.wdom.net/upload/2018/05/pb96rrmoh6h25osklskr2q0u0f.png)
+![Demo](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/demo.png)
 # How it works
 
 ## 1. Holer使用
+
+Holer支持如下两种使用方式：
+
+**(1)** 使用**公开的holer**或者**开通holer服务**，通过holer客户端软件经**holer服务器**实现公网访问；<br/>
+**(2)** 使用**holer服务端软件**搭建holer服务，通过holer客户端软件经**自己服务器**实现公网访问。
+
+如果下载holer软件遇到问题，请从这里下载：[**软件地址**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA)<br/>
 
 ### 1.1. 安装 Java
 安装Java 1.7或者更高版本；
@@ -19,7 +26,6 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 
 ### 1.3. 配置holer 
 下载并解压软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary/Java)
-
 修改配置文件：<br/>
 `holer-client/conf/holer.conf`<br/>
 
@@ -57,7 +63,15 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 **注意事项：** <br/>
 **CentOS 7, RedHat 7, Ubuntu 18** 及更高版本，建议执行命令`bash setup-service.sh`设置开机启动；<br/>
 
-根据提示输入**holer access key**和**holer server host**
+根据提示输入**holer access key**和**holer server host** <br/>
+输入示例：
+```
+------------------------------------------
+Enter holer access key: HOLER_CLIENT-2F8D8B78B3C2A0AE
+------------------------------------------
+Enter holer server host: holer.org
+------------------------------------------
+```
 
 ### 1.6. 公网和内网的地址映射关系
 
@@ -82,13 +96,21 @@ Go版本的holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 
 这里以`Windows & Linux x86-64bit` 为例，启动holer执行如下命令：<br/><br/>
 **Windows系统**:<br/>
-`holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE`<br/>
+`holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE -s holer.org`<br/>
 也可以执行命令 `startup.bat` 或者双击 `startup.bat`
 
 **Linux系统**:<br/>
-`nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE &`<br/>
+`nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE -s holer.org &`<br/>
 也可以执行命令 `bash startup.sh`<br/>
-首次启动根据提示输入**holer access key**和**holer server host**
+首次启动根据提示输入**holer access key**和**holer server host** <br/>
+输入示例：
+```
+------------------------------------------
+Enter holer access key: HOLER_CLIENT-2F8D8B78B3C2A0AE
+------------------------------------------
+Enter holer server host: holer.org
+------------------------------------------
+```
 
 #### 1.7.2. 设置开机启动
 进入目录：<br/>
@@ -104,11 +126,20 @@ Go版本的holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 执行命令 `bash setup.sh`<br/>
 **注意事项：** <br/>
 **CentOS 7, RedHat 7, Ubuntu 18** 及更高版本，建议执行命令`bash setup-service.sh`设置开机启动；<br/>
-根据提示输入**holer access key**和**holer server host**
+根据提示输入**holer access key**和**holer server host** <br/>
+输入示例：
+```
+------------------------------------------
+Enter holer access key: HOLER_CLIENT-2F8D8B78B3C2A0AE
+------------------------------------------
+Enter holer server host: holer.org
+------------------------------------------
+```
 
 ## 2. Holer服务端软件使用
 
 用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases) 搭建自己的holer服务端。
+![Holer Server](http://blog.wdom.net/upload/2019/04/pnlmngj08sh4eqv8fdb97oto0p.png)
 
 ### 2.1. 搭建holer服务端准备工作
 (1) 准备一台Linux系统或者Windows系统主机；
@@ -119,9 +150,9 @@ Go版本的holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 
 (4) 安装MariaDB并设置root用户密码；
 
-(5) 设置安全规则，允许访问holer服务端端口6060、600以及端口映射规则所涉及的端口；
+(5) 设置安全规则，允许访问Holer服务端端口**6060、600**以及**端口映射规则**所涉及的端口；
 
-(6) 建议申请域名并且完成域名备案，如果没有域名可以直接使用IP和端口访问。
+(6) 建议申请域名并且完成域名备案，并设置域名**泛解析（*.域名）**和**直接解析主域名（@.域名）**，如果没有域名可以直接使用**IP和端口**访问。
 
 ### 2.2. 配置并启动holer服务端
 解压软件包，打开配置文件 `holer-server/resources/application.yaml`
@@ -145,8 +176,21 @@ holer
     #home: /usr/local/nginx
     home: C:/nginx-1.14.2
 ```
-Linux系统默认安装Nginx路径 `/usr/local/nginx`
-Windows系统中可以先将Nginx复制到某个目录下，然后在配置文件中指定其主目录。
+
+将示例中的域名`your-domain.com`修改成自己**备案过**的域名，如果没有域名，请忽略该配置项。
+
+Linux系统默认安装Nginx路径 `/usr/local/nginx` <br/>
+Windows系统中可以先将Nginx复制到某个目录下，然后在配置文件中指定其主目录。<br/><br/>
+**注意事项：** <br/>
+请确保Nginx主目录下存在配置文件：`conf/nginx.conf` <br/>
+Nginx目录结构示例：
+```
+Nginx主目录
+├── conf
+│   ├── nginx.conf
+.   .
+.   .
+```
 
 如果需要用到HTTPS功能，Window系统版本的Nginx默认支持HTTPS功能，Linux系统需要下载Nginx源码，配置和编译以及安装执行如下命令：
 ```
@@ -200,15 +244,15 @@ startup.bat
 
 在用户列表页面中创建一个holer客户端<br/>
 `http://holer.your-domain.com/view/holer-client.html`
-![Holer Client](http://blog.wdom.net/upload/2019/04/1he44jumd2g9no95c6f8fsa5re.png)
+![Holer Client](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-client.png)
 
 在端口映射页面中为该holer客户端创建端口映射<br/>
 `http://holer.your-domain.com/view/holer-port.html`
-![Holer Port](http://blog.wdom.net/upload/2019/04/0s78i863v4h6tr1vfdg3eo3trv.png)
+![Holer Port](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-port.png)
 
 在数据统计页面中查看报表信息<br/>
 `http://holer.your-domain.com/view/holer-report.html`
-![Holer Report](http://blog.wdom.net/upload/2019/04/5atk5j8ii2gl1rqfl3l6672sdq.png)
+![Holer Report](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-report.png)
 
 #### 2.3.3. 配置holer客户端使其与holer服务端实现端口映射功能
 
@@ -218,7 +262,10 @@ startup.bat
 然后将详情信息粘贴到记事本里，严格按照详情信息里的使用说明进行操作，这样即可完成holer客户端配置，从而实现基于自己holer服务端的端口映射功能。
 
 # Support
-All of the above holer access keys and ports have been shared to public. Users can also apply for exclusive holer services.
-If you want to have **exclusive holer services**, please contact **QQ 2353941272** for application. For more details about holer services, please visit [**Wisdom**](http://www.wdom.net).<br/><br/>
-以上的全部key和端口都已公开共享。用户也可以申请holer服务，如果您需要**holer服务**，请联系**QQ 2353941272**开通。Holer服务详情，请访问[**Wisdom**](http://www.wdom.net)。<br/>
-如果下载holer软件遇到问题，请从百度网盘下载：[**软件地址**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA)
+
+用户可以使用上述公开的key和端口，也可以申请holer服务；<br/>
+如果需要**holer服务**，请联系**QQ 2353941272**开通。<br/>
+Holer服务详情，请访问[**Wisdom**](http://www.wdom.net) <br/>
+![Wisdom](http://blog.wdom.net/upload/2019/09/6pb9liclg4jbercad2d4hhnj3j.gif)
+
+

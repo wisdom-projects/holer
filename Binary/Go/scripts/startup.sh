@@ -29,12 +29,12 @@ HOLER_LOG=$HOLER_LOG_DIR/holer-client.log
 HOLER_BIN=$HOLER_HOME/holer-linux-amd64
 HOLER_CONF=$HOLER_HOME/holer.conf
 
-function pid() 
+pid() 
 {
     HOLER_PID=`ps -ef | grep -v grep | grep "$HOLER_BIN" |awk '{print $2}'`
 }
 
-function status() 
+status() 
 {
     pid
     if [ -n "$HOLER_PID" ]; then
@@ -44,17 +44,17 @@ function status()
     fi
 }
 
-function input() 
+input() 
 {
     if [ -f $HOLER_CONF ]; then
         . $HOLER_CONF
     fi
 
     # Asking for the holer access key
-    if [ "$HOLER_ACCESS_KEY" == "" ]; then
+    if [ -z "$HOLER_ACCESS_KEY" ]; then
         echo "Enter holer access key:"
         read HOLER_ACCESS_KEY
-        if [ "$HOLER_ACCESS_KEY" == "" ]; then
+        if [ -z "$HOLER_ACCESS_KEY" ]; then
             echo "Please enter holer access key."
             exit $HOLER_ERR
         fi
@@ -62,10 +62,10 @@ function input()
     fi
 
     # Asking for the holer server host
-    if [ "$HOLER_SERVER_HOST" == "" ]; then
+    if [ -z "$HOLER_SERVER_HOST" ]; then
         echo "Enter holer server host:"
         read HOLER_SERVER_HOST
-        if [ "$HOLER_SERVER_HOST" == "" ]; then
+        if [ -z "$HOLER_SERVER_HOST" ]; then
             echo "Please enter holer server host."
             exit $HOLER_ERR
         fi
@@ -73,7 +73,7 @@ function input()
     fi
 }
 
-function start() 
+start() 
 {
     if [ ! -d $HOLER_LOG_DIR ]; then
         mkdir -p $HOLER_LOG_DIR

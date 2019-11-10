@@ -31,12 +31,12 @@ HOLER_LOG=$HOLER_LOG_DIR/holer-client.log
 HOLER_APP=$HOLER_HOME/holer-client.jar
 HOLER_CONF=$HOLER_HOME/conf/holer.conf
 
-function pid() 
+pid() 
 {
     HOLER_PID=`ps -ef | grep -v grep | grep "$HOLER_APP" |awk '{print $2}'`
 }
 
-function status() 
+status() 
 {
     pid
     if [ -n "$HOLER_PID" ]; then
@@ -46,7 +46,7 @@ function status()
     fi
 }
 
-function input() 
+input() 
 {
     if [ -f $HOLER_CONF ]; then
         . $HOLER_CONF
@@ -75,7 +75,7 @@ function input()
     fi
 }
 
-function start() 
+start() 
 {
     if [ ! -d $HOLER_LOG_DIR ]; then
         mkdir -p $HOLER_LOG_DIR

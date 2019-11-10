@@ -30,7 +30,6 @@ Set HOLER_WSH = CreateObject("WScript.Shell")
 Set HOLER_ENV = HOLER_WSH.Environment("USER")
 
 HOLER_VBS_FILE = "holer.vbs"
-HOLER_VBS_STARTUP = "startup.vbs"
 HOLER_BOOT_DIR = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\"
 HOLER_HOME = HOLER_FSO.GetFolder(".").Path & "\"
 HOLER_CONF = HOLER_HOME & "holer.conf"
@@ -54,7 +53,6 @@ WriteFile HOLER_CONF, HOLER_CONTENTS
 ' Set startup
 '---------------------------------------------------
 HOLER_FSO.CopyFile HOLER_VBS_FILE, HOLER_BOOT_DIR
-HOLER_FSO.CopyFile HOLER_BOOT_DIR & HOLER_VBS_FILE, HOLER_VBS_STARTUP
 
 MsgBox("Done")
 WScript.Quit
