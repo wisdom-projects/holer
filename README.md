@@ -264,7 +264,7 @@ startup.bat
 # Support
 
 用户可以使用上述公开的key和端口，也可以申请holer服务；<br/>
-如果需要**holer服务**，请联系**QQ 2353941272或微信 wangyudongdom**开通。<br/>
+如果需要**holer服务**，请联系 **QQ 2353941272 或微信 wangyudongdom** 开通。<br/>
 Holer服务详情，请访问[**Wisdom**](http://www.wdom.net) <br/>
 ![Wisdom](http://blog.wdom.net/upload/2019/09/6pb9liclg4jbercad2d4hhnj3j.gif)
 
