@@ -17,7 +17,19 @@ Holer支持如下两种使用方式：
 ## 1. 使用公开的holer或者开通holer服务（方式一）
 
 使用**公开的holer**或者**开通holer服务**，通过holer客户端软件经**holer服务器**实现公网访问；<br/>
-这里以映射本地Tomcat服务端口为例，其他TCP端口映射步骤类似，更多使用示例请参考[**官方文档**](http://blog.wdom.net/tag/Holer)。
+
+**公开的holer**映射详情如下：
+
+Holer Access Key             |Domain Name|Internet Address|Local Address
+-----------------------------|-----------|----------------|---------------
+HOLER_CLIENT-2F8D8B78B3C2A0AE|holer65530.wdom.net|holer.org:65530|127.0.0.1:8080
+HOLER_CLIENT-3C07CDFD1BF99BF2|holer65531.wdom.net|holer.org:65531|127.0.0.1:8088
+HOLER_CLIENT-2A623FCB6E2A7D1D|holer65532.wdom.net|holer.org:65532|127.0.0.1:80
+HOLER_CLIENT-AF3E6391525F70E4|N/A|holer.org:65533|127.0.0.1:3389
+HOLER_CLIENT-822404317F9D8ADD|N/A|holer.org:65534|127.0.0.1:22
+HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
+
+这里以映射本地Tomcat默认端口8080，选择上述表中的第一条映射记录为例；如果本地的Tomcat端口是80或者8088，请选择相匹配的端口映射记录，其他TCP端口映射步骤类似，更多的使用示例请参考[**官方文档**](http://blog.wdom.net)。
 
 ### 1.1. 安装 Java
 安装Java 1.7或者更高版本；
@@ -25,7 +37,7 @@ Holer支持如下两种使用方式：
 
 ### 1.2. 安装Web服务端
 
-以Tomcat为例，安装并启动Tomcat<br/><br/>
+以Tomcat为例，安装并启动Tomcat，默认安装的端口是8080；<br/>
 在浏览器里输入如下URL来检查Tomcat服务是否可以正常访问：<br/>
 `http://127.0.0.1:8080`
 
@@ -78,26 +90,11 @@ Enter holer server host: holer.org
 ------------------------------------------
 ```
 
-### 1.6. 公网和内网的地址映射关系
-
-Holer Access Key             |Domain Name|Internet Address|Local Address
------------------------------|-----------|----------------|---------------
-HOLER_CLIENT-2F8D8B78B3C2A0AE|holer65530.wdom.net|holer.org:65530|127.0.0.1:8080
-HOLER_CLIENT-3C07CDFD1BF99BF2|holer65531.wdom.net|holer.org:65531|127.0.0.1:8088
-HOLER_CLIENT-2A623FCB6E2A7D1D|holer65532.wdom.net|holer.org:65532|127.0.0.1:80
-HOLER_CLIENT-AF3E6391525F70E4|N/A|holer.org:65533|127.0.0.1:3389
-HOLER_CLIENT-822404317F9D8ADD|N/A|holer.org:65534|127.0.0.1:22
-HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
-
-如果您本地的Tomcat端口是80或者8088，请选择匹配的key进行设置。<br/>
-
-请参考[**博客文章**](http://blog.wdom.net/tag/Holer)获得更多的使用示例和帮助。<br/>
-
-### 1.7. Go版本的holer客户端
+### 1.6. Go版本的holer客户端
 
 Go版本的holer客户端软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/>
 
-#### 1.7.1. 启动holer
+#### 1.6.1. 启动holer
 
 这里以`Windows & Linux x86-64bit` 为例，启动holer执行如下命令：<br/><br/>
 **Windows系统**:<br/>
@@ -117,7 +114,7 @@ Enter holer server host: holer.org
 ------------------------------------------
 ```
 
-#### 1.7.2. 设置开机启动
+#### 1.6.2. 设置开机启动
 进入目录：<br/>
 `cd holer-client/bin`<br/>
 
@@ -143,17 +140,18 @@ Enter holer server host: holer.org
 
 ## 2. 使用holer服务端软件搭建holer服务（方式二）
 
+使用**holer服务端软件**搭建holer服务，通过holer客户端软件经**自己服务器**实现公网访问。<br/>
 用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases) 搭建自己的holer服务。<br/>
 ![Holer Server](http://blog.wdom.net/upload/2019/04/pnlmngj08sh4eqv8fdb97oto0p.png)
 
 ### 2.1. 搭建holer服务端准备工作
-(1) 准备一台带有公网IP地址的Linux系统或者Windows系统主机；
+(1) 准备一台可以经**公网IP访问**的Linux系统或者Windows系统主机；
 
-(2) 安装Java 1.8及以上版本，执行命令 `java -version` 检查Java是否可用；
+(2) 安装**Java 1.8及以上版本**，执行命令 `java -version` 检查Java是否可用；
 
 (3) 安装并启动Nginx, 建议安装其稳定版本；
 
-(4) 安装MariaDB并设置root用户密码；
+(4) 安装MariaDB并**设置root用户密码**；
 
 (5) 设置安全规则，允许访问Holer服务端端口**6060、600**以及**端口映射规则**所涉及的端口；
 
