@@ -66,10 +66,12 @@ Java版本的holer客户端软件（[源代码](https://github.com/wisdom-projec
 `cd holer-client/bin`<br/>
 
 **Windows系统**:<br/>
-执行命令 `startup.bat` 或者双击 `startup.bat`<br/>
+执行命令 `startup.bat` 或双击 `startup.bat`<br/>
+如果需要停止进程，执行命令`shutdown.bat`或双击`shutdown.bat`<br/>
 
 **Linux系统**:<br/>
 执行命令 `bash startup.sh`<br/>
+如果需要停止进程，执行命令 `bash shutdown.sh`<br/>
 
 然后就可以通过如下URL来访问Web应用：<br/>
 `http://holer65530.wdom.net` 或者 `http://holer.org:65530` 
@@ -118,11 +120,14 @@ Go版本的holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 这里以`Windows & Linux x86-64bit` 为例，启动holer执行如下命令：<br/><br/>
 **Windows系统**:<br/>
 `holer-windows-amd64.exe -k HOLER_CLIENT-2F8D8B78B3C2A0AE -s holer.org`<br/>
-也可以执行命令 `startup.bat` 或者双击 `startup.bat`
+也可以执行命令 `startup.bat` 或者双击 `startup.bat`<br/>
+如果需要停止进程，执行命令`shutdown.bat`或双击`shutdown.bat`<br/>
 
 **Linux系统**:<br/>
 `nohup ./holer-linux-amd64 -k HOLER_CLIENT-2F8D8B78B3C2A0AE -s holer.org &`<br/>
 也可以执行命令 `bash startup.sh`<br/>
+如果需要停止进程，执行命令 `bash shutdown.sh`<br/>
+
 首次启动根据提示输入**holer access key**和**holer server host** <br/>
 输入示例：
 ```
@@ -229,12 +234,15 @@ cd holer-server
 chmod 755 holer
 bash holer start
 ```
+如果需要停止进程，执行命令`bash holer stop`<br/>
+
 Windows系统执行启动命令如下：
 ```
 cd holer-server
 startup.bat
 ```
-或者双击 `startup.bat`
+或者双击 `startup.bat`<br/>
+如果需要停止进程，执行命令`shutdown.bat`或双击`shutdown.bat`<br/>
 
 #### 2.2.2.4 设置开机启动
 
@@ -319,8 +327,8 @@ startup.bat
 `holer-server/logs/holer-server.log`
 
 ## 3.4 申请holer服务
-用户可以使用上述公开的holer映射详见[2.1节](#21-使用公开的holer映射或者开通holer服务)，也可以申请holer服务；<br/>
-如果需要**holer服务**，请联系 **QQ 2353941272 或微信 wangyudongdom** 开通。<br/>
+用户可以使用上述公开的holer映射详见[2.1节](#21-使用公开的holer映射或者开通holer服务)，也可以申请**holer服务**；<br/>
+如果需要开通**holer服务**，请联系 **QQ 2353941272 或微信 wangyudongdom** 开通。<br/>
 Holer服务详情，请访问[**Wisdom**](http://www.wdom.net) <br/>
 ![Wisdom](http://blog.wdom.net/upload/2019/09/6pb9liclg4jbercad2d4hhnj3j.gif)
 
