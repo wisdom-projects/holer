@@ -265,7 +265,7 @@ startup.bat
 #### 2.2.3.1 登录holer管理系统
 
 如果配置文件`application.yaml`中设置了域名，并且指定了Nginx主目录，则在浏览器输入URL `http://holer.your-domain.com`
-如果没有设置域名访问，则通过IP和端口登录系统 `http://IP地址:600`
+如果没有设置域名访问，则通过IP和端口登录系统 `http://IP地址:600`<br/>
 ![Holer Login](http://blog.wdom.net/upload/2019/04/oru7f1ojueilep57qkfkimrobf.png)
 
 登录系统需要输入默认的管理员账号，默认用户名： `admin` 密码： `admin123`
@@ -275,20 +275,20 @@ startup.bat
 #### 2.2.3.2 创建客户端和端口映射
 
 在用户列表页面中创建一个holer客户端<br/>
-`http://holer.your-domain.com/view/holer-client.html`
+`http://holer.your-domain.com/view/holer-client.html`<br/>
 ![Holer Client](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-client.png)
 
 在端口映射页面中为该holer客户端创建端口映射<br/>
-`http://holer.your-domain.com/view/holer-port.html`
+`http://holer.your-domain.com/view/holer-port.html`<br/>
 ![Holer Port](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-port.png)
 
 在数据统计页面中查看报表信息<br/>
-`http://holer.your-domain.com/view/holer-report.html`
+`http://holer.your-domain.com/view/holer-report.html`<br/>
 ![Holer Report](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/holer-report.png)
 
 #### 2.2.3.3 配置holer客户端使其与holer服务端实现端口映射功能
 
-在用户列表页面中选中一条客户端记录，在页面右上角点击详情按钮，弹出的详情框下点击复制按钮；
+在用户列表页面中选中一条客户端记录，在页面右上角点击详情按钮，弹出的详情框下点击复制按钮；<br/>
 ![Holer Copy](http://blog.wdom.net/upload/2019/04/q7ffnsuu6ghf4p66chtb3001r3.png)
 
 然后将详情信息粘贴到记事本里，请严格按照详情信息里的使用说明进行操作，这样可以顺利完成holer客户端配置，从而实现基于自己holer服务端的端口映射功能。
@@ -330,5 +330,6 @@ startup.bat
 用户可以使用上述公开的holer映射详见[2.1节](#21-使用公开的holer映射或者开通holer服务)，也可以申请**holer服务**；<br/>
 如果需要开通**holer服务**，请联系 **QQ 2353941272 或微信 wangyudongdom** 开通。<br/>
 Holer服务详情，请访问[**Wisdom**](http://www.wdom.net) <br/>
+
 ![Wisdom](http://blog.wdom.net/upload/2019/09/6pb9liclg4jbercad2d4hhnj3j.gif)
 
