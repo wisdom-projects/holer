@@ -4,26 +4,26 @@
 
 Holer exposes local servers behind NATs and firewalls to the public internet over secure tunnels. <br/>
 Support forwarding message based on TCP protocol.<br/><br/>
-Holer是一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于TCP协议的报文。
-![Demo](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/demo.png)
+Holer是一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于TCP协议的报文。<br/>
+![示意图](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/demo.png)
 
 # 2. Holer使用
 
 Holer支持以下两种使用方式，根据实际需求，任选其中一种方式即可：
 
 **方式一：** <br/>
-使用**公开的holer映射**或者**开通holer服务**，通过**holer客户端软件**经**holer服务器**实现公网访问，详见**2.1节**。<br/><br/>
+使用**公开的holer映射**或者**开通holer服务**，通过**holer客户端软件**经**holer服务器**实现公网访问，详见**2.1节**。<br/>
 
 **方式二：** <br/>
 使用**holer服务端软件**搭建holer服务，通过**holer客户端软件**经**自己服务器**实现公网访问，详见**2.2节**。<br/>
 
-Holer客户端软件有Java版本（**详见2.1.1节**）和Go版本（**详见2.1.2节**），根据偏好，任选其中一种版本使用即可。
+Holer客户端软件有Java版本（详见**2.1.1节**）和Go版本（详见**2.1.2节**），根据偏好，任选其中一种版本使用即可。
 
-如果下载holer软件遇到问题，请从这里下载：[**软件地址**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA)<br/>
+如果下载holer软件遇到问题，更多的下载地址详见**3.2节**。
 
 ## 2.1. 使用公开的holer映射或者开通holer服务（方式一）
 
-使用**公开的holer映射**或者**开通holer服务**，通过holer客户端软件经**holer服务器**实现公网访问；<br/>
+使用**公开的holer映射**或者**开通holer服务**，通过holer客户端软件经**holer服务器**实现公网访问。<br/>
 
 **公开的holer映射**详情如下：
 
@@ -161,6 +161,8 @@ Enter holer server host: holer.org
 
 使用**holer服务端软件**搭建holer服务，通过holer客户端软件经**自己服务器**实现公网访问。<br/>
 用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases) 搭建自己的holer服务。<br/>
+如果下载holer软件遇到问题，更多的下载地址详见**3.2节**。<br/>
+
 ![Holer Server](http://blog.wdom.net/upload/2019/04/pnlmngj08sh4eqv8fdb97oto0p.png)
 
 ### 2.2.1. 搭建holer服务端准备工作
@@ -172,7 +174,7 @@ Enter holer server host: holer.org
 
 (4) 安装MariaDB并**设置root用户密码**；
 
-(5) 设置安全规则，允许访问Holer服务端端口**6060、600**以及**端口映射规则**所涉及的端口；
+(5) 设置安全规则，允许访问holer服务端端口**6060、600**以及**端口映射规则**所涉及的端口；
 
 (6) 建议申请域名并且完成域名备案，并设置域名**泛解析（*.域名）**和**直接解析主域名（@.域名）**，如果没有域名可以直接使用**IP和端口**访问。
 
