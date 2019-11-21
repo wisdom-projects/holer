@@ -299,7 +299,26 @@ startup.bat
 [**软件地址一**](https://github.com/wisdom-projects/holer/releases)<br/>
 [**软件地址二**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA#list/path=%2Fsharelink2808252679-1014620033513253%2Fholer%2Fholer-server&parentPath=%2Fsharelink2808252679-1014620033513253)<br/>
 
-## 3.3 申请holer服务
+## 3.3 问题帮助
+使用中遇到问题可以查看holer日志信息来排查问题的具体原因。
+
+### 3.3.1 Holer客户端日志
+#### Java版本的holer客户端
+查看日志文件：
+holer-client/logs/holer-client.log
+
+#### Go版本的holer客户端
+**Linux系统** <br/>
+查看可执行程序所在目录下的日志文件`logs/holer-client.log`或者`nohup.out`文件
+
+**Windows系统** <br/>
+查看可执行程序所在目录下的日志文件`logs/holer-client.log`
+
+### 3.3.2 Holer服务端日志
+查看日志文件：
+holer-server/logs/holer-server.log
+
+## 3.4 申请holer服务
 用户可以使用上述公开的holer映射详见[2.1节](#21-使用公开的holer映射或者开通holer服务)，也可以申请holer服务；<br/>
 如果需要**holer服务**，请联系 **QQ 2353941272 或微信 wangyudongdom** 开通。<br/>
 Holer服务详情，请访问[**Wisdom**](http://www.wdom.net) <br/>
