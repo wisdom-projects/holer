@@ -11,8 +11,11 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 
 Holer支持以下两种使用方式：
 
-**方式一：** 使用**公开的holer映射**或者**开通holer服务**，通过holer客户端软件经**holer服务器**实现公网访问；<br/>
-**方式二：** 使用**holer服务端软件**搭建holer服务，通过holer客户端软件经**自己服务器**实现公网访问。
+**方式一：** <br/>
+使用**公开的holer映射**或者**开通holer服务**，通过holer客户端软件经**holer服务器**实现公网访问；<br/>
+
+**方式二：** <br/>
+使用**holer服务端软件**搭建holer服务，通过holer客户端软件经**自己服务器**实现公网访问。
 
 如果下载holer软件遇到问题，请从这里下载：[**软件地址**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA)<br/>
 根据实际需求，任选其中一种使用方式即可，两种使用方式详情如下：
@@ -23,20 +26,21 @@ Holer支持以下两种使用方式：
 
 **公开的holer映射**详情如下：
 
-Holer Access Key             |Domain Name|Internet Address|Local Address
------------------------------|-----------|----------------|---------------
-HOLER_CLIENT-2F8D8B78B3C2A0AE|holer65530.wdom.net|holer.org:65530|127.0.0.1:8080
-HOLER_CLIENT-3C07CDFD1BF99BF2|holer65531.wdom.net|holer.org:65531|127.0.0.1:8088
-HOLER_CLIENT-2A623FCB6E2A7D1D|holer65532.wdom.net|holer.org:65532|127.0.0.1:80
-HOLER_CLIENT-AF3E6391525F70E4|N/A|holer.org:65533|127.0.0.1:3389
-HOLER_CLIENT-822404317F9D8ADD|N/A|holer.org:65534|127.0.0.1:22
-HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
+访问密钥                      |访问域名    |公网地址   |本地地址|使用场景
+-----------------------------|-----------|-----------|-----------|--------
+HOLER_CLIENT-2F8D8B78B3C2A0AE|holer65530.wdom.net|holer.org:65530|127.0.0.1:8080|WEB
+HOLER_CLIENT-3C07CDFD1BF99BF2|holer65531.wdom.net|holer.org:65531|127.0.0.1:8088|WEB
+HOLER_CLIENT-2A623FCB6E2A7D1D|holer65532.wdom.net|holer.org:65532|127.0.0.1:80|WEB
+HOLER_CLIENT-AF3E6391525F70E4|N/A|holer.org:65533|127.0.0.1:3389|远程桌面
+HOLER_CLIENT-822404317F9D8ADD|N/A|holer.org:65534|127.0.0.1:22|SSH
+HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306|数据库
 
-这里以映射本地Tomcat默认端口8080，选择上述表中的第一条映射记录为例；如果Tomcat端口是80或者8088，请选择相匹配的端口映射记录，其他TCP端口映射步骤类似，更多的使用示例请参考[**官方文档**](http://blog.wdom.net)。
+这里以映射本地Tomcat默认端口8080为例，选择表中的第一条映射进行配置；<br/>
+如果Web服务端的端口是80或者8088，请选择相匹配的端口映射，其他TCP端口映射步骤类似，更多的使用示例请参考[**官方文档**](http://blog.wdom.net)。
+
 
 #### 1.1. 安装 Java
-安装Java 1.7或者更高版本；
-执行命令 `java -version` 检查Java是否可用。
+安装Java 1.7或者更高版本，执行命令 `java -version` 查看版本号和检查Java是否可用。
 
 #### 1.2. 安装Web服务端
 
