@@ -23,7 +23,7 @@ Holer客户端软件有Java版本详见[2.1.1节](#211-使用Java版本的holer�
 
 ## 2.1 使用公开的holer映射或者开通holer服务
 
-**方式一:** 使用**公开的holer映射**或者**开通holer服务**，通过holer客户端软件经**holer服务器**实现公网访问。<br/>
+[**方式一:**](#2-holer使用) 使用**公开的holer映射**或者**开通holer服务**，通过holer客户端软件经**holer服务器**实现公网访问。<br/>
 
 **公开的holer映射**详情如下：
 
@@ -164,7 +164,7 @@ Enter holer server host: holer.org
 
 ## 2.2 使用holer服务端软件搭建holer服务
 
-**方式二:** 使用**holer服务端软件**搭建holer服务，通过holer客户端软件经**自己服务器**实现公网访问。<br/>
+[**方式二:**](#2-holer使用) 使用**holer服务端软件**搭建holer服务，通过holer客户端软件经**自己服务器**实现公网访问。<br/>
 用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases) 搭建自己的holer服务。<br/>
 如果下载holer软件遇到问题，更多的下载地址详见[3.2节](#32-holer下载)。<br/>
 
