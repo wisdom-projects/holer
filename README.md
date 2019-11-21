@@ -3,9 +3,8 @@ Holer exposes local servers behind NATs and firewalls to the public internet ove
 Support forwarding message based on TCP protocol.<br/><br/>
 Holer是一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于TCP协议的报文。
 ![Demo](https://github.com/wisdom-projects/holer/blob/8d7794f500cfc2cc33702f92983d1674dab4917e/Image/demo.png)
-# How it works
 
-## 1. Holer使用
+# Holer使用方式
 
 Holer支持如下两种使用方式：
 
@@ -13,6 +12,12 @@ Holer支持如下两种使用方式：
 **(2)** 使用**holer服务端软件**搭建holer服务，通过holer客户端软件经**自己服务器**实现公网访问。
 
 如果下载holer软件遇到问题，请从这里下载：[**软件地址**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA)<br/>
+根据实际需求，任选其中一种使用方式即可，两种使用方式详情如下：
+
+## 1. 使用公开的holer或者开通holer服务（方式一）
+
+使用**公开的holer**或者**开通holer服务**，通过holer客户端软件经**holer服务器**实现公网访问；<br/>
+这里以映射本地Tomcat服务端口为例，其他TCP端口映射步骤类似，更多使用示例请参考[**官方文档**](http://blog.wdom.net/tag/Holer)。
 
 ### 1.1. 安装 Java
 安装Java 1.7或者更高版本；
@@ -136,13 +141,13 @@ Enter holer server host: holer.org
 ------------------------------------------
 ```
 
-## 2. Holer服务端软件使用
+## 2. 使用holer服务端软件搭建holer服务（方式二）
 
-用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases) 搭建自己的holer服务端。<br/>
+用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases) 搭建自己的holer服务。<br/>
 ![Holer Server](http://blog.wdom.net/upload/2019/04/pnlmngj08sh4eqv8fdb97oto0p.png)
 
 ### 2.1. 搭建holer服务端准备工作
-(1) 准备一台Linux系统或者Windows系统主机；
+(1) 准备一台带有公网IP地址的Linux系统或者Windows系统主机；
 
 (2) 安装Java 1.8及以上版本，执行命令 `java -version` 检查Java是否可用；
 
