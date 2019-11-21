@@ -18,7 +18,7 @@ Holer支持如下两种使用方式：
 
 使用**公开的holer**或者**开通holer服务**，通过holer客户端软件经**holer服务器**实现公网访问；<br/>
 
-**公开的holer**映射详情如下：
+**公开的holer服务**映射详情如下：
 
 Holer Access Key             |Domain Name|Internet Address|Local Address
 -----------------------------|-----------|----------------|---------------
@@ -29,7 +29,7 @@ HOLER_CLIENT-AF3E6391525F70E4|N/A|holer.org:65533|127.0.0.1:3389
 HOLER_CLIENT-822404317F9D8ADD|N/A|holer.org:65534|127.0.0.1:22
 HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306
 
-这里以映射本地Tomcat默认端口8080，选择上述表中的第一条映射记录为例；如果本地的Tomcat端口是80或者8088，请选择相匹配的端口映射记录，其他TCP端口映射步骤类似，更多的使用示例请参考[**官方文档**](http://blog.wdom.net)。
+这里以映射本地Tomcat默认端口8080，选择上述表中的第一条映射记录为例；如果Tomcat端口是80或者8088，请选择相匹配的端口映射记录，其他TCP端口映射步骤类似，更多的使用示例请参考[**官方文档**](http://blog.wdom.net)。
 
 ### 1.1. 安装 Java
 安装Java 1.7或者更高版本；
