@@ -12,14 +12,14 @@ Holer是一个将局域网中的应用映射到公网访问的端口映射软件
 Holer支持以下两种使用方式，根据实际需求，任选其中一种方式即可：
 
 **方式一：** <br/>
-使用**公开的holer映射**或者**开通holer服务**，通过**holer客户端软件**经**holer服务器**实现公网访问，详见 [**2.1节**](#21-使用公开的holer映射或者开通holer服务)。<br/>
+使用**公开的holer映射**或者**开通holer服务**，通过**holer客户端软件**经**holer服务器**实现公网访问，详见[**2.1节**](#21-使用公开的holer映射或者开通holer服务)。<br/>
 
 **方式二：** <br/>
-使用**holer服务端软件**搭建holer服务，通过**holer客户端软件**经**自己服务器**实现公网访问，详见[2.2节](#22-使用holer服务端软件搭建holer服务)。<br/>
+使用**holer服务端软件**搭建holer服务，通过**holer客户端软件**经**自己服务器**实现公网访问，详见[**2.2节**](#22-使用holer服务端软件搭建holer服务)。<br/>
 
-Holer客户端软件有Java版本（详见**2.1.1节**）和Go版本（详见**2.1.2节**），根据偏好，任选其中一种版本使用即可。
+Holer客户端软件有Java版本（详见[**2.1.1节**](#211-使用Java版本的holer客户端实现步骤)）和Go版本（详见[**2.1.2节**](#212-使用Go版本的holer客户端实现步骤)），根据偏好，任选其中一种版本使用即可。
 
-如果下载holer软件遇到问题，更多的下载地址详见[3.2节](#32-holer下载)。
+如果下载holer软件遇到问题，更多的下载地址详见[**3.2节**](#32-holer下载)。
 
 ## 2.1 使用公开的holer映射或者开通holer服务
 
@@ -161,7 +161,7 @@ Enter holer server host: holer.org
 
 **方式二:** 使用**holer服务端软件**搭建holer服务，通过holer客户端软件经**自己服务器**实现公网访问。<br/>
 用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases) 搭建自己的holer服务。<br/>
-如果下载holer软件遇到问题，更多的下载地址详见**3.2节**。<br/>
+如果下载holer软件遇到问题，更多的下载地址详见[**3.2节**](#32-holer下载)。<br/>
 
 ![Holer Server](http://blog.wdom.net/upload/2019/04/pnlmngj08sh4eqv8fdb97oto0p.png)
 
