@@ -328,7 +328,6 @@ startup.bat
 
 ## 3.4 申请holer服务
 用户可以使用上述公开的holer映射详见[2.1节](#21-使用公开的holer映射或者开通holer服务)，也可以申请**holer服务**；<br/>
-如果需要开通**holer服务**，请联系 **QQ 2353941272 或微信 wangyudongdom** 开通。<br/>
 Holer服务详情，请访问[**Wisdom**](http://www.wdom.net) <br/>
 
 ![Wisdom](http://blog.wdom.net/upload/2019/09/6pb9liclg4jbercad2d4hhnj3j.gif)
