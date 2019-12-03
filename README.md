@@ -327,7 +327,7 @@ startup.bat
 `holer-server/logs/holer-server.log`
 
 ## 3.4 申请holer服务
-用户可以使用上述公开的holer映射详见[2.1节](#21-使用公开的holer映射或者开通holer服务)，也可以申请**holer服务**，holer服务[**详见文档**](http://blog.wdom.net/article/23)。 <br/>
+用户可以使用上述公开的holer映射详见[2.1节](#21-使用公开的holer映射或者开通holer服务)，也可以申请**holer服务**，holer服务[**详见文档**](http://blog.wdom.net/article/23)或[**WISDOM官网**](http://wdom.net)。 <br/>
 
 ![Wisdom](http://blog.wdom.net/upload/2019/09/6pb9liclg4jbercad2d4hhnj3j.gif)
 
