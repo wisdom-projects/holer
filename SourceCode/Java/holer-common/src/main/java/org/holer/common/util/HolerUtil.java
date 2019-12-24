@@ -217,7 +217,7 @@ public class HolerUtil
     /**
     * 
     * @Title      : sleep 
-    * @Description: TODO 
+    * @Description: Thread sleep 
     * @Param      : @param millis 
     * @Return     : void
     * @Throws     :
