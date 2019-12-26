@@ -1,0 +1,11 @@
+[Unit]
+Description=Holer
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/bin/sh /usr/bin/holer start
+ExecStop=/bin/sh /usr/bin/holer stop
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,148 @@
+#!/bin/bash
+
+# Copyright 2018-present, Yudong (Dom) Wang
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# chkconfig: 345 99 01
+# description: holer
+
+# -----------------------------------------------------------------------------
+# Holer Script
+# -----------------------------------------------------------------------------
+
+HOLER_OK=0
+HOLER_ERR=1
+HOLER_PID=""
+
+HOLER_LOG_DIR=/var/log
+HOLER_BIN_DIR=/usr/bin
+HOLER_CONF_DIR=/etc
+
+HOLER_ARCH=`uname -m`
+HOLER_LINUX=holer-linux
+HOLER_BIN_NAME=$HOLER_LINUX-$HOLER_ARCH
+HOLER_LOG=$HOLER_LOG_DIR/holer-client.log
+HOLER_BIN=$HOLER_BIN_DIR/$HOLER_BIN_NAME
+HOLER_CONF=$HOLER_CONF_DIR/holer.conf
+
+# Source function library
+INIT_FUNCTIONS="/etc/init.d/functions"
+if [ -f $INIT_FUNCTIONS ]; then
+    . $INIT_FUNCTIONS
+fi
+
+if [ -f $HOLER_CONF ]; then
+    . $HOLER_CONF
+fi
+
+if [ ! -d $HOLER_LOG_DIR ]; then
+    mkdir -p $HOLER_LOG_DIR
+fi
+
+holer_bin()
+{
+    if [ $HOLER_ARCH = "i486" -o $HOLER_ARCH = "i586" -o $HOLER_ARCH = "i686" ]; then
+        HOLER_BIN_NAME=$HOLER_LINUX-i386
+    fi
+
+    if [ $HOLER_ARCH = "armv5b" ]; then
+        HOLER_BIN_NAME=$HOLER_LINUX-armv5l
+    fi
+
+    if [ $HOLER_ARCH = "armv6b" ]; then
+        HOLER_BIN_NAME=$HOLER_LINUX-armv6l
+    fi
+
+    if [ $HOLER_ARCH = "armv7b" ]; then
+        HOLER_BIN_NAME=$HOLER_LINUX-armv7l
+    fi
+
+    if [ $HOLER_ARCH = "armv8b" -o $HOLER_ARCH = "aarch64" -o $HOLER_ARCH = "aarch64_be" ]; then
+        HOLER_BIN_NAME=$HOLER_LINUX-armv8l
+    fi
+
+    if [ $HOLER_ARCH = "s390" ]; then
+        HOLER_BIN_NAME=$HOLER_LINUX-s390x
+    fi
+
+    if [ $HOLER_ARCH = "ppcle" ]; then
+        HOLER_BIN_NAME=$HOLER_LINUX-ppc64le
+    fi
+
+    if [ $HOLER_ARCH = "ppc" ]; then
+        HOLER_BIN_NAME=$HOLER_LINUX-ppc64
+    fi
+    HOLER_BIN=$HOLER_BIN_DIR/$HOLER_BIN_NAME
+}
+
+pid() 
+{
+    holer_bin
+    HOLER_PID=`ps -ef | grep -v grep | grep "$HOLER_BIN" |awk '{print $2}'`
+}
+
+status() 
+{
+    pid
+    if [ -n "$HOLER_PID" ]; then
+        echo "Holer client PID <$HOLER_PID> is running."
+    else
+        echo "Holer client is stopped."
+    fi
+}
+
+start() 
+{
+    pid
+    if [ -n "$HOLER_PID" ]; then
+        status
+        return $HOLER_OK
+    fi
+
+    $HOLER_BIN -k $HOLER_ACCESS_KEY -s $HOLER_SERVER_HOST >> $HOLER_LOG 2>&1 &
+    status
+}
+
+stop() 
+{
+    pid
+    if [ -z "$HOLER_PID" ]; then
+        status
+        return $HOLER_OK
+    fi
+
+    echo -e "Stopping the holer client PID <$HOLER_PID> ...\c"
+    kill -9 $HOLER_PID >> $HOLER_LOG 2>&1
+    status
+}
+
+# See how we were called.
+case "$1" in
+    start)
+        start
+    ;;
+    stop)
+        stop
+    ;;
+    status)
+        status
+    ;;
+    restart)
+        stop
+        start
+    ;;
+    *)
+    echo $"Usage: $0 {start|stop|status|restart}"
+    exit $HOLER_ERR
+esac
