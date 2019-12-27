@@ -21,6 +21,7 @@ cd `dirname $0`
 
 SYSD_DIR="/lib/systemd/system"
 RCD_DIR="/etc/rc.d/init.d"
+INITD_DIR="/etc/init.d"
 
 INSTALL_NAME=$0
 INSTALL_OPTIONS="$@"
@@ -123,43 +124,60 @@ holer_init()
 
 setup_sysd()
 {
-    if [ ! -d $SYSD_DIR ]; then
-        return $HOLER_OK
+    if [ -d $SYSD_DIR ]; then
+        cp $HOLER_CUR_DIR/$HOLER_SERVICE $SYSD_DIR/
+        chmod 644 $SYSD_DIR/$HOLER_SERVICE
     fi
 
-    cp $HOLER_CUR_DIR/$HOLER_SERVICE $SYSD_DIR/
-
-    systemctl enable $HOLER_SERVICE
-    systemctl daemon-reload
-    systemctl start $HOLER_SERVICE
-    systemctl status $HOLER_SERVICE >> $HOLER_LOG 2>&1
+    which systemctl >> $HOLER_LOG 2>&1
+    if [ $? -eq 0 ]; then
+        systemctl enable $HOLER_SERVICE
+        systemctl daemon-reload
+        systemctl start $HOLER_SERVICE
+        systemctl status $HOLER_SERVICE
+    fi
 
     return $HOLER_OK
 }
 
-setup_rcd()
+setup_initd()
 {
-    if [ ! -d $RCD_DIR ]; then
-        return $HOLER_OK
+    if [ -d $RCD_DIR ]; then
+        cp $HOLER_CUR_DIR/$HOLER_NAME $RCD_DIR/$HOLER_SERVICE
+        chmod +x $RCD_DIR/$HOLER_SERVICE
     fi
 
-    cp $HOLER_CUR_DIR/$HOLER_NAME $RCD_DIR/$HOLER_SERVICE
+    if [ -d $INITD_DIR ]; then
+        cp $HOLER_CUR_DIR/$HOLER_NAME $INITD_DIR/$HOLER_SERVICE
+        chmod +x $INITD_DIR/$HOLER_SERVICE
+    fi
 
-    chmod +x $RCD_DIR/$HOLER_SERVICE
+    which chkconfig >> $HOLER_LOG 2>&1
+    if [ $? -eq 0 ]; then
+        chkconfig --add $HOLER_SERVICE
+        chkconfig $HOLER_SERVICE on
+        chkconfig --list |grep $HOLER_SERVICE >> $HOLER_LOG 2>&1
+        service $HOLER_NAME start
+    fi
 
-    chkconfig --add $HOLER_SERVICE
-    chkconfig $HOLER_SERVICE on
-    chkconfig --list |grep $HOLER_SERVICE >> $HOLER_LOG 2>&1
+    which update-rc.d >> $HOLER_LOG 2>&1
+    if [ $? -eq 0 ]; then
+        update-rc.d $HOLER_SERVICE defaults
+        service $HOLER_NAME start
+    fi
 
-    service $HOLER_NAME start
     return $HOLER_OK
 }
 
 holer_setup()
 {
-    setup_sysd > /dev/null 2>&1
-    setup_rcd > /dev/null 2>&1
-    sh $HOLER_PROGRAM status
+    setup_sysd >> $HOLER_LOG 2>&1
+    setup_initd >> $HOLER_LOG 2>&1
+
+    if [ -f $HOLER_PROGRAM ]; then
+        sh $HOLER_PROGRAM start > /dev/null 2>&1
+        sh $HOLER_PROGRAM status
+    fi
 }
 
 holer_usage()
@@ -215,7 +233,7 @@ holer_option()
 
 holer_install()
 {
-    HOLER_LINE_NUM=235
+    HOLER_LINE_NUM=253
     tail -n +$HOLER_LINE_NUM $0 > $HOLER_CUR_DIR/$HOLER_PKG_NAME
 
     holer_option $INSTALL_OPTIONS

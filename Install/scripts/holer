@@ -17,6 +17,16 @@
 # chkconfig: 345 99 01
 # description: holer
 
+### BEGIN INIT INFO
+# Provides:          holer.service
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start holer daemon at boot time
+# Description:       Enable holer service provided by daemon.
+### END INIT INFO
+
 # -----------------------------------------------------------------------------
 # Holer Script
 # -----------------------------------------------------------------------------

@@ -21,6 +21,7 @@ cd `dirname $0`
 
 SYSD_DIR="/lib/systemd/system"
 RCD_DIR="/etc/rc.d/init.d"
+INITD_DIR="/etc/init.d"
 
 HOLER_OK=0
 HOLER_ERR=1
@@ -42,14 +43,12 @@ HOLER_SERVICE=$HOLER_NAME.service
 
 unset_sysd()
 {
-    if [ ! -d $SYSD_DIR ]; then
-        return $HOLER_OK
+    which systemctl >> $HOLER_LOG 2>&1
+    if [ $? -eq 0 ]; then
+        systemctl stop $HOLER_SERVICE
+        systemctl disable $HOLER_SERVICE
+        systemctl daemon-reload
     fi
-
-    systemctl stop $HOLER_SERVICE
-    systemctl disable $HOLER_SERVICE
-    systemctl daemon-reload
-    systemctl status $HOLER_SERVICE >> $HOLER_LOG 2>&1
 
     if [ -f $SYSD_DIR/$HOLER_SERVICE ]; then
         rm -f $SYSD_DIR/$HOLER_SERVICE
@@ -58,19 +57,27 @@ unset_sysd()
     return $HOLER_OK
 }
 
-unset_rcd()
+unset_initd()
 {
-    if [ ! -d $RCD_DIR ]; then
-        return $HOLER_OK
+    service $HOLER_NAME stop
+
+    which chkconfig >> $HOLER_LOG 2>&1
+    if [ $? -eq 0 ]; then
+        chkconfig $HOLER_SERVICE off
+        chkconfig --del $HOLER_SERVICE
     fi
 
-    service $HOLER_NAME stop
-    chkconfig $HOLER_SERVICE off
-    chkconfig --del $HOLER_SERVICE
-    chkconfig --list |grep $HOLER_SERVICE >> $HOLER_LOG 2>&1
+    which update-rc.d >> $HOLER_LOG 2>&1
+    if [ $? -eq 0 ]; then
+        update-rc.d -f $HOLER_SERVICE remove
+    fi
 
     if [ -f $RCD_DIR/$HOLER_SERVICE ]; then
         rm -f $RCD_DIR/$HOLER_SERVICE
+    fi
+
+    if [ -f $INITD_DIR/$HOLER_SERVICE ]; then
+        rm -f $INITD_DIR/$HOLER_SERVICE
     fi
 
     return $HOLER_OK
@@ -81,8 +88,8 @@ holer_unset()
     if [ -f $HOLER_PROGRAM ]; then
         $HOLER_PROGRAM stop
     fi
-    unset_sysd > /dev/null 2>&1
-    unset_rcd > /dev/null 2>&1
+    unset_sysd >> $HOLER_LOG 2>&1
+    unset_initd >> $HOLER_LOG 2>&1
 }
 
 holer_remove()
