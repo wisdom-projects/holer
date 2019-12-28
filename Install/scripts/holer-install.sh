@@ -157,13 +157,17 @@ setup_initd()
         chkconfig --add $HOLER_SERVICE
         chkconfig $HOLER_SERVICE on
         chkconfig --list |grep $HOLER_SERVICE >> $HOLER_LOG 2>&1
-        service $HOLER_NAME start
     fi
 
     which update-rc.d >> $HOLER_LOG 2>&1
     if [ $? -eq 0 ]; then
         update-rc.d $HOLER_SERVICE defaults
-        service $HOLER_NAME start
+        
+    fi
+
+    which service >> $HOLER_LOG 2>&1
+    if [ $? -eq 0 ]; then
+        service $HOLER_NAME start >> $HOLER_LOG 2>&1
     fi
 
     return $HOLER_OK
@@ -233,7 +237,7 @@ holer_option()
 
 holer_install()
 {
-    HOLER_LINE_NUM=253
+    HOLER_LINE_NUM=257
     tail -n +$HOLER_LINE_NUM $0 > $HOLER_CUR_DIR/$HOLER_PKG_NAME
 
     holer_option $INSTALL_OPTIONS
