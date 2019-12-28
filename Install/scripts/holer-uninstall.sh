@@ -59,7 +59,10 @@ unset_sysd()
 
 unset_initd()
 {
-    service $HOLER_NAME stop
+    which service >> $HOLER_LOG 2>&1
+    if [ $? -eq 0 ]; then
+        service $HOLER_NAME stop
+    fi
 
     which chkconfig >> $HOLER_LOG 2>&1
     if [ $? -eq 0 ]; then
@@ -86,7 +89,7 @@ unset_initd()
 holer_unset()
 {
     if [ -f $HOLER_PROGRAM ]; then
-        $HOLER_PROGRAM stop
+        sh $HOLER_PROGRAM stop
     fi
     unset_sysd >> $HOLER_LOG 2>&1
     unset_initd >> $HOLER_LOG 2>&1

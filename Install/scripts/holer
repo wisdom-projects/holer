@@ -39,6 +39,7 @@ HOLER_LOG_DIR=/var/log
 HOLER_BIN_DIR=/usr/bin
 HOLER_CONF_DIR=/etc
 
+HOLER_ARM=""
 HOLER_ARCH=`uname -m`
 HOLER_LINUX=holer-linux
 HOLER_BIN_NAME=$HOLER_LINUX-$HOLER_ARCH
@@ -94,12 +95,18 @@ holer_bin()
         HOLER_BIN_NAME=$HOLER_LINUX-ppc64
     fi
     HOLER_BIN=$HOLER_BIN_DIR/$HOLER_BIN_NAME
+    HOLER_ARM=$(echo $HOLER_BIN_NAME | grep "arm")
 }
 
 pid() 
 {
     holer_bin
     HOLER_PID=`ps -ef | grep -v grep | grep "$HOLER_BIN" |awk '{print $2}'`
+
+    # Check if it is ARM
+    if [ $HOLER_ARM != "" ]; then
+        HOLER_PID=`ps -ef | grep -v grep | grep "$HOLER_BIN" |awk '{print $1}'`
+    fi
 }
 
 status() 
