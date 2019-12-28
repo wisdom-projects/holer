@@ -104,7 +104,7 @@ pid()
     HOLER_PID=`ps -ef | grep -v grep | grep "$HOLER_BIN" |awk '{print $2}'`
 
     # Check if it is ARM
-    if [ $HOLER_ARM != "" ]; then
+    if [ "$HOLER_ARM" != "" ]; then
         HOLER_PID=`ps -ef | grep -v grep | grep "$HOLER_BIN" |awk '{print $1}'`
     fi
 }
