@@ -149,7 +149,9 @@ setup_initd()
 
     if [ -d $INITD_DIR ]; then
         cp $HOLER_CUR_DIR/$HOLER_NAME $INITD_DIR/$HOLER_SERVICE
+        cp $HOLER_CUR_DIR/$HOLER_NAME $INITD_DIR/$HOLER_NAME.sh
         chmod +x $INITD_DIR/$HOLER_SERVICE
+        chmod +x $INITD_DIR/$HOLER_NAME.sh
     fi
 
     which chkconfig >> $HOLER_LOG 2>&1
@@ -162,7 +164,7 @@ setup_initd()
     which update-rc.d >> $HOLER_LOG 2>&1
     if [ $? -eq 0 ]; then
         update-rc.d $HOLER_SERVICE defaults
-        
+        update-rc.d $HOLER_NAME.sh defaults
     fi
 
     which service >> $HOLER_LOG 2>&1
@@ -237,7 +239,7 @@ holer_option()
 
 holer_install()
 {
-    HOLER_LINE_NUM=257
+    HOLER_LINE_NUM=259
     tail -n +$HOLER_LINE_NUM $0 > $HOLER_CUR_DIR/$HOLER_PKG_NAME
 
     holer_option $INSTALL_OPTIONS

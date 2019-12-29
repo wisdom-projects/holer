@@ -73,6 +73,7 @@ unset_initd()
     which update-rc.d >> $HOLER_LOG 2>&1
     if [ $? -eq 0 ]; then
         update-rc.d -f $HOLER_SERVICE remove
+        update-rc.d -f $HOLER_NAME.sh remove
     fi
 
     if [ -f $RCD_DIR/$HOLER_SERVICE ]; then
@@ -81,6 +82,10 @@ unset_initd()
 
     if [ -f $INITD_DIR/$HOLER_SERVICE ]; then
         rm -f $INITD_DIR/$HOLER_SERVICE
+    fi
+
+    if [ -f $INITD_DIR/$HOLER_NAME.sh ]; then
+        rm -f $INITD_DIR/$HOLER_NAME.sh
     fi
 
     return $HOLER_OK
