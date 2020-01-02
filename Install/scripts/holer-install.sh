@@ -181,8 +181,7 @@ holer_setup()
     setup_initd >> $HOLER_LOG 2>&1
 
     if [ -f $HOLER_PROGRAM ]; then
-        sh $HOLER_PROGRAM start > /dev/null 2>&1
-        sh $HOLER_PROGRAM status
+        sh $HOLER_PROGRAM start
     fi
 }
 
