@@ -1,12 +1,12 @@
 ## Holer Client
 
-### 1. Holer客户端Java版本
+### Holer Client Java版本
+Java语言实现的holer客户端，支持跨平台。
 
-Java实现的holer客户端:
+[**源码地址**](https://github.com/wisdom-projects/holer-client/Java)
 
-[源码地址](https://github.com/wisdom-projects/holer-client/Java)
+### Holer Client Go版本
+Go语言实现的holer客户端，支持多种操作系统和硬件架构。
 
-### 2. Holer客户端Go版本
-Go实现的holer客户端:
+[**源码地址**](https://github.com/wisdom-projects/holer-client/Go)
 
-[源码地址](https://github.com/wisdom-projects/holer-client/Go)
