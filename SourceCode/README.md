@@ -4,9 +4,9 @@
 
 Java实现的holer客户端:
 
-[源代码地址](https://github.com/wisdom-projects/holer-client/Java)
+[源码地址](https://github.com/wisdom-projects/holer-client/Java)
 
 ## 2. Holer客户端Go版本
 Go实现的holer客户端:
 
-[源代码地址](https://github.com/wisdom-projects/holer-client/Go)
+[源码地址](https://github.com/wisdom-projects/holer-client/Go)
