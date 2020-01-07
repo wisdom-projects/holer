@@ -1,12 +1,12 @@
 # Holer Client
 
-## Holer客户端Java版本
+## 1. Holer客户端Java版本
 
 Java实现的holer客户端:
 
 [源码地址](https://github.com/wisdom-projects/holer-client/Java)
 
-## Holer客户端Go版本
+## 2. Holer客户端Go版本
 Go实现的holer客户端:
 
 [源码地址](https://github.com/wisdom-projects/holer-client/Go)
