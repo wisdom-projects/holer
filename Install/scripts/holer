@@ -139,7 +139,7 @@ stop()
         return $HOLER_OK
     fi
 
-    echo -e "Stopping the holer client PID <$HOLER_PID> ...\c"
+    echo -e "Stopping the holer client PID <$HOLER_PID> ... \c"
     kill -9 $HOLER_PID >> $HOLER_LOG 2>&1
     status
 }

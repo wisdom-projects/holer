@@ -238,7 +238,7 @@ holer_option()
 
 holer_install()
 {
-    HOLER_LINE_NUM=259
+    HOLER_LINE_NUM=258
     tail -n +$HOLER_LINE_NUM $0 > $HOLER_CUR_DIR/$HOLER_PKG_NAME
 
     holer_option $INSTALL_OPTIONS
