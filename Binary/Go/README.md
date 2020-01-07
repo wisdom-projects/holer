@@ -1,7 +1,6 @@
-## Holer Client
+## Holer Client Go版本
 
-### Holer客户端Go版本
-Go实现的holer客户端:
+Go语言实现的holer客户端，支持多种操作系统和硬件架构。
 
 [**软件地址一**](https://github.com/wisdom-projects/holer/tree/master/Binary/Go)
 
