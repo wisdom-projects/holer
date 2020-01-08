@@ -40,7 +40,7 @@ HOLER_CLIENT-27DD1389DF1D4DBC|N/A|holer.org:65535|127.0.0.1:3306|数据库
 
 ### 2.1.1 使用Java版本的holer客户端实现步骤
 
-Java版本的holer客户端软件（[源代码](https://github.com/wisdom-projects/holer/tree/master/SourceCode/Java)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Java)）是由Java语言实现，支持跨平台。<br/>
+Java版本的holer客户端软件（[源代码](https://github.com/wisdom-projects/holer-client/tree/master/Java)，[软件包](https://github.com/wisdom-projects/holer-client/releases)）是由Java语言实现，支持跨平台。<br/>
 
 #### 2.1.1.1 安装 Java
 安装Java 1.7或者更高版本，执行命令 `java -version` 检查Java是否可用。
@@ -52,7 +52,7 @@ Java版本的holer客户端软件（[源代码](https://github.com/wisdom-projec
 `http://127.0.0.1:8080`
 
 #### 2.1.1.3 下载并配置holer客户端 
-下载并解压软件包[`holer-client.zip`](https://github.com/Wisdom-Projects/holer/blob/master/Binary/Java)
+下载并解压软件包[`holer-client.zip`](https://github.com/wisdom-projects/holer-client/releases)
 修改配置文件：<br/>
 `holer-client/conf/holer.conf`<br/>
 
@@ -103,7 +103,7 @@ Enter holer server host: holer.org
 ```
 
 ### 2.1.2 使用Go版本的holer客户端实现步骤
-Go版本的holer客户端软件（[源代码](https://github.com/Wisdom-Projects/holer/tree/master/SourceCode/Go)，[软件包](https://github.com/Wisdom-Projects/holer/tree/master/Binary/Go)）是由GO语言实现，支持多种操作系统和硬件架构。<br/>
+Go版本的holer客户端软件（[源代码](https://github.com/wisdom-projects/holer-client/tree/master/Go)，[软件包](https://github.com/wisdom-projects/holer-client/releases)）是由GO语言实现，支持多种操作系统和硬件架构。<br/>
 
 #### 2.1.2.1 安装Web服务端
 
@@ -113,7 +113,7 @@ Go版本的holer客户端软件（[源代码](https://github.com/Wisdom-Projects
 
 #### 2.1.2.2 下载holer客户端
 
-根据实际的系统平台，选择匹配的软件包下载并解压[`holer-xxx.tar.gz`](https://github.com/Wisdom-Projects/holer/blob/master/Binary/Go)
+根据实际的系统平台，选择匹配的软件包下载并解压[`holer-xxx.tar.gz`](https://github.com/wisdom-projects/holer-client/releases)
 
 #### 2.1.2.3 启动holer
 
@@ -165,7 +165,7 @@ Enter holer server host: holer.org
 ## 2.2 使用holer服务端软件搭建holer服务
 
 [**方式二:**](#2-holer使用) 使用**holer服务端软件**搭建holer服务，通过holer客户端软件经**自己服务器**实现公网访问。<br/>
-用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer/releases) 搭建自己的holer服务。<br/>
+用户也可以下载 [**holer-server.zip**](https://github.com/wisdom-projects/holer-server/releases) 搭建自己的holer服务。<br/>
 如果下载holer软件遇到问题，更多的下载地址详见[3.2节](#32-holer下载)。<br/>
 
 ![Holer Server](http://blog.wdom.net/upload/2019/04/pnlmngj08sh4eqv8fdb97oto0p.png)
@@ -300,12 +300,12 @@ startup.bat
 
 ## 3.2 Holer下载
 ### 3.2.1 Holer客户端软件
-[**软件地址一**](https://github.com/wisdom-projects/holer/tree/master/Binary)<br/>
-[**软件地址二**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA#list/path=%2Fsharelink2808252679-1014620033513253%2Fholer%2Fholer-client&parentPath=%2Fsharelink2808252679-1014620033513253)<br/>
+[下载地址一](https://github.com/wisdom-projects/holer-client/releases)<br/>
+[下载地址二](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA#list/path=%2Fsharelink2808252679-1014620033513253%2Fholer%2Fholer-client&parentPath=%2Fsharelink2808252679-1014620033513253)<br/>
 
 ### 3.2.2 Holer服务端软件
-[**软件地址一**](https://github.com/wisdom-projects/holer/releases)<br/>
-[**软件地址二**](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA#list/path=%2Fsharelink2808252679-1014620033513253%2Fholer%2Fholer-server&parentPath=%2Fsharelink2808252679-1014620033513253)<br/>
+[下载地址一](https://github.com/wisdom-projects/holer/releases)<br/>
+[下载地址二](https://pan.baidu.com/s/1APDAaaaQxTa71IR2hDjIaA#list/path=%2Fsharelink2808252679-1014620033513253%2Fholer%2Fholer-server&parentPath=%2Fsharelink2808252679-1014620033513253)<br/>
 
 ## 3.3 问题帮助
 使用中遇到问题可以查看holer日志信息来排查问题的具体原因。
