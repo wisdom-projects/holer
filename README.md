@@ -20,3 +20,5 @@ Holer支持以下两种使用方式，根据实际需求，任选其中一种方
 
 ## 支持与帮助
 更多的holer使用示例和帮助，请参考[**官方文档**](http://blog.wdom.net)，或访问holer官网[**WISDOM**](http://wdom.net)。
+
+![](http://blog.wdom.net/upload/2019/09/6pb9liclg4jbercad2d4hhnj3j.gif)
